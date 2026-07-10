@@ -19,7 +19,7 @@ export default function Assignment1() {
               <span className="font-medium text-slate-900 dark:text-white">Course:</span> UBC Master of Educational Technology
             </div>
             <div>
-              <span className="font-medium text-slate-900 dark:text-white">Instructors:</span> Sam McCready & Dr. Jen
+              <span className="font-medium text-slate-900 dark:text-white">Instructors:</span> Sam McCready & Jen Jenson (MET Director)
             </div>
           </div>
         </div>
