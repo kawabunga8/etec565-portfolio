@@ -1,7 +1,19 @@
+import Image from "next/image";
+
 export default function Assignment1() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
-      <header className="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+      <header className="w-full">
+        <Image
+          src="/etec565-banner.png"
+          alt="ETEC 565 Ethical AI in Education"
+          width={1400}
+          height={300}
+          priority
+          className="w-full h-auto"
+        />
+      </header>
+      <div className="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
         <div className="max-w-3xl mx-auto px-6 py-12">
           <div className="mb-4">
             <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
@@ -180,6 +192,8 @@ export default function Assignment1() {
           </ul>
         </section>
       </main>
+        </div>
+      </div>
     </div>
   );
 }

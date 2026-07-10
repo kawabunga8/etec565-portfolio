@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   const assignments = [
     {
@@ -12,15 +14,15 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
-      <header className="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
-        <div className="max-w-4xl mx-auto px-6 py-12">
-          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-2">
-            ETEC 565 Portfolio
-          </h1>
-          <p className="text-slate-600 dark:text-slate-400">
-            Assignments and Projects
-          </p>
-        </div>
+      <header className="w-full">
+        <Image
+          src="/etec565-banner.png"
+          alt="ETEC 565 Ethical AI in Education"
+          width={1400}
+          height={300}
+          priority
+          className="w-full h-auto"
+        />
       </header>
 
       <main className="max-w-4xl mx-auto px-6 py-12">
