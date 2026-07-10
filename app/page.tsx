@@ -2,15 +2,17 @@ export default function Home() {
   const assignments = [
     {
       id: 1,
-      title: "Assignment 1",
-      description: "Add your assignment details here",
-      status: "In Progress",
-      date: "Coming soon",
+      slug: "assignment-1",
+      title: "Investigating Biases and Blind Spots in AI Systems",
+      description: "Examining hidden assumptions in AI-generated report card comments through testing with ChatGPT, Gemini, and Claude.",
+      status: "Completed",
+      date: "Summer 2025",
     },
     {
       id: 2,
+      slug: "assignment-2",
       title: "Assignment 2",
-      description: "Add your assignment details here",
+      description: "Coming soon",
       status: "Planned",
       date: "Coming soon",
     },
@@ -36,11 +38,12 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {assignments.map((assignment) => (
-              <div
+              <a
                 key={assignment.id}
-                className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6 hover:shadow-lg transition-shadow"
+                href={assignment.slug ? `/assignments/${assignment.slug}` : "#"}
+                className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6 hover:shadow-lg transition-shadow hover:border-blue-300 dark:hover:border-blue-700 group"
               >
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {assignment.title}
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400 mb-4">
@@ -54,7 +57,7 @@ export default function Home() {
                     {assignment.status}
                   </span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
