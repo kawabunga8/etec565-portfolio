@@ -35,7 +35,7 @@ export default function Assignment1() {
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
       <main className="max-w-3xl mx-auto px-6 py-12">
         <section className="mb-12">
