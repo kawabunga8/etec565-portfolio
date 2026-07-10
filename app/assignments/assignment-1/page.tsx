@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Assignment1() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
+    <div className="min-h-screen bg-cover bg-center bg-fixed" style={{backgroundImage: 'url(/StockSnap_A3KPSZEFND.jpg)'}}>
       <header className="w-full">
         <Image
           src="/etec565-banner2.png"
