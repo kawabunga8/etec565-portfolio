@@ -16,9 +16,9 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
       <header className="w-full">
         <Image
-          src="/etec565-banner.png"
+          src="/etec565-banner2.png"
           alt="ETEC 565 Ethical AI in Education"
-          width={560}
+          width={253}
           height={120}
           priority
           className="w-full h-auto"
