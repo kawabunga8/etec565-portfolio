@@ -18,8 +18,8 @@ export default function Home() {
         <Image
           src="/etec565-banner.png"
           alt="ETEC 565 Ethical AI in Education"
-          width={1400}
-          height={300}
+          width={560}
+          height={120}
           priority
           className="w-full h-auto"
         />
