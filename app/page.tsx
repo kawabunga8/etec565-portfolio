@@ -53,17 +53,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6">
-          <p className="text-sm text-blue-900 dark:text-blue-200">
-            💡 Tip: Edit the assignments array in{" "}
-            <code className="bg-blue-100 dark:bg-blue-900 px-2 py-1 rounded">
-              app/page.tsx
-            </code>{" "}
-            to add your own assignments. You can also create individual pages
-            for each assignment.
-          </p>
-        </div>
       </main>
     </div>
   );
