@@ -192,8 +192,6 @@ export default function Assignment1() {
           </ul>
         </section>
       </main>
-        </div>
-      </div>
     </div>
   );
 }
