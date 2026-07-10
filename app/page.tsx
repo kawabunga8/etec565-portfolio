@@ -8,14 +8,6 @@ export default function Home() {
       status: "Completed",
       date: "Summer 2026",
     },
-    {
-      id: 2,
-      slug: "assignment-2",
-      title: "Assignment 2",
-      description: "Coming soon",
-      status: "Planned",
-      date: "Coming soon",
-    },
   ];
 
   return (
