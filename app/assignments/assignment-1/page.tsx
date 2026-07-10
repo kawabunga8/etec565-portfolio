@@ -157,10 +157,12 @@ export default function Assignment1() {
             Read the complete analysis with all three AI-generated comments and full citations:
           </p>
           <a
-            href="https://drive.google.com/file/d/1-your-actual-drive-link/view"
+            href="https://docs.google.com/document/d/1FI5_r0pXjKs-VwDqV68VGhxFDenCNwTdri8zONch8ZQ/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
           >
-            📄 Download PDF
+            📄 View Full Document
           </a>
         </section>
 
