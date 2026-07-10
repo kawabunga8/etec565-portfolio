@@ -6,7 +6,7 @@ export default function Home() {
       title: "Investigating Biases and Blind Spots in AI Systems",
       description: "Examining hidden assumptions in AI-generated report card comments through testing with ChatGPT, Gemini, and Claude.",
       status: "Completed",
-      date: "Summer 2025",
+      date: "Summer 2026",
     },
     {
       id: 2,
