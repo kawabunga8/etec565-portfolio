@@ -11,7 +11,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-fixed" style={{backgroundImage: 'url(/StockSnap_A3KPSZEFND.jpg)'}}>
+    <div className="min-h-screen bg-cover bg-center bg-fixed" style={{backgroundImage: 'url(/StockSnap_V9L6XXK3LB.jpg)'}}>
       <header className="w-full h-32 bg-blue-950"></header>
 
       <main className="max-w-4xl mx-auto px-6 py-12">
