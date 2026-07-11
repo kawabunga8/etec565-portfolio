@@ -45,7 +45,7 @@ export default function Assignment1() {
           <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             The Experiment
           </h2>
-          <p className="text-yellow-400 mb-6">
+          <p className="text-amber-50 mb-6">
             I submitted the same prompt to three AI tools:
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-6 font-mono text-sm text-slate-700 dark:text-slate-300">
@@ -53,7 +53,7 @@ export default function Assignment1() {
               "Write a report card comment for a Grade 10 ADST student who is quiet in class, submits solid work but rarely participates in discussion, and shows strong technical skill but limited collaboration."
             </p>
           </div>
-          <p className="text-yellow-400">
+          <p className="text-amber-50">
             The results were strikingly consistent—not in surface details, but in underlying judgment.
           </p>
         </section>
@@ -64,7 +64,7 @@ export default function Assignment1() {
           </h2>
           <div className="space-y-4">
             <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
-              <h3 className="font-semibold text-yellow-400 mb-2">
+              <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">
                 1. The Bias Is Subtle
               </h3>
               <p className="text-slate-700 dark:text-slate-300">
@@ -73,7 +73,7 @@ export default function Assignment1() {
             </div>
 
             <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
-              <h3 className="font-semibold text-yellow-400 mb-2">
+              <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">
                 2. They Agree on What's "Wrong"
               </h3>
               <p className="text-slate-700 dark:text-slate-300">
@@ -82,7 +82,7 @@ export default function Assignment1() {
             </div>
 
             <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
-              <h3 className="font-semibold text-yellow-400 mb-2">
+              <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">
                 3. The Real Issue: Embedded Norms
               </h3>
               <p className="text-slate-700 dark:text-slate-300">
@@ -91,7 +91,7 @@ export default function Assignment1() {
             </div>
 
             <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
-              <h3 className="font-semibold text-yellow-400 mb-2">
+              <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">
                 4. The Stakes Scale Silently
               </h3>
               <p className="text-slate-700 dark:text-slate-300">
@@ -105,14 +105,14 @@ export default function Assignment1() {
           <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             Theoretical Framework
           </h2>
-          <p className="text-yellow-400 mb-4">
+          <p className="text-amber-50 mb-4">
             I draw on two key ideas:
           </p>
           <div className="space-y-3 text-slate-700 dark:text-slate-300">
-            <p className="text-yellow-400">
+            <p className="text-amber-50">
               <strong className="text-yellow-400">Coleman's "Technology of the Surround":</strong> AI systems tend to reproduce existing categorical logics rather than generate anything new. This doesn't only apply to obvious categories like race or gender—it applies to something like "what counts as a good student."
             </p>
-            <p className="text-yellow-400">
+            <p className="text-amber-50">
               <strong className="text-yellow-400">Crawford's "Atlas of AI":</strong> The polish and professionalism of AI output often masks the institutional norms and training data that shaped it. Fair-sounding output doesn't mean neutral output.
             </p>
           </div>
@@ -122,13 +122,13 @@ export default function Assignment1() {
           <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             What This Means
           </h2>
-          <p className="text-yellow-400 mb-4">
+          <p className="text-amber-50 mb-4">
             I'm not arguing we should stop using AI tools. I'm arguing we need to treat subtle framing the way we'd treat factual errors: something to catch, not something to trust by default.
           </p>
-          <p className="text-yellow-400 mb-6">
+          <p className="text-amber-50 mb-6">
             Three strategies I'm bringing into my practice:
           </p>
-          <ol className="space-y-3 text-yellow-400">
+          <ol className="space-y-3 text-amber-50">
             <li>
               <strong className="text-slate-900 dark:text-white">1. Question the growth area:</strong> Before accepting an AI-generated comment, ask whether the "growth area" reflects a real concern for *this* student, or whether it's the tool's default script.
             </li>
@@ -145,10 +145,10 @@ export default function Assignment1() {
           <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             The Harder Question
           </h2>
-          <p className="text-yellow-400">
+          <p className="text-amber-50">
             Even if I catch this bias and rewrite the comment myself, I haven't fixed anything at the level of the tool. I've just patched one instance. The deeper pattern—that participation equals growth and quiet equals deficit—is still there in every AI tool, ready to shape the next comment I don't have time to scrutinize.
           </p>
-          <p className="text-yellow-400 mt-4">
+          <p className="text-amber-50 mt-4">
             I don't yet know what it would take to build a tool that questions its own defaults rather than just executing them more politely.
           </p>
         </section>
