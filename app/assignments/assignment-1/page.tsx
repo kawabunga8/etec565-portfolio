@@ -5,22 +5,22 @@ export default function Assignment1() {
         <a href="/" className="text-4xl font-bold text-white whitespace-nowrap hover:text-[#B4985B] transition-colors">ETEC 565</a>
         <p className="text-base text-[#B4985B] text-right max-w-2xl">Ethical, Critical, and Professional Use of Generative AI in Teaching and Learning</p>
       </header>
-      <div className="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+      <div className="border-b border-slate-200 dark:border-slate-800 bg-cover bg-center" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
         <div className="max-w-3xl mx-auto px-6 py-12">
           <div className="mb-4">
-            <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-              ETEC 565 Assignment
+            <span className="text-sm font-medium text-[#B4985B]">
+              ETEC 565 Assignment 1
             </span>
           </div>
-          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <h1 className="text-4xl font-bold text-white mb-4">
             Investigating Biases and Blind Spots in AI Systems
           </h1>
-          <p className="text-slate-600 dark:text-slate-400 mb-4">
+          <p className="text-amber-50 mb-4">
             Shingo Kawamura
           </p>
-          <div className="text-sm text-slate-600 dark:text-slate-400 mb-4">
+          <div className="text-sm text-amber-50 mb-4">
             <p>UBC Master of Educational Technology, Summer Institute</p>
-            <p className="font-medium text-slate-900 dark:text-white">Instructors: Dr. Sam McCready & Dr. Jen Jenson</p>
+            <p className="font-medium text-white">Instructors: Dr. Sam McCready & Dr. Jen Jenson</p>
           </div>
         </div>
       </div>
