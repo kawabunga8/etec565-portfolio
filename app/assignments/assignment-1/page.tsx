@@ -31,7 +31,7 @@ export default function Assignment1() {
 
       <main className="max-w-3xl mx-auto px-6 py-12 bg-black/60 rounded-lg m-6 backdrop-blur-sm">
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             Research Question
           </h2>
           <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
@@ -42,7 +42,7 @@ export default function Assignment1() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             The Experiment
           </h2>
           <p className="text-slate-700 dark:text-slate-300 mb-6">
@@ -59,12 +59,12 @@ export default function Assignment1() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             Key Findings
           </h2>
           <div className="space-y-4">
             <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
-              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
+              <h3 className="font-semibold text-yellow-400 mb-2">
                 1. The Bias Is Subtle
               </h3>
               <p className="text-slate-700 dark:text-slate-300">
@@ -73,7 +73,7 @@ export default function Assignment1() {
             </div>
 
             <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
-              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
+              <h3 className="font-semibold text-yellow-400 mb-2">
                 2. They Agree on What's "Wrong"
               </h3>
               <p className="text-slate-700 dark:text-slate-300">
@@ -82,7 +82,7 @@ export default function Assignment1() {
             </div>
 
             <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
-              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
+              <h3 className="font-semibold text-yellow-400 mb-2">
                 3. The Real Issue: Embedded Norms
               </h3>
               <p className="text-slate-700 dark:text-slate-300">
@@ -91,7 +91,7 @@ export default function Assignment1() {
             </div>
 
             <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
-              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
+              <h3 className="font-semibold text-yellow-400 mb-2">
                 4. The Stakes Scale Silently
               </h3>
               <p className="text-slate-700 dark:text-slate-300">
@@ -102,7 +102,7 @@ export default function Assignment1() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             Theoretical Framework
           </h2>
           <p className="text-slate-700 dark:text-slate-300 mb-4">
@@ -119,7 +119,7 @@ export default function Assignment1() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             What This Means
           </h2>
           <p className="text-slate-700 dark:text-slate-300 mb-4">
@@ -142,7 +142,7 @@ export default function Assignment1() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             The Harder Question
           </h2>
           <p className="text-slate-700 dark:text-slate-300">
@@ -171,7 +171,7 @@ export default function Assignment1() {
         </section>
 
         <section className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6 mb-8">
-          <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
+          <h3 className="font-semibold text-yellow-400 mb-2">
             References
           </h3>
           <ul className="text-sm text-slate-700 dark:text-slate-300 space-y-2">
