@@ -1,9 +1,9 @@
 export default function Assignment1() {
   return (
     <div className="min-h-screen bg-cover bg-center bg-fixed" style={{backgroundImage: 'url(/StockSnap_O23H6MFZTV.jpg)'}}>
-      <header className="sticky top-0 z-50 w-full bg-blue-950 flex flex-row items-center justify-between py-6 px-8">
-        <a href="/" className="text-4xl font-bold text-white whitespace-nowrap hover:text-yellow-400 transition-colors">ETEC 565</a>
-        <p className="text-base text-yellow-400 text-right max-w-2xl">Ethical, Critical, and Professional Use of Generative AI in Teaching and Learning</p>
+      <header className="sticky top-0 z-50 w-full flex flex-row items-center justify-between py-6 px-8" style={{backgroundColor: '#002145'}}>
+        <a href="/" className="text-4xl font-bold text-white whitespace-nowrap hover:text-[#B4985B] transition-colors">ETEC 565</a>
+        <p className="text-base text-[#B4985B] text-right max-w-2xl">Ethical, Critical, and Professional Use of Generative AI in Teaching and Learning</p>
       </header>
       <div className="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
         <div className="max-w-3xl mx-auto px-6 py-12">
@@ -31,7 +31,7 @@ export default function Assignment1() {
 
       <main className="max-w-3xl mx-auto px-6 py-12 bg-black/60 rounded-lg m-6 backdrop-blur-sm">
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
+          <h2 className="text-2xl font-semibold text-[#B4985B] mb-6">
             Research Question
           </h2>
           <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
@@ -42,7 +42,7 @@ export default function Assignment1() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
+          <h2 className="text-2xl font-semibold text-[#B4985B] mb-6">
             The Experiment
           </h2>
           <p className="text-amber-50 mb-6">
@@ -59,7 +59,7 @@ export default function Assignment1() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
+          <h2 className="text-2xl font-semibold text-[#B4985B] mb-6">
             Key Findings
           </h2>
           <div className="space-y-4">
@@ -102,7 +102,7 @@ export default function Assignment1() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
+          <h2 className="text-2xl font-semibold text-[#B4985B] mb-6">
             Theoretical Framework
           </h2>
           <p className="text-amber-50 mb-4">
@@ -110,16 +110,16 @@ export default function Assignment1() {
           </p>
           <div className="space-y-3 text-slate-700 dark:text-slate-300">
             <p className="text-amber-50">
-              <strong className="text-yellow-400">Coleman's "Technology of the Surround":</strong> AI systems tend to reproduce existing categorical logics rather than generate anything new. This doesn't only apply to obvious categories like race or gender—it applies to something like "what counts as a good student."
+              <strong className="text-[#B4985B]">Coleman's "Technology of the Surround":</strong> AI systems tend to reproduce existing categorical logics rather than generate anything new. This doesn't only apply to obvious categories like race or gender—it applies to something like "what counts as a good student."
             </p>
             <p className="text-amber-50">
-              <strong className="text-yellow-400">Crawford's "Atlas of AI":</strong> The polish and professionalism of AI output often masks the institutional norms and training data that shaped it. Fair-sounding output doesn't mean neutral output.
+              <strong className="text-[#B4985B]">Crawford's "Atlas of AI":</strong> The polish and professionalism of AI output often masks the institutional norms and training data that shaped it. Fair-sounding output doesn't mean neutral output.
             </p>
           </div>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
+          <h2 className="text-2xl font-semibold text-[#B4985B] mb-6">
             What This Means
           </h2>
           <p className="text-amber-50 mb-4">
@@ -130,19 +130,19 @@ export default function Assignment1() {
           </p>
           <ol className="space-y-3 text-amber-50">
             <li>
-              <strong className="text-yellow-400">1. Question the growth area:</strong> Before accepting an AI-generated comment, ask whether the "growth area" reflects a real concern for *this* student, or whether it's the tool's default script.
+              <strong className="text-[#B4985B]">1. Question the growth area:</strong> Before accepting an AI-generated comment, ask whether the "growth area" reflects a real concern for *this* student, or whether it's the tool's default script.
             </li>
             <li>
-              <strong className="text-yellow-400">2. Test edge cases:</strong> Run the same prompt with variations (a loud but less skilled student, for example) to see if the tone shifts in ways that reveal underlying assumptions.
+              <strong className="text-[#B4985B]">2. Test edge cases:</strong> Run the same prompt with variations (a loud but less skilled student, for example) to see if the tone shifts in ways that reveal underlying assumptions.
             </li>
             <li>
-              <strong className="text-yellow-400">3. Integrate bias review into formal processes:</strong> Add it to privacy reviews and policy discussions—not just as an afterthought, but as part of the legitimate scrutiny any educational tool should receive.
+              <strong className="text-[#B4985B]">3. Integrate bias review into formal processes:</strong> Add it to privacy reviews and policy discussions—not just as an afterthought, but as part of the legitimate scrutiny any educational tool should receive.
             </li>
           </ol>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
+          <h2 className="text-2xl font-semibold text-[#B4985B] mb-6">
             The Harder Question
           </h2>
           <p className="text-amber-50">
@@ -171,7 +171,7 @@ export default function Assignment1() {
         </section>
 
         <section className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6 mb-8">
-          <h3 className="font-semibold text-yellow-400 mb-2">
+          <h3 className="font-semibold text-[#B4985B] mb-2">
             References
           </h3>
           <ul className="text-sm text-slate-700 dark:text-slate-300 space-y-2">
