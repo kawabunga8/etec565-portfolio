@@ -46,9 +46,6 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <p className="text-amber-50 text-center">
-            More assignments coming as the course progresses...
-          </p>
         </div>
       </main>
     </div>
