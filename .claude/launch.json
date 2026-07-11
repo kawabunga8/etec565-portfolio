@@ -4,9 +4,8 @@
     {
       "name": "dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 3000,
-      "cwd": "/Users/shingokawamura/etec565-portfolio"
+      "runtimeArgs": ["--prefix", "/Users/shingokawamura/etec565-portfolio", "run", "dev"],
+      "port": 3000
     }
   ]
 }
