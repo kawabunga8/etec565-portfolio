@@ -141,9 +141,6 @@ export default function Assignment1() {
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
             View Full Assignment
           </h2>
-          <p className="text-slate-700 dark:text-slate-300 mb-4">
-            Read the complete analysis with all three AI-generated comments and full citations:
-          </p>
           <a
             href="https://docs.google.com/document/d/1PMAUKhsUnolJ8DywDoINR9Zll2tds8mTl_WS7WzgXtw/edit?usp=sharing"
             target="_blank"
