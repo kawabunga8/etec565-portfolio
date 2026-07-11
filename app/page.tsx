@@ -19,7 +19,7 @@ export default function Home() {
 
       <main className="max-w-4xl mx-auto px-6 py-12 bg-black/60 rounded-lg m-6 backdrop-blur-sm">
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             Assignments
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -46,6 +46,9 @@ export default function Home() {
               </a>
             ))}
           </div>
+          <p className="text-yellow-400 text-center">
+            More assignments coming as the course progresses...
+          </p>
         </div>
       </main>
     </div>
