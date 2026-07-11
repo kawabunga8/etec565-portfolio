@@ -1,18 +1,7 @@
-import Image from "next/image";
-
 export default function Assignment1() {
   return (
     <div className="min-h-screen bg-cover bg-center bg-fixed" style={{backgroundImage: 'url(/StockSnap_A3KPSZEFND.jpg)'}}>
-      <header className="w-full">
-        <Image
-          src="/etec565-banner2.png"
-          alt="ETEC 565 Ethical AI in Education"
-          width={1920}
-          height={120}
-          priority
-          className="w-full h-auto"
-        />
-      </header>
+      <header className="w-full h-32 bg-blue-950"></header>
       <div className="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
         <div className="max-w-3xl mx-auto px-6 py-12">
           <div className="mb-4">

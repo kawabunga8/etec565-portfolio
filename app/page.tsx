@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   const assignments = [
     {
@@ -14,16 +12,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-cover bg-center bg-fixed" style={{backgroundImage: 'url(/StockSnap_A3KPSZEFND.jpg)'}}>
-      <header className="w-full">
-        <Image
-          src="/etec565-banner2.png"
-          alt="ETEC 565 Ethical AI in Education"
-          width={1920}
-          height={120}
-          priority
-          className="w-full h-auto"
-        />
-      </header>
+      <header className="w-full h-32 bg-blue-950"></header>
 
       <main className="max-w-4xl mx-auto px-6 py-12">
         <div className="mb-8">
