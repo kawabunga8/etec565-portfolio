@@ -28,7 +28,7 @@ export default function Assignment1() {
         </div>
       </div>
 
-      <main className="max-w-3xl mx-auto px-6 py-12">
+      <main className="max-w-3xl mx-auto px-6 py-12 bg-black/60 rounded-lg m-6 backdrop-blur-sm">
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
             Research Question

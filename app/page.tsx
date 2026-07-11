@@ -16,7 +16,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-white">ETEC 565</h1>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 py-12">
+      <main className="max-w-4xl mx-auto px-6 py-12 bg-black/60 rounded-lg m-6 backdrop-blur-sm">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
             Assignments
