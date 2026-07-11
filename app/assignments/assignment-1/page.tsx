@@ -130,13 +130,13 @@ export default function Assignment1() {
           </p>
           <ol className="space-y-3 text-amber-50">
             <li>
-              <strong className="text-slate-900 dark:text-white">1. Question the growth area:</strong> Before accepting an AI-generated comment, ask whether the "growth area" reflects a real concern for *this* student, or whether it's the tool's default script.
+              <strong className="text-yellow-400">1. Question the growth area:</strong> Before accepting an AI-generated comment, ask whether the "growth area" reflects a real concern for *this* student, or whether it's the tool's default script.
             </li>
             <li>
-              <strong className="text-slate-900 dark:text-white">2. Test edge cases:</strong> Run the same prompt with variations (a loud but less skilled student, for example) to see if the tone shifts in ways that reveal underlying assumptions.
+              <strong className="text-yellow-400">2. Test edge cases:</strong> Run the same prompt with variations (a loud but less skilled student, for example) to see if the tone shifts in ways that reveal underlying assumptions.
             </li>
             <li>
-              <strong className="text-slate-900 dark:text-white">3. Integrate bias review into formal processes:</strong> Add it to privacy reviews and policy discussions—not just as an afterthought, but as part of the legitimate scrutiny any educational tool should receive.
+              <strong className="text-yellow-400">3. Integrate bias review into formal processes:</strong> Add it to privacy reviews and policy discussions—not just as an afterthought, but as part of the legitimate scrutiny any educational tool should receive.
             </li>
           </ol>
         </section>
