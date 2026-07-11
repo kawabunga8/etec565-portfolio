@@ -1,6 +1,6 @@
 export default function Assignment1() {
   return (
-    <div className="min-h-screen bg-cover bg-center bg-fixed" style={{backgroundImage: 'url(/StockSnap_CWJQPL0YCQ.jpg)'}}>
+    <div className="min-h-screen bg-cover bg-center bg-fixed" style={{backgroundImage: 'url(/StockSnap_O23H6MFZTV.jpg)'}}>
       <header className="sticky top-0 z-50 w-full bg-blue-950 flex flex-row items-center justify-between py-6 px-8">
         <a href="/" className="text-4xl font-bold text-white whitespace-nowrap hover:text-yellow-400 transition-colors">ETEC 565</a>
         <p className="text-base text-yellow-400 text-right max-w-2xl">Ethical, Critical, and Professional Use of Generative AI in Teaching and Learning</p>
