@@ -29,7 +29,7 @@ export default function Assignment1() {
         </div>
       </div>
 
-      <main className="max-w-3xl mx-auto px-6 py-12 rounded-lg m-6 backdrop-blur-sm bg-cover bg-center" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
+      <main className="max-w-3xl mx-auto px-6 py-12 bg-black/60 rounded-lg m-6 backdrop-blur-sm">
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             Research Question
@@ -63,7 +63,7 @@ export default function Assignment1() {
             Key Findings
           </h2>
           <div className="space-y-4">
-            <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
+            <div className="bg-cover bg-center rounded-lg border border-slate-200 dark:border-slate-800 p-6" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
               <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">
                 1. The Bias Is Subtle
               </h3>
@@ -72,7 +72,7 @@ export default function Assignment1() {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
+            <div className="bg-cover bg-center rounded-lg border border-slate-200 dark:border-slate-800 p-6" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
               <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">
                 2. They Agree on What's "Wrong"
               </h3>
@@ -81,7 +81,7 @@ export default function Assignment1() {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
+            <div className="bg-cover bg-center rounded-lg border border-slate-200 dark:border-slate-800 p-6" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
               <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">
                 3. The Real Issue: Embedded Norms
               </h3>
@@ -90,7 +90,7 @@ export default function Assignment1() {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6">
+            <div className="bg-cover bg-center rounded-lg border border-slate-200 dark:border-slate-800 p-6" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
               <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">
                 4. The Stakes Scale Silently
               </h3>
@@ -153,7 +153,7 @@ export default function Assignment1() {
           </p>
         </section>
 
-        <section className="mb-12 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-8">
+        <section className="mb-12 bg-cover bg-center rounded-lg border border-slate-200 dark:border-slate-800 p-8" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
             View Full Assignment
           </h2>

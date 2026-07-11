@@ -17,7 +17,7 @@ export default function Home() {
         <p className="text-base text-yellow-400 text-right max-w-2xl">Ethical, Critical, and Professional Use of Generative AI in Teaching and Learning</p>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 py-12 rounded-lg m-6 backdrop-blur-sm bg-cover bg-center" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
+      <main className="max-w-4xl mx-auto px-6 py-12 bg-black/60 rounded-lg m-6 backdrop-blur-sm">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-yellow-400 mb-6">
             Assignments
@@ -27,7 +27,8 @@ export default function Home() {
               <a
                 key={assignment.id}
                 href={assignment.slug ? `/assignments/${assignment.slug}` : "#"}
-                className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-6 hover:shadow-lg transition-shadow hover:border-blue-300 dark:hover:border-blue-700 group"
+                className="bg-cover bg-center rounded-lg border border-slate-200 dark:border-slate-800 p-6 hover:shadow-lg transition-shadow hover:border-blue-300 dark:hover:border-blue-700 group"
+                style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}
               >
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {assignment.title}
