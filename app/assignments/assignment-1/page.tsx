@@ -161,10 +161,11 @@ export default function Assignment1() {
             Read the complete analysis with all three AI-generated comments and full citations:
           </p>
           <a
-            href="https://docs.google.com/document/d/1FI5_r0pXjKs-VwDqV68VGhxFDenCNwTdri8zONch8ZQ/edit?usp=sharing"
+            href="https://docs.google.com/document/d/1PMAUKhsUnolJ8DywDoINR9Zll2tds8mTl_WS7WzgXtw/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-950 hover:bg-blue-900 text-white font-medium rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 hover:opacity-90 text-white font-medium rounded-lg transition-colors"
+            style={{backgroundColor: '#002145'}}
           >
             📄 View Full Document
           </a>
