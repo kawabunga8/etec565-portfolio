@@ -8,6 +8,14 @@ export default function Home() {
       status: "Completed",
       date: "Summer 2026",
     },
+    {
+      id: 2,
+      slug: "assignment-2",
+      title: "Evaluation Heuristic and Testing",
+      description: "Can AI help me know my students better? An evaluation framework for GenAI-assisted reading of student self-reflections, tested against four obfuscated reflections.",
+      status: "In Progress",
+      date: "Summer 2026",
+    },
   ];
 
   return (
