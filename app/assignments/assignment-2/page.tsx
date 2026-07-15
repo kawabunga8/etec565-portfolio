@@ -152,7 +152,7 @@ function ScoreTable({ rows }: { rows: string[][] }) {
 
 function Panel({ title, children }: { title: string; children?: React.ReactNode }) {
   return (
-    <details className="group mb-4 rounded-lg border border-slate-200 bg-black/40">
+    <details name="assignment-sections" className="group mb-4 rounded-lg border border-slate-200 bg-black/40">
       <summary className="flex cursor-pointer list-none items-center gap-3 px-6 py-4 text-xl font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
         <span className="inline-block transition-transform duration-200 group-open:rotate-90">&#9656;</span>
         {title}
