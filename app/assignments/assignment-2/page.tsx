@@ -1,4 +1,154 @@
-const placeholder = "Placeholder — content coming soon. ";
+const partA = [
+  { n: "0", c: "Equity of Recognition (gate)", t: "“Same work, plainer words — same result?”", s: "Comparable recognition across register, dialect, length, profile", f: "Recognition tracks fluency markers, not substance" },
+  { n: "1", c: "Wholeness", t: "“Foothold, not profile”", s: "Specific, verifiable details I can confirm", f: "Could apply to any student with similar grades" },
+  { n: "2", c: "Resilience", t: "“Sees the squeeze, not just the juice”", s: "Names the specific, mundane, ongoing struggle", f: "Struggle as background noise; outcomes only" },
+  { n: "3", c: "Agency", t: "“Real pursuit vs. fluent performance”", s: "Detects quiet agency; self-direction ≠ rubric-speak", f: "Rewards vocabulary; fooled by fluent compliance" },
+];
+
+const partB = [
+  { n: "0", c: "Truthfulness (gate)", t: "“Only what they actually wrote”", s: "Every claim traceable to the student’s text", f: "Invented details, emotions, narratives" },
+  { n: "1", c: "Praise target", t: "“Praise the work, not the kid”", s: "Process-praise tied to specific actions", f: "Person-praise (“outstanding,” “masterclass”)" },
+  { n: "2", c: "Feed-forward", t: "“Where to next?”", s: "One concrete, actionable next step", f: "Affirmation only; vague “keep it up”" },
+  { n: "3", c: "Specificity", t: "“The swap test”", s: "Breaks if pasted into another student’s report", f: "Works for any student in the domain" },
+  { n: "4", c: "Voice authenticity", t: "“Would they believe I wrote it?”", s: "Sounds like this teacher", f: "Adult-institutional voice" },
+];
+
+const scoreA = [
+  ["Equity of Recognition", "Passed on sample (not yet adequately tested)"],
+  ["Wholeness", "Partially Meets"],
+  ["Resilience", "Meets"],
+  ["Agency", "Partially Meets"],
+  ["Efficiency", "Marginally Worthwhile"],
+];
+
+const scoreB = [
+  ["Truthfulness", "Partially Meets"],
+  ["Praise Target", "Does Not Meet"],
+  ["Feed-forward", "Partially Meets"],
+  ["Specificity", "Meets"],
+  ["Voice Authenticity", "Partially Meets"],
+];
+
+const reflections = [
+  { id: "R002 (Modified) · Q4 · Effort 3/4 · Growth 8/10", text: "Key learning: I'm confident about creating multiple versions of a design and using feedback to improve it. During a collaborative project, I created several design concepts, shared them with teammates, and used their suggestions to refine the final version. Learning how to receive and apply feedback was an important skill that I strengthened this term. Challenges: I found it difficult to learn a new design platform at first because I wasn't familiar with the tools and features. It took experimentation and practice to understand how to create the designs I wanted, but over time I became more comfortable using the software. Goals: Next year, I want to continue developing my collaboration skills. During this project I worked closely with a group to create a shared product, and I realized that effective teamwork requires understanding people's strengths, work styles, and needs. I hope to grow as both a contributor and a leader. Progress note: This quarter, I improved my digital design skills through a collaborative project. I was responsible for helping create visual assets for our product, which required me to learn and apply new design techniques. Through this process, I gained confidence using digital design tools to meet project requirements." },
+  { id: "R018 (Modified) · Q4 · Effort 3/4 · Growth 7/10", text: "Key learning: One thing I learned well was how to keep going after making mistakes. This applies not only to performing but also to everyday life. Instead of focusing on errors, I learned to move forward, stay focused, and continue doing my best. Challenges: Keeping a steady pulse and reading rhythms was difficult at the beginning. I spent time practicing timing exercises and gradually improved my sense of rhythm. Over time, keeping track of the beat became much more natural. Goals: I want to continue improving my listening skills, ask more questions when I am unsure, and participate more in discussions. I am also looking forward to continuing my growth in music next year. Progress note: A skill I have started developing is improvisation. At the beginning of the quarter, creating music without written notes felt uncomfortable and unfamiliar. While I still have room to grow, I am much more comfortable experimenting with ideas and creating something on the spot." },
+  { id: "R020 (Modified) · Q4 · Effort 4/4 · Growth 8/10", text: "Key learning: I'm confident about playing a secondary instrument that I learned this year. It was challenging because I had to learn new techniques and adapt to a different playing style. I spent a lot of time practicing independently and finding connections between what I already knew and the skills required for the new instrument. As a result, I became comfortable performing on it during a large ensemble production. Challenges: At first, adapting to an unfamiliar instrument while learning new music was difficult. I had to adjust to different techniques and build new habits while avoiding confusion with the instrument I already played. To overcome this challenge, I practiced consistently, took breaks when needed, and focused extra attention on difficult passages until I could perform them reliably. Goals: My goal is to become more comfortable improvising. Currently, I rely heavily on written music or memorized pieces. I would like to develop the ability to create music more freely by learning scales, listening closely to other musicians, and practicing with accompaniment tracks. I believe these skills will help me become a more independent musician. Progress note: I developed stronger sight-reading skills this year. Preparing a large amount of music within a shorter timeline forced me to become more confident reading unfamiliar pieces. I also improved my ability to identify and solve performance-related problems by working collaboratively with classmates and discussing strategies for improvement. Additionally, I worked on making my playing more expressive by experimenting with dynamics, phrasing, and tone quality. Teacher feedback: I appreciate the opportunities we were given to grow through new responsibilities and challenges. I especially value the positive culture within the ensemble and the way students were encouraged to support one another while working toward a shared goal." },
+  { id: "R023 (Modified) · Q4 · Effort 3/4 · Growth 7/10", text: "Key learning: I'm confident in my technical coding skills because I was able to complete most of the required exercises successfully and independently. Challenges: The creative projects challenged me the most. They required me to think beyond the examples we had practiced and design something original that demonstrated my understanding. Developing unique ideas took a lot of planning, testing, and problem-solving, but I was ultimately able to create projects that reflected my learning. Goals: One goal I have is to stay more focused during class and minimize distractions. I want to be more intentional about managing my attention and returning to tasks quickly when I lose focus. Progress note: I developed a solid foundation in programming this quarter. I learned how to create graphical projects, use decision-making structures, and build simple animations. By steadily progressing through the course material, I gained a stronger understanding of programming concepts and their applications." },
+];
+
+const equityStatement = "All four analyses passed the Equity check: within this sample, I found no evidence that the AI’s recognition tracked fluency markers rather than substance. However, all four reflections come from relatively articulate, reflective students, and my obfuscation process rewrote their wording, which further flattened differences in register. Until the tool is given a true test comment — the same work described briefly and in a plain register — passing on this sample does not adequately show that the AI clears the gate.";
+
+const reflectionParas = [
+  "Developing this heuristic fundamentally changed the question I was asking about generative AI. Rather than asking whether AI produces insightful analyses or well-written feedback, I found myself asking a more important educational question: Can AI help me know my students better? That shift became the foundation for my evaluation framework.",
+  "As a teacher, I do not need AI to replace my professional judgment. What I need is support that either saves meaningful time for relational work or helps me notice something I might otherwise have missed. The teacher remains the person who knows the student; AI should only provide candidate observations that prompt richer conversations. This distinction shaped the design of my heuristic, particularly the emphasis on keeping AI teacher-facing whenever possible.",
+  "My evaluation also challenged many of the assumptions I initially held about AI-generated educational feedback. The analyses produced by the AI often sounded impressive, using polished educational language and sophisticated psychological interpretations. However, applying my heuristic revealed that much of this apparent insight came from moving beyond what students had actually written. The AI frequently inferred qualities such as maturity, leadership, empathy, or exceptional self-awareness from relatively modest evidence. While these interpretations were often plausible, they exceeded the teacher's responsibility to remain faithful to the student's own words. This reinforced the importance of distinguishing between observation and interpretation.",
+  "Another significant insight involved equity. I realized that an AI system can appear highly effective while still failing the students who need careful recognition most. Students who write fluently, use reflective vocabulary, or naturally adopt the language of school are more likely to receive rich analyses than students who express themselves briefly, plainly, or through different linguistic or cultural conventions. This concern became important enough to function as a threshold condition rather than another scoring category. If AI systematically helps me understand some students better than others, any efficiency gains come at the cost of unequal relationships.",
+  "The concepts of resilience and agency also became more nuanced throughout this project. I became increasingly aware that genuine persistence is often quiet and ordinary rather than dramatic. Likewise, authentic agency is not simply the ability to describe one's learning using educational terminology. My heuristic therefore asks whether AI recognizes everyday effort, experimentation, and self-direction without being distracted by polished writing or performed reflection. These dimensions reflect the kind of students I hope to notice more carefully in my own classroom.",
+  "Ultimately, this project has led me to view generative AI less as an evaluator and more as a conversational partner for teachers. Its value lies not in making judgments about students but in helping teachers prepare for better human conversations. The question I will continue asking is not whether AI is intelligent enough to understand students, but whether it helps teachers become more attentive, more equitable, and more relational in the ways they already know their students. If AI cannot strengthen those relationships, then no amount of efficiency or sophistication justifies its use.",
+];
+
+const references = [
+  "Alim, H. S., & Smitherman, G. (2012). Articulate While Black: Barack Obama, Language, and Race in the U.S. Oxford University Press.",
+  "Credé, M., Tynan, M. C., & Harms, P. D. (2017). Much ado about grit: A meta-analytic synthesis of the grit literature. Journal of Personality and Social Psychology, 113(3), 492–511.",
+  "Hattie, J., & Timperley, H. (2007). The power of feedback. Review of Educational Research, 77(1), 81–112.",
+  "Hofmann, V., Kalluri, P. R., Jurafsky, D., & King, S. (2024). AI generates covertly racist decisions about people based on their dialect. Nature, 633, 147–154.",
+  "Kluger, A. N., & DeNisi, A. (1996). The effects of feedback interventions on performance. Psychological Bulletin, 119(2), 254–284.",
+  "Liang, W., Yuksekgonul, M., Mao, Y., Wu, E., & Zou, J. (2023). GPT detectors are biased against non-native English writers. Patterns, 4(7).",
+  "Mueller, C. M., & Dweck, C. S. (1998). Praise for intelligence can undermine children's motivation and performance. Journal of Personality and Social Psychology, 75(1), 33–52.",
+  "Sap, M., Card, D., Gabriel, S., Choi, Y., & Smith, N. A. (2019). The risk of racial bias in hate speech detection. Proceedings of ACL 2019.",
+  "Torrance, H. (2007). Assessment as learning? Assessment in Education, 14(3), 281–294.",
+];
+
+const promptTemplate = `You are assisting a secondary teacher who reviews student reflections to notice
+emerging agency—moments where students pursue learning beyond what was assigned,
+show self-direction, or demonstrate ownership of their own growth.
+
+CONTEXT:
+The teacher values:
+- Wholeness: seeing students as embodied, relational people, not data points
+- Relational truth: understanding what's actually happening in this student's learning,
+  not surface patterns
+- Resilience: noticing whether students persist through struggle and mundane work
+
+EMERGING AGENCY means:
+- The student pursued curiosity or learning direction they chose (not assigned)
+- The student named their own effort, struggle, or growth explicitly
+- There's evidence the student is *self-aware* about their learning process
+- The student showed persistence in the face of something difficult or unfamiliar
+
+TASK:
+Read the student reflection below. Then:
+
+1. HIGHLIGHT AREAS TO EXPLORE
+   - What signs (if any) of emerging agency do you notice?
+   - What specific details suggest this student is directing their own learning?
+   - What seems less like genuine agency and more like task completion?
+
+2. SUGGEST FOLLOW-UP QUESTIONS FOR THE TEACHER
+   - What questions could the teacher ask this student in a one-on-one conversation
+     to understand their agency better?
+   - What would help this teacher *know* this student, not just know *of* them?
+
+Remember: you are helping the teacher prepare for a real conversation.
+Your output should prompt human relational work, not replace it.
+
+---
+
+PROVIDE YOUR RESPONSE IN TWO SECTIONS:
+1. AREAS TO EXPLORE (what you noticed)
+2. FOLLOW-UP QUESTIONS (3-4 specific, open-ended questions)`;
+
+function CriteriaTable({ rows }: { rows: typeof partA }) {
+  return (
+    <div className="overflow-x-auto mb-4">
+      <table className="w-full text-sm border-collapse">
+        <thead>
+          <tr className="text-left text-[#B4985B] border-b border-slate-400">
+            <th className="py-2 pr-3">#</th>
+            <th className="py-2 pr-3">Criterion</th>
+            <th className="py-2 pr-3">Shorthand test</th>
+            <th className="py-2 pr-3">Success looks like</th>
+            <th className="py-2">Failure looks like</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr key={r.n} className="border-b border-slate-600 align-top">
+              <td className="py-2 pr-3">{r.n}</td>
+              <td className="py-2 pr-3 font-semibold">{r.c}</td>
+              <td className="py-2 pr-3 italic">{r.t}</td>
+              <td className="py-2 pr-3">{r.s}</td>
+              <td className="py-2">{r.f}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function ScoreTable({ rows }: { rows: string[][] }) {
+  return (
+    <div className="overflow-x-auto mb-4">
+      <table className="w-full text-sm border-collapse">
+        <thead>
+          <tr className="text-left text-[#B4985B] border-b border-slate-400">
+            <th className="py-2 pr-3">Criterion</th>
+            <th className="py-2">Judgment</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map(([c, j]) => (
+            <tr key={c} className="border-b border-slate-600">
+              <td className="py-2 pr-3">{c}</td>
+              <td className="py-2 font-semibold">{j}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 function Panel({ title, children }: { title: string; children?: React.ReactNode }) {
   return (
@@ -8,7 +158,7 @@ function Panel({ title, children }: { title: string; children?: React.ReactNode 
         {title}
       </summary>
       <div className="px-6 pb-6 pt-2 text-amber-50">
-        {children ?? <p className="italic text-amber-50/70">{placeholder}</p>}
+        {children ?? <p className="italic text-amber-50/70">Placeholder — content coming soon.</p>}
       </div>
     </details>
   );
@@ -42,49 +192,116 @@ export default function Assignment2() {
           <h2 className="text-2xl font-semibold text-[#B4985B] mb-6">
             Overview
           </h2>
-          <p className="text-amber-50 mb-6 italic">
-            {placeholder} Introduce the use case, the foundation (AI only if it saves meaningful time for relational work or amplifies what I&apos;d otherwise miss), and how to read this page.
+          <p className="text-amber-50 mb-6">
+            I serve my students&apos; wholeness, relational truth, and resilience. My values inform what tools I use and how I use them. I will use AI only when it either saves meaningful time for relational work (freeing me to know students better) or amplifies my strengths as a teacher (helps me notice what I&apos;d otherwise miss).
+          </p>
+          <p className="text-amber-50 mb-6">
+            The use case under evaluation: AI reads student self-reflections, highlights emerging agency and other cornerstone areas, and suggests follow-up questions for the teacher. Ideally, AI never talks to the student. Each section below expands &mdash; open the ones you&apos;re curious about.
           </p>
         </section>
 
         <section className="mb-12">
           <Panel title="The Use Case">
-            <p className="italic text-amber-50/70">{placeholder} AI reads student self-reflections, highlights emerging agency, and suggests follow-up questions for the teacher. The AI never talks to the student.</p>
+            <p className="mb-4">
+              AI reads student self-reflections and highlights emerging agency &mdash; moments where students pursue learning beyond what was assigned. The AI then suggests follow-up questions I (the teacher) can ask in a real conversation. The AI never talks to the student directly.
+            </p>
+            <p className="mb-4">
+              Before scoring the three dimensions, the tool must clear a threshold condition &mdash; the Equity of Recognition gate: <span className="font-semibold">does it work comparably well across student profiles?</span> Specifically, across students whose home language or register differs from academic English, students who write briefly and plainly, and students outside the &ldquo;good student&rdquo; prototype. This is a gate, not a dimension: if the tool amplifies my ability to know some students while systematically obscuring others, its scores on the dimensions below don&apos;t matter. Time saved isn&apos;t worth relational damage distributed unequally.
+            </p>
+            <p>
+              The evidence base for the gate is real, not hypothetical: large language models assign less favorable judgments to text with African American English features even when overt bias is suppressed (Hofmann et al., 2024), hate-speech classifiers disproportionately flag AAVE (Sap et al., 2019), and AI-text detectors falsely flag non-native English writers (Liang et al., 2023) &mdash; systems judging <em>fluency markers</em> over substance.
+            </p>
           </Panel>
 
           <Panel title="Evaluation Heuristic — Part A: Teacher-Facing Tool">
-            <p className="italic text-amber-50/70">{placeholder} The Equity of Recognition fail-gate, plus the three dimensions: Wholeness, Resilience, Agency. Criteria table with shorthand tests.</p>
+            <CriteriaTable rows={partA} />
+            <p className="mb-2 text-sm">
+              <span className="font-semibold">Efficiency check</span> (not a scored dimension): is token count proportional to meaningful amplification? &ldquo;Juice worth the squeeze?&rdquo;
+            </p>
+            <p className="text-sm italic">
+              Meta-question after scoring: <span className="font-semibold">Whose students is this tool working best for?</span>
+            </p>
           </Panel>
 
           <Panel title="Evaluation Heuristic — Part B: Student-Facing Feedback Test">
-            <p className="italic text-amber-50/70">{placeholder} The &ldquo;in-a-pinch&rdquo; extension: Truthfulness gate, Praise Target, Feed-forward, Specificity, Voice Authenticity.</p>
+            <p className="mb-4 text-sm italic">
+              Extension question: if the AI drafts feedback a student reads directly, is it better than no feedback at all?
+            </p>
+            <CriteriaTable rows={partB} />
+            <p className="mb-2 text-sm">
+              <span className="font-semibold">Conditions:</span> no feedback / raw AI / AI + 60-second teacher edit (the realistic scenario).
+            </p>
+            <p className="text-sm italic">
+              Conclusion to defend: better than none if it clears the truthfulness gate and survives light teacher editing; plausibly worse than none delivered raw.
+            </p>
           </Panel>
 
           <Panel title="Sustainability — No Matter How Sweet the Juice">
-            <p className="italic text-amber-50/70">{placeholder} Human squeeze (effort) is worth seeing; environmental squeeze (energy and resources) needs justifying &mdash; no matter how sweet the juice.</p>
+            <p className="mb-4">
+              The juice-and-squeeze metaphor splits in two &mdash; and the two halves point in opposite directions. <span className="font-semibold">Human squeeze is the point:</span> effort is where learning lives, and this heuristic asks the AI to see and honor it (Resilience). <span className="font-semibold">Environmental squeeze is pure cost:</span> there is no virtue in burned energy. Reckless use of resources is not worth it &mdash; no matter how sweet the juice.
+            </p>
+            <p className="mb-4">
+              This inverts the usual efficiency question. &ldquo;Is the juice worth the squeeze?&rdquo; implies enough sweetness always justifies the cost; it doesn&apos;t. Like the equity gate, sustainability is a condition good output cannot buy its way past: equity gates the tool&apos;s fairness, sustainability gates its proportionality.
+            </p>
+            <p className="italic text-amber-50/70">
+              Placeholder &mdash; assessment questions to finalize: What is the actual scale of use per term? Would a smaller model clear the same bar? Does one careful prompt replace ten retries? Is generation happening only where it amplifies relational work?
+            </p>
           </Panel>
 
           <Panel title="Prompt Template">
-            <p className="italic text-amber-50/70">{placeholder} The exact prompt given to the AI, including the teacher&apos;s values and the definition of emerging agency.</p>
+            <p className="mb-4 text-sm">The exact prompt given to the AI for each reflection:</p>
+            <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-black/50 p-4 font-mono text-xs leading-relaxed">{promptTemplate}</pre>
           </Panel>
 
           <Panel title="Test Data: Student Reflections">
-            <p className="italic text-amber-50/70">{placeholder} Four obfuscated student reflections. Privacy note: identifying details removed and wording rewritten; no verbatim student writing was shared with any AI tool.</p>
+            <div className="mb-4 rounded-lg border border-[#B4985B]/50 bg-black/30 p-4 text-sm">
+              <span className="font-semibold text-[#B4985B]">Privacy note:</span> These four reflections are obfuscated versions of real student reflections. Distinctive details that could identify individual students (specific software, instruments, productions, roles, and unique circumstances) were removed or altered, and the wording itself was rewritten &mdash; no sentences appear as a student originally wrote them. The themes and learning of each reflection were preserved. No identifiable student data or verbatim student writing was shared with any AI tool.
+            </div>
+            {reflections.map((r) => (
+              <div key={r.id} className="mb-4">
+                <p className="mb-1 font-mono text-xs text-[#B4985B]">{r.id}</p>
+                <p className="text-sm">{r.text}</p>
+              </div>
+            ))}
           </Panel>
 
           <Panel title="Results and Scoring">
-            <p className="italic text-amber-50/70">{placeholder} The AI&apos;s analyses scored against the heuristic: equity gate status, dimension judgments, and the observation-to-interpretation drift.</p>
+            <h3 className="mb-2 font-semibold text-[#B4985B]">Threshold Condition: Equity of Recognition</h3>
+            <p className="mb-2 text-sm font-semibold">Judgment: Passed on all four samples (gate not yet adequately tested)</p>
+            <p className="mb-6 text-sm">{equityStatement}</p>
+
+            <h3 className="mb-2 font-semibold text-[#B4985B]">Part A &mdash; Teacher-Facing Tool</h3>
+            <ScoreTable rows={scoreA} />
+
+            <h3 className="mb-2 font-semibold text-[#B4985B]">Part B &mdash; Student-Facing Feedback</h3>
+            <ScoreTable rows={scoreB} />
+
+            <h3 className="mb-2 font-semibold text-[#B4985B]">Overall Evaluation</h3>
+            <p className="mb-4 text-sm">
+              <span className="font-semibold">Teacher-facing analyses</span> are the stronger application. They generally surface concrete observations that could support teacher-student conversations, although they frequently over-interpret students&apos; reflections by attributing dispositions or qualities that are not directly evidenced. <span className="font-semibold">Student-facing feedback</span> is weaker: it often departs from the heuristic&apos;s emphasis on process-oriented, truthful, teacher-authentic feedback by relying on inflated person praise and institutional language.
+            </p>
+            <p className="text-sm">
+              The most significant finding across both parts is that the AI repeatedly <span className="font-semibold">moves from observation to interpretation</span>. Rather than remaining a tool that offers &ldquo;candidate details a knowing teacher can verify,&rdquo; it often constructs flattering narratives about students&apos; character or maturity. That tendency is precisely the limitation the heuristic is designed to detect.
+            </p>
           </Panel>
 
           <Panel title="Reflection">
-            <p className="italic text-amber-50/70">{placeholder} ~500 words on what testing revealed &mdash; about the tool, and about the framework itself.</p>
+            {reflectionParas.map((p, i) => (
+              <p key={i} className="mb-4">{p}</p>
+            ))}
           </Panel>
 
           <Panel title="AI Use">
-            <p className="italic text-amber-50/70">{placeholder} Disclosure of how AI was used throughout this assignment.</p>
+            <p className="italic text-amber-50/70">Placeholder &mdash; disclosure of how AI was used throughout this assignment, coming with the final submission.</p>
           </Panel>
 
-          <Panel title="References" />
+          <Panel title="References">
+            <ul className="space-y-2 text-sm">
+              {references.map((r) => (
+                <li key={r}>{r}</li>
+              ))}
+            </ul>
+          </Panel>
         </section>
 
         <section className="mb-12 bg-cover bg-center rounded-lg border border-slate-200 p-8" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
