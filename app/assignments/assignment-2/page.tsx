@@ -405,7 +405,7 @@ export default function Assignment2() {
           </Panel>
 
           <Panel title="Heuristic Details: 'Can AI Help Me Know My Students Better?'">
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
