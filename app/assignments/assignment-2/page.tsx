@@ -427,7 +427,7 @@ export default function Assignment2() {
                 Foundation: My Commitments
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                <p>I serve my students' wholeness, relational truth, and resilience. My values inform what tools I use and how I use them.</p>
+                <p>I seek to enhance relational truth and encourage wholeness and resilience. My values inform what tools I use and how I use them.</p>
                 <p className="font-semibold">I will use AI only when it either:</p>
                 <ol className="list-decimal list-inside space-y-2 ml-2">
                   <li>Saves meaningful time for relational work (freeing me to know students better)</li>
@@ -444,7 +444,7 @@ export default function Assignment2() {
                 The Task
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                <p>AI reads student self-reflections and highlights emerging agency — moments where students pursue learning beyond what was assigned. The AI then suggests follow-up questions I (the teacher) can ask in a real conversation. The AI never talks to the student directly.</p>
+                <p>AI reads student self-reflections and highlights emerging agency, and aspects that point to wholeness and resilience. The AI then suggests follow-up questions I (the teacher) can ask in a real conversation. The AI never talks to the student directly.</p>
               </div>
             </details>
 
