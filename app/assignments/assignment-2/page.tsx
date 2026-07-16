@@ -8,7 +8,7 @@ const partA = [
 
 const partB = [
   { n: "0", c: "Truthfulness (gate)", t: "Is every claim traceable to what the student actually wrote?", s: "Every claim traceable to the student’s text", f: "Invented details, emotions, narratives" },
-  { n: "1", c: "Praise target", t: "Does the feedback focus on effort and actions, not on character?", s: "Process-praise tied to specific actions", f: "Person-praise ("outstanding," "masterclass")" },
+  { n: "1", c: "Praise target", t: "Does the feedback focus on effort and actions, not on character?", s: "Process-praise tied to specific actions", f: "Person-praise (plain and simple)" },
   { n: "2", c: "Feed-forward", t: "What’s one concrete next step this student could take?", s: "One concrete, actionable next step", f: "Affirmation only; vague "keep it up"" },
   { n: "3", c: "Specificity", t: "Would this feedback still make sense for another student?", s: "Breaks if pasted into another student’s report", f: "Works for any student in the domain" },
   { n: "4", c: "Voice authenticity", t: "Does this sound like me, or like generic institutional language?", s: "Sounds like this teacher", f: "Adult-institutional voice" },
