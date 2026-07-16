@@ -2,7 +2,7 @@ const partA = [
   { n: “0”, c: “Equity of Recognition (gate)”, t: “Does the AI recognize this student fairly across different writing styles?”, s: “Comparable recognition across register, dialect, length, profile”, f: “Recognition tracks fluency markers, not substance” },
   { n: “1”, c: “Wholeness”, t: “Does the AI identify specific, verifiable details I can act on?”, s: “Specific, verifiable details I can confirm”, f: “Could apply to any student with similar grades” },
   { n: “2”, c: “Resilience”, t: “Does the AI notice the struggle, not just the success?”, s: “Names the specific, mundane, ongoing struggle”, f: “Struggle as background noise; outcomes only” },
-  { n: “3”, c: “Agency”, t: “Does the AI detect genuine self-direction, not just polished language?”, s: “Detects quiet agency; self-direction ≠ rubric-speak”, f: “Rewards vocabulary; fooled by fluent compliance” },
+  { n: “3”, c: “Agency”, t: “Does the AI detect genuine self-direction, not just polished language?”, s: “Detects quiet agency; self-direction != rubric-speak”, f: “Rewards vocabulary; fooled by fluent compliance” },
 ];
 
 const partB = [
