@@ -328,11 +328,11 @@ export default function Assignment2() {
                 Extension question: if the AI drafts feedback a student reads directly, is it better than no feedback at all?
               </p>
               <CriteriaTable rows={partB} />
-              <p className="mb-2 text-sm mt-4">
-                <span className="font-semibold">Conditions:</span> no feedback / raw AI / AI + 60-second teacher edit (the realistic scenario).
+              <p className="mb-4 text-sm mt-4">
+                <span className="font-semibold">Three scenarios tested:</span> no feedback (baseline) / raw AI feedback (unedited) / AI feedback with light teacher editing (approximately 60 seconds—the realistic scenario).
               </p>
               <p className="text-sm italic">
-                Conclusion to defend: better than none if it clears the truthfulness gate and survives light teacher editing; plausibly worse than none delivered raw.
+                <span className="font-semibold">My finding:</span> AI-generated feedback is better than no feedback only if two conditions are met: (1) it passes the truthfulness gate—every claim must be traceable to what the student actually wrote, not invented—and (2) it receives brief teacher editing to remove generic language and sound more like me. Raw AI feedback delivered without teacher editing could plausibly be worse than no feedback, since it risks sounding institutional or containing fabricated details that undermine student trust.
               </p>
             </div>
 
