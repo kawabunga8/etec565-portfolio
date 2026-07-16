@@ -59,6 +59,25 @@ const references = [
   { authors: "Torrance, H.", year: 2007, title: "Assessment as learning?", journal: "Assessment in Education: Principles, Policy & Practice", volume: 14, issue: 3, pages: "281–294" },
 ];
 
+const methodNotes = {
+  partA: [
+    { num: 1, text: "Gate, not dimension. Equity must clear before anything else is scored — if this gate fails, scores below don't matter. A tool that amplifies my knowledge of some students while obscuring others causes unequally distributed relational damage no efficiency gain can offset." },
+    { num: 2, text: "What to test, and why. Dialect (home language variety) ≠ register (plain/brief vs. polished academic style); in Grade 10 written reflections, register and length are the likelier variables — test both (three plain sentences vs. three polished paragraphs describing the same work)." },
+    { num: 3, text: "The Wholeness paradox, named on purpose. The AI cannot know my students; only I can. Wholeness measures whether the output gives me a foothold for recognition — candidate details a knowing teacher can verify — not whether the AI itself recognizes anyone." },
+    { num: 6, text: "Grit is contested. Its predictive validity is weaker than popularly claimed and overlaps heavily with conscientiousness. Grit language can valorize grinding through when the better questions are Why is this so hard? and What support is missing?" },
+    { num: 7, text: "Criteria compliance. Schools model agency vocabulary; students learn to perform it — producing the language of the rubric rather than the learning it describes. Quiet students, or those writing in a plain register, may show agency without sounding agentive." },
+    { num: 8, text: "Hedging cuts both ways. I tried to... may reflect epistemic care or cultural norms — or genuine uncertainty and low self-efficacy. The ambiguity is the point: AI output should prompt a teacher conversation, never a conclusion." },
+  ],
+  partB: [
+    { num: 1, text: "Gate, not dimension. Truthfulness gates Part B because in student-facing feedback, fabrication reaches the student directly — and a student who reads praise for something they never wrote learns the system did not really read their work. Trust damage outlasts the feedback." },
+    { num: 4, text: "Coded praise. Words like articulate, well-organized, and sophisticated can do invisible work, rewarding how a student writes over what they are thinking." },
+    { num: 9, text: "Why truthfulness gates Part B but only cautions Part A. In the teacher-facing tool, a fabricated detail wastes my time; I am in the loop to catch it. In student-facing feedback, fabrication reaches the student directly and affects trust." },
+    { num: 10, text: "Comparison design. Better than none is not a low bar: feedback interventions decreased performance in about a third of studied cases, typically when attention went to the self rather than the task. Score the generated paragraphs against criteria the literature says predict benefit or harm." },
+    { num: 11, text: "What good feedback contains. Person-praise is associated with fragility after later setbacks; process-praise supports persistence. Effective feedback answers Where am I going? How am I going? Where to next? — affirmation-heavy paragraphs answer only the middle question." },
+    { num: 12, text: "Voice authenticity is an empirical question. Students readily distinguish institutional voice from their teacher's, and feedback perceived as automated may be discounted regardless of content — but this cannot be verified without student participants. A limitation, not a finding." },
+  ],
+};
+
 const promptTemplate = `You are assisting a secondary teacher who reviews student reflections to notice
 emerging agency—moments where students pursue learning beyond what was assigned,
 show self-direction, or demonstrate ownership of their own growth.
@@ -218,9 +237,22 @@ export default function Assignment2() {
             <p className="mb-2 text-sm">
               <span className="font-semibold">Efficiency check</span> (not a scored dimension): is token count proportional to meaningful amplification? &ldquo;Juice worth the squeeze?&rdquo;
             </p>
-            <p className="text-sm italic">
+            <p className="text-sm italic mb-4">
               Meta-question after scoring: <span className="font-semibold">Whose students is this tool working best for?</span>
             </p>
+            <details className="group mb-4 rounded-lg bg-black/40">
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] [&::-webkit-details-marker]:hidden">
+                <span className="inline-block transition-transform duration-200 group-open:rotate-90">&#9656;</span>
+                Methodological Notes
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
+                {methodNotes.partA.map((note) => (
+                  <div key={note.num} className="border-l-2 border-[#B4985B]/30 pl-3">
+                    <p><span className="font-semibold text-[#B4985B]">{note.num}.</span> {note.text}</p>
+                  </div>
+                ))}
+              </div>
+            </details>
           </Panel>
 
           <Panel title="Evaluation Heuristic — Part B: Student-Facing Feedback Test">
@@ -231,9 +263,22 @@ export default function Assignment2() {
             <p className="mb-2 text-sm">
               <span className="font-semibold">Conditions:</span> no feedback / raw AI / AI + 60-second teacher edit (the realistic scenario).
             </p>
-            <p className="text-sm italic">
+            <p className="text-sm italic mb-4">
               Conclusion to defend: better than none if it clears the truthfulness gate and survives light teacher editing; plausibly worse than none delivered raw.
             </p>
+            <details className="group mb-4 rounded-lg bg-black/40">
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] [&::-webkit-details-marker]:hidden">
+                <span className="inline-block transition-transform duration-200 group-open:rotate-90">&#9656;</span>
+                Methodological Notes
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
+                {methodNotes.partB.map((note) => (
+                  <div key={note.num} className="border-l-2 border-[#B4985B]/30 pl-3">
+                    <p><span className="font-semibold text-[#B4985B]">{note.num}.</span> {note.text}</p>
+                  </div>
+                ))}
+              </div>
+            </details>
           </Panel>
 
           <Panel title="Sustainability — No Matter How Sweet the Juice">
