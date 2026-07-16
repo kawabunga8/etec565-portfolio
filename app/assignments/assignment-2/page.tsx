@@ -1,3 +1,4 @@
+// Evaluation heuristic criteria - Part A (Teacher-facing tool)
 const partA = [
   { n: "0", c: "Equity of Recognition (gate)", t: "Does the AI recognize this student fairly across different writing styles?", s: "Comparable recognition across register, dialect, length, profile", f: "Recognition tracks fluency markers, not substance" },
   { n: "1", c: "Wholeness", t: "Does the AI identify specific, verifiable details I can act on?", s: "Specific, verifiable details I can confirm", f: "Could apply to any student with similar grades" },
