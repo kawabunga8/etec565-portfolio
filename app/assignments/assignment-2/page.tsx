@@ -605,7 +605,7 @@ export default function Assignment2() {
             <ul className="list-disc list-inside space-y-2 text-slate-200">
               <li>Gemini 3.5 Flash was used to analyze student reflections and generate the AI-produced feedback examples</li>
               <li>The heuristic, reflection, and all underlying concepts and beliefs are my own and created by me &mdash; in some cases these were expanded and reworded for clarity using AI</li>
-              <li>AI was used to test ideas, look for supporting documents, and verify some claims</li>
+              <li>AI was used to develop the test prompt, test ideas, look for supporting documents, and verify some claims</li>
               <li>AI was used to build this website</li>
               <li>Student reflections are modified from real examples</li>
             </ul>
