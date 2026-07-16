@@ -308,7 +308,7 @@ export default function Assignment2() {
 
           <Panel title="Sustainability – Is the Juice Worth the Squeeze?">
             <p className="mb-4">
-              The juice-and-squeeze metaphor splits in two &mdash; and the two halves point in opposite directions. <span className="font-semibold">Human squeeze is the point:</span> effort is where learning lives, and this heuristic asks the AI to see and honor it (Resilience). <span className="font-semibold">Environmental squeeze is pure cost:</span> there is no virtue in burned energy. Reckless use of resources is not worth it &mdash; no matter how sweet the juice.
+              Although I did not add an environmental assessment to my heuristic, I want to stress that I do believe this issue is important. As I have begun to explore the impacts, I am realizing how complex and multi-tiered the layers are. I flip the &ldquo;juice is worth the squeeze&rdquo; saying on its head. This metaphor is helpful for me as a mental picture of what I need to remember. Applied to human work, the juice may sometimes appear insignificant for the amount of effort. On the other hand, for AI work, the abundant juice seems to appear with little effort.
             </p>
             <p className="mb-4">
               When my students do hard work (squeeze), they are gaining experience, knowledge, and the muscle memory of accomplishing tasks and acquiring new skills (the juice). However, in the use of AI there is a large impact on the environment in terms of water use and energy requirements.
@@ -318,6 +318,9 @@ export default function Assignment2() {
             </p>
             <p className="mb-4">
               There is no easy way to measure energy use, and that analysis is beyond my understanding. Instead, I will use token use as a proxy for energy consumption. This creates a practical tension: I need the AI&apos;s feedback to be genuinely helpful to students, but I also need to minimize energy and token use. The key question becomes: does generating quality feedback require a high-capacity (expensive) model, or can a smaller, cheaper model do the job adequately?
+            </p>
+            <p className="mb-4">
+              For this assignment, I decided to start with Gemini 3.5 Flash, a middle-level model in terms of compute requirements. This choice directly tests the sustainability question: can quality feedback be generated at a moderate compute cost, or would a high-capacity model be necessary?
             </p>
           </Panel>
 
