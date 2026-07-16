@@ -212,13 +212,13 @@ export default function Assignment2() {
             Overview
           </h2>
           <p className="text-amber-50 mb-6">
-            I teach high school band and technology. Both are relational disciplines — they live in the space between what students can do alone and what they can do together. My job is not to evaluate students, but to know them well enough to ask what matters and to see when they&apos;re ready for the next challenge. That kind of attention is time-intensive, and it&apos;s not negotiable.
+            This project asks an important question for my practice: Can AI help me know my students better? My values inform what tools I use and how I use them. As an educator, I want my students to be whole, not fractured; connected and relational, not alone; resilient and able to persist through mundane struggle. Any tool I adopt must serve those commitments.
           </p>
           <p className="text-amber-50 mb-6">
-            So when I consider using generative AI in my classroom, I have one guiding question: <span className="italic">Does it save me meaningful time for relational work, or does it amplify what I already notice well?</span> I will not use AI to replace my judgment. I use it only if it frees me to know students better or helps me see what I&apos;d otherwise miss.
+            I designed a use case in which AI reads student self-reflections and highlights emerging agency to support my understanding and planning. Ideally, this remains a tool for the teacher—helping me know students better and preparing me for real conversations. However, there are realistic scenarios where time or circumstances might lead me to share the AI&apos;s feedback directly with a student. So I built a two-part heuristic: Part A evaluates the teacher-facing analysis; Part B tests whether that same tool&apos;s output, when shared as student feedback, still serves my commitments. Both parts share a foundation—three core dimensions: Wholeness, Resilience, and Agency.
           </p>
           <p className="text-amber-50 mb-6">
-            This evaluation tests a specific scenario: AI reads student self-reflections about their learning, highlights emerging agency and effort, and suggests follow-up questions for me to ask in a one-on-one conversation. The AI never speaks to the student directly — it&apos;s a thinking partner for me, not a feedback machine. The sections below examine whether it actually works that way, and at what cost.
+            I tested the heuristic against four composite student reflections. What follows is the heuristic itself, the test results, and my reflection on what both revealed—about the tool, and about the framework itself.
           </p>
         </section>
 
