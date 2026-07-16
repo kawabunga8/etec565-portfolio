@@ -48,7 +48,7 @@ const reflectionParas = [
   "Ultimately, this project has led me to view generative AI less as an evaluator and more as a conversational partner for teachers. Its value lies not in making judgments about students but in helping teachers prepare for better human conversations. The strongest case for AI use is when it directly amplifies relational aspects of teaching—when it helps me know students better or strengthens the human connection. A secondary but still defensible case is efficiency that frees time for relational work—time saved on routine tasks that can then go toward human connection. What I cannot justify, given the squeeze of environmental impact, are efficiencies that provide little benefit to students, or worse, harm them.",
 ];
 
-const references = [
+const footnoteReferences = [
   { authors: "Alim, H. S., & Smitherman, G.", year: 2012, title: "Articulate While Black: Barack Obama, Language, and Race in the Politics of Identity.", type: "book", publisher: "Oxford University Press." },
   { authors: "Credé, M., Tynan, M. C., & Harms, P. D.", year: 2017, title: "Much ado about grit: A meta-analytic synthesis of the relevance of grit for motivation, achievement, and retention.", type: "article", journal: "Journal of Personality and Social Psychology", volume: 113, issue: 4, pages: "492–511" },
   { authors: "Hattie, J., & Timperley, H.", year: 2007, title: "The power of feedback.", type: "article", journal: "Review of Educational Research", volume: 77, issue: 1, pages: "81–112" },
@@ -58,6 +58,12 @@ const references = [
   { authors: "Mueller, C. M., & Dweck, C. S.", year: 1998, title: "Praise for intelligence can undermine children's motivation and performance.", type: "article", journal: "Journal of Personality and Social Psychology", volume: 75, issue: 1, pages: "33–52" },
   { authors: "Sap, M., Card, D., Gabriel, S., Choi, Y., & Smith, N. A.", year: 2019, title: "The risk of racial bias in hate speech detection datasets.", type: "article", journal: "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics", volume: null, issue: null, pages: "1668–1678" },
   { authors: "Torrance, H.", year: 2007, title: "Assessment as learning? How the use of student self-assessment extends the purposes of assessment.", type: "article", journal: "Assessment in Education: Principles, Policy & Practice", volume: 14, issue: 3, pages: "281–294" },
+];
+
+const reflectionReferences = [
+  { authors: "Bucher, T.", year: 2025, title: "Beyond the hype: Reframing AI through algorithms and culture.", type: "article", journal: "Journal of Communication", volume: 75, issue: 1, pages: "81–84" },
+  { authors: "Horvath, J. C.", year: 2025, title: "The Digital Delusion: How Classroom Technology Harms Our Kids' Learning—and How to Help Them Thrive Again.", type: "book", publisher: "LME Global." },
+  { authors: "Suchman, L.", year: 2023, title: "The uncontroversial 'thingness' of AI.", type: "article", journal: "Big Data & Society", volume: null, issue: null, pages: "1–5" },
 ];
 
 const aiAnalyses = [
@@ -390,7 +396,7 @@ export default function Assignment2() {
                 Footnotes References
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                {references.map((r, idx) => (
+                {footnoteReferences.map((r, idx) => (
                   <p key={idx}>
                     {r.authors} ({r.year}). {r.title}
                     {r.type === "book" ? (
@@ -613,7 +619,7 @@ export default function Assignment2() {
 
           <Panel title="Reflection References">
             <ul className="space-y-3 text-sm">
-              {references.map((r, idx) => (
+              {reflectionReferences.map((r, idx) => (
                 <li key={idx}>
                   {r.authors} ({r.year}). {r.title}
                   {r.type === "book" ? (
