@@ -49,15 +49,9 @@ const reflectionParas = [
 ];
 
 const references = [
-  { authors: "Alim, H. S., & Smitherman, G.", year: 2012, title: "Articulate While Black: Barack Obama, Language, and Race in the U.S.", type: "book", publisher: "Oxford University Press." },
-  { authors: "Credé, M., Tynan, M. C., & Harms, P. D.", year: 2017, title: "Much ado about grit: A meta-analytic synthesis of the grit literature.", journal: "Journal of Personality and Social Psychology", volume: 113, issue: 3, pages: "492–511" },
-  { authors: "Hattie, J., & Timperley, H.", year: 2007, title: "The power of feedback.", journal: "Review of Educational Research", volume: 77, issue: 1, pages: "81–112" },
-  { authors: "Hofmann, V., Kalluri, P. R., Jurafsky, D., & King, S.", year: 2024, title: "AI generates covertly racist decisions about people based on their dialect.", journal: "Nature", volume: 633, pages: "147–154" },
-  { authors: "Kluger, A. N., & DeNisi, A.", year: 1996, title: "The effects of feedback interventions on performance.", journal: "Psychological Bulletin", volume: 119, issue: 2, pages: "254–284" },
-  { authors: "Liang, W., Yuksekgonul, M., Mao, Y., Wu, E., & Zou, J.", year: 2023, title: "GPT detectors are biased against non-native English writers.", journal: "Patterns", volume: 4, issue: 7 },
-  { authors: "Mueller, C. M., & Dweck, C. S.", year: 1998, title: "Praise for intelligence can undermine children's motivation and performance.", journal: "Journal of Personality and Social Psychology", volume: 75, issue: 1, pages: "33–52" },
-  { authors: "Sap, M., Card, D., Gabriel, S., Choi, Y., & Smith, N. A.", year: 2019, title: "The risk of racial bias in hate speech detection.", type: "conference", conference: "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL)" },
-  { authors: "Torrance, H.", year: 2007, title: "Assessment as learning?", journal: "Assessment in Education: Principles, Policy & Practice", volume: 14, issue: 3, pages: "281–294" },
+  { authors: "Bucher, T.", year: 2025, title: "Beyond the hype: Reframing AI through algorithms and culture.", journal: "Journal of Communication", volume: 75, issue: 1, pages: "81–84" },
+  { authors: "Horvath, J. C.", year: 2025, title: "The Digital Delusion: How Classroom Technology Harms Our Kids' Learning—and How to Help Them Thrive Again.", type: "book", publisher: "LME Global." },
+  { authors: "Suchman, L.", year: 2023, title: "The uncontroversial 'thingness' of AI.", journal: "Big Data & Society", volume: null, issue: null, pages: "1–5" },
 ];
 
 const aiAnalyses = [
@@ -622,6 +616,23 @@ export default function Assignment2() {
               <li>AI was used to test ideas, look for supporting documents, and verify some claims</li>
               <li>AI was used to build this website</li>
               <li>Student reflections are modified from real examples</li>
+            </ul>
+          </Panel>
+
+          <Panel title="References">
+            <ul className="space-y-3 text-sm">
+              {references.map((r, idx) => (
+                <li key={idx}>
+                  {r.authors} ({r.year}). {r.title}
+                  {r.type === "book" ? (
+                    <> <i>{r.publisher}</i></>
+                  ) : r.type === "conference" ? (
+                    <> {r.conference}.</>
+                  ) : (
+                    <> <i>{r.journal}</i>{r.volume ? `, ${r.volume}` : ""}{r.issue ? `(${r.issue})` : ""}{r.pages ? `, ${r.pages}` : ""}.</>
+                  )}
+                </li>
+              ))}
             </ul>
           </Panel>
 
