@@ -625,34 +625,6 @@ export default function Assignment2() {
             </ul>
           </Panel>
 
-          <Panel title="References">
-            <ul className="space-y-3 text-sm">
-              {references.map((r, idx) => {
-                let citation = `${r.authors} (${r.year}). ${r.title} `;
-                if (r.type === "book") {
-                  citation += `${r.publisher}`;
-                } else if (r.type === "conference") {
-                  citation += `${r.conference}.`;
-                } else {
-                  citation += `${r.journal}, ${r.volume}`;
-                  if (r.issue) citation += `(${r.issue})`;
-                  citation += `, ${r.pages}.`;
-                }
-                return (
-                  <li key={idx}>
-                    {r.authors} ({r.year}). {r.title}
-                    {r.type === "book" ? (
-                      <i>{r.publisher}</i>
-                    ) : r.type === "conference" ? (
-                      <>{r.conference}.</>
-                    ) : (
-                      <><i>{r.journal}</i>, {r.volume}{r.issue ? `(${r.issue})` : ""}{r.pages ? `, ${r.pages}` : ""}.</>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-          </Panel>
         </section>
 
         <section className="mb-12 bg-cover bg-center rounded-lg border border-slate-200 p-8" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
