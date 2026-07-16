@@ -225,13 +225,13 @@ export default function Assignment2() {
         <section className="mb-12">
           <Panel title="The Use Case">
             <p className="mb-4">
-              AI reads student self-reflections and highlights emerging agency &mdash; moments where students pursue learning beyond what was assigned. The AI then suggests follow-up questions I (the teacher) can ask in a real conversation. The AI never talks to the student directly.
+              To test this tool, I needed student reflections that would reveal whether the AI could recognize and describe student learning accurately and fairly. I used four composite student reflections — each based on real reflections from my students, modified to remove identifying details and adjust phrasing. All come from end-of-quarter self-assessments in band and technology classes.
             </p>
             <p className="mb-4">
-              Before scoring the three dimensions, the tool must clear a threshold condition &mdash; the Equity of Recognition gate: <span className="font-semibold">does it work comparably well across student profiles?</span> Specifically, across students whose home language or register differs from academic English, students who write briefly and plainly, and students outside the &ldquo;good student&rdquo; prototype. This is a gate, not a dimension: if the tool amplifies my ability to know some students while systematically obscuring others, its scores on the dimensions below don&apos;t matter. Time saved isn&apos;t worth relational damage distributed unequally.
+              The reflections follow a consistent structure: each student names one area of confident learning, describes a challenge they faced, sets a goal for the future, and notes progress made. This structure is realistic — it mirrors prompts I actually use — but the wording has been altered throughout. No sentences appear as students originally wrote them; themes and learning are preserved, not quotations.
             </p>
-            <p>
-              The evidence base for the gate is real, not hypothetical: large language models assign less favorable judgments to text with African American English features even when overt bias is suppressed (Hofmann et al., 2024), hate-speech classifiers disproportionately flag AAVE (Sap et al., 2019), and AI-text detectors falsely flag non-native English writers (Liang et al., 2023) &mdash; systems judging <em>fluency markers</em> over substance.
+            <p className="mb-4">
+              The four reflections vary in length and detail, but all come from relatively articulate, reflective students. This is actually a limitation: the Equity of Recognition gate asks whether the tool works equally well across different student profiles, including those who write plainly or briefly. To truly test this gate, I would need the same content written in two versions — one polished, one plain — to see if recognition changes with register. These four reflections alone cannot answer that question. They can show whether the tool produces reasonable analyses for reflective students, but not whether bias emerges across different writing profiles.
             </p>
           </Panel>
 
