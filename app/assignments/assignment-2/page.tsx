@@ -171,7 +171,7 @@ function ScoreTable({ rows }: { rows: string[][] }) {
 
 function Panel({ title, children }: { title: string; children?: React.ReactNode }) {
   return (
-    <details name="assignment-sections" className="group mb-4 rounded-lg bg-black/40">
+    <details name="assignment-sections" className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]">
       <summary className="flex cursor-pointer list-none items-center gap-3 px-6 py-4 text-xl font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
         <span className="inline-block transition-transform duration-200 group-open:rotate-90">&#9656;</span>
         {title}
@@ -240,7 +240,7 @@ export default function Assignment2() {
             <p className="text-sm italic mb-4">
               Meta-question after scoring: <span className="font-semibold">Whose students is this tool working best for?</span>
             </p>
-            <details className="group mb-4 rounded-lg bg-black/40">
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]">
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] [&::-webkit-details-marker]:hidden">
                 <span className="inline-block transition-transform duration-200 group-open:rotate-90">&#9656;</span>
                 Methodological Notes
@@ -266,7 +266,7 @@ export default function Assignment2() {
             <p className="text-sm italic mb-4">
               Conclusion to defend: better than none if it clears the truthfulness gate and survives light teacher editing; plausibly worse than none delivered raw.
             </p>
-            <details className="group mb-4 rounded-lg bg-black/40">
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]">
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] [&::-webkit-details-marker]:hidden">
                 <span className="inline-block transition-transform duration-200 group-open:rotate-90">&#9656;</span>
                 Methodological Notes
