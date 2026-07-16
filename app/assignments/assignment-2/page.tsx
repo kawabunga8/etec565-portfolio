@@ -612,8 +612,6 @@ export default function Assignment2() {
                   {r.authors} ({r.year}). {r.title}
                   {r.type === "book" ? (
                     <> <i>{r.publisher}</i></>
-                  ) : r.type === "conference" ? (
-                    <> {r.conference}.</>
                   ) : (
                     <> <i>{r.journal}</i>{r.volume ? `, ${r.volume}` : ""}{r.issue ? `(${r.issue})` : ""}{r.pages ? `, ${r.pages}` : ""}.</>
                   )}
