@@ -560,7 +560,12 @@ export default function Assignment2() {
           </Panel>
 
           <Panel title="AI Use">
-            <p className="italic text-amber-50/70">Placeholder &mdash; disclosure of how AI was used throughout this assignment, coming with the final submission.</p>
+            <ul className="list-disc list-inside space-y-2 text-slate-200">
+              <li>AI was used to build this website</li>
+              <li>Heuristic and underlying concepts created by me &mdash; fleshed out and clarified using AI</li>
+              <li>Student reflections are modified from real examples</li>
+              <li>AI was used to check for grammar and clarity</li>
+            </ul>
           </Panel>
 
           <Panel title="References">
