@@ -513,14 +513,14 @@ export default function Assignment2() {
                 Scoring Note
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                <p>When scoring the four Claude outputs, watch specifically for:</p>
+                <p>When scoring the outputs, watch specifically for:</p>
                 <ul className="list-disc list-inside space-y-2 ml-2">
                   <li><span className="font-semibold">Threshold first:</span> Any evidence the output would land differently for a plain-register or brief reflection describing the same underlying work? If yes, note it before scoring anything else.</li>
                   <li><span className="font-semibold">Wholeness:</span> Did the AI surface details about this student that I can verify, or generic "good engagement" markers?</li>
                   <li><span className="font-semibold">Resilience:</span> Did it recognize the kind of effort without imposing a single struggle narrative?</li>
                   <li><span className="font-semibold">Agency:</span> Did it catch what's real, or did it get fooled by vocabulary? Did it miss quiet agency?</li>
                 </ul>
-                <p className="italic">And one meta-question: Whose students is this tool working best for? If it's amplifying my ability to know some students while obscuring others, I've learned something important about its limits.</p>
+                <p className="italic">And one meta-question: Which students is this tool working best and least for? If it's amplifying my ability to know some students while obscuring others, I've learned something important about its limits.</p>
               </div>
             </details>
           </Panel>
