@@ -323,10 +323,7 @@ export default function Assignment2() {
               </p>
               <CriteriaTable rows={partB} />
               <p className="mb-4 text-sm mt-4">
-                <span className="font-semibold">Three scenarios tested:</span> no feedback (baseline) / raw AI feedback (unedited) / AI feedback with light teacher editing (approximately 60 seconds—the realistic scenario).
-              </p>
-              <p className="text-sm italic">
-                <span className="font-semibold">My finding:</span> AI-generated feedback is better than no feedback only if two conditions are met: (1) it passes the truthfulness gate—every claim must be traceable to what the student actually wrote, not invented—and (2) it receives brief teacher editing to remove generic language and sound more like me. Raw AI feedback delivered without teacher editing could plausibly be worse than no feedback, since it risks sounding institutional or containing fabricated details that undermine student trust.
+                <span className="font-semibold">Three scenarios to test:</span> no feedback (baseline) / raw AI feedback (unedited) / AI feedback with light teacher editing (approximately 60 seconds—the realistic scenario).
               </p>
             </div>
 
