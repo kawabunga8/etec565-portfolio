@@ -212,10 +212,13 @@ export default function Assignment2() {
             Overview
           </h2>
           <p className="text-amber-50 mb-6">
-            I serve my students&apos; wholeness, relational truth, and resilience. My values inform what tools I use and how I use them. I will use AI only when it either saves meaningful time for relational work (freeing me to know students better) or amplifies my strengths as a teacher (helps me notice what I&apos;d otherwise miss).
+            I teach high school band and technology. Both are relational disciplines — they live in the space between what students can do alone and what they can do together. My job is not to evaluate students, but to know them well enough to ask what matters and to see when they&apos;re ready for the next challenge. That kind of attention is time-intensive, and it&apos;s not negotiable.
           </p>
           <p className="text-amber-50 mb-6">
-            The use case under evaluation: AI reads student self-reflections, highlights emerging agency and other cornerstone areas, and suggests follow-up questions for the teacher. Ideally, AI never talks to the student. Each section below expands &mdash; open the ones you&apos;re curious about.
+            So when I consider using generative AI in my classroom, I have one guiding question: <span className="italic">Does it save me meaningful time for relational work, or does it amplify what I already notice well?</span> I will not use AI to replace my judgment. I use it only if it frees me to know students better or helps me see what I&apos;d otherwise miss.
+          </p>
+          <p className="text-amber-50 mb-6">
+            This evaluation tests a specific scenario: AI reads student self-reflections about their learning, highlights emerging agency and effort, and suggests follow-up questions for me to ask in a one-on-one conversation. The AI never speaks to the student directly — it&apos;s a thinking partner for me, not a feedback machine. The sections below examine whether it actually works that way, and at what cost.
           </p>
         </section>
 
