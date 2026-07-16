@@ -224,15 +224,15 @@ function ScoreTable({ rows }: { rows: string[][] }) {
       <table className="w-full text-sm border-collapse">
         <thead>
           <tr className="text-left text-[#B4985B] border-b border-slate-400">
-            <th className="py-2 pr-3">Criterion</th>
-            <th className="py-2 pr-3">Judgment</th>
+            <th className="py-2 pr-3 w-2/5">Criterion</th>
+            <th className="py-2 pr-3 w-3/5">Judgment</th>
           </tr>
         </thead>
         <tbody>
           {rows.map(([c, j]) => (
             <tr key={c} className="border-b border-slate-600">
-              <td className="py-2 pr-3">{c}</td>
-              <td className="py-2 pr-3 font-semibold">{j}</td>
+              <td className="py-2 pr-3 w-2/5">{c}</td>
+              <td className="py-2 pr-3 font-semibold w-3/5">{j}</td>
             </tr>
           ))}
         </tbody>
