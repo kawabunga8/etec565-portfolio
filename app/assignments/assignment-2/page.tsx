@@ -119,23 +119,27 @@ const aiAnalyses = [
   }
 ];
 
+const methodNotesPartA = `Equity of Recognition acts as a threshold condition rather than a scorable dimension. If this gate fails, the scores below don't matter — a tool that amplifies my knowledge of some students while obscuring others causes unequally distributed relational damage that no efficiency gain can offset. Testing equity requires attention to how language variation affects recognition. Dialect (home language variety) and register (plain/brief vs. polished academic style) are distinct; in Grade 10 written reflections, register and length are the likelier variables to test. The real verification would come from presenting the same content in two versions—three plain sentences vs. three polished paragraphs describing identical work—to see if the AI's recognition shifts with presentation rather than substance.
+
+The Wholeness criterion contains a paradox, named on purpose: the AI cannot know my students; only I can. Wholeness doesn't measure whether the AI "recognizes" anyone. Rather, it measures whether the output gives me, a knowing teacher, a foothold for recognition—candidate details I can verify against what I actually know about this student. The question is not "Is the AI insightful?" but "Does this output help me see something true?"
+
+Resilience and Agency both require skepticism toward common language. Grit language is contested; its predictive validity is weaker than popularly claimed, and it often valorizes grinding through when the better questions are "Why is this so hard?" and "What support is missing?" Similarly, schools model agency vocabulary, and students learn to perform it—producing the language of the rubric rather than the learning it describes. Quiet students, or those writing in a plain register, may show genuine agency without sounding agentive. The ambiguity matters: hedged language like "I tried to..." may reflect epistemic care or cultural norms, or it may reflect genuine uncertainty and low self-efficacy. The point is that AI output should prompt a teacher conversation, never a conclusion.`;
+
+const methodNotesPartB = `Truthfulness gates Part B because in student-facing feedback, fabrication reaches the student directly. A student who reads praise for something they never wrote learns the system did not really read their work—trust damage outlasts the feedback. This is why truthfulness gates Part B but only cautions Part A: in the teacher-facing tool, a fabricated detail wastes my time, but I am in the loop to catch it. In student-facing feedback, that same fabrication reaches the student directly and affects trust.
+
+What constitutes good feedback matters greatly. Words like "articulate," "well-organized," and "sophisticated" can do invisible work, rewarding how a student writes over what they are thinking. Person-praise is associated with fragility after later setbacks; process-praise supports persistence. Effective feedback answers three questions: Where am I going? How am I going? Where to next? Many AI-generated paragraphs answer only the middle question with affirmation-heavy language, missing the specificity and forward direction that supports growth.
+
+The baseline for evaluation is not "Is this perfect?" but "Is it better than none?" This is not a low bar: feedback interventions decreased performance in about a third of studied cases, typically when attention went to the student (person-praise) rather than the task (process-praise). Generated feedback should be scored against criteria the literature says predict benefit or harm, not against an imaginary ideal.
+
+Feed-forward requires concrete next steps. The feedback should suggest one specific, actionable direction the student could pursue. Generic affirmations ("keep it up") or vague encouragement lack the actionability that actually supports growth. The specificity of the next step also signals that the feedback was written for this student, not copied from a template.
+
+Specificity itself serves as a check: effective feedback should break if pasted into another student's report. If the same paragraph works equally well for any student in a domain, it's too generic to support individual growth. The phrases, observations, and next steps should be particular enough that they would seem out of place anywhere else.
+
+Voice authenticity is an empirical question with inherent limitations. Students readily distinguish institutional voice from their teacher's, and feedback perceived as automated may be discounted regardless of content quality. However, voice authenticity cannot be verified without student participants—students actually reading and responding to the feedback. This is a limitation of the heuristic, not a finding.`;
+
 const methodNotes = {
-  partA: [
-    { num: 1, text: "Gate, not dimension. Equity must clear before anything else is scored — if this gate fails, scores below don't matter. A tool that amplifies my knowledge of some students while obscuring others causes unequally distributed relational damage no efficiency gain can offset." },
-    { num: 2, text: "What to test, and why. Dialect (home language variety) ≠ register (plain/brief vs. polished academic style); in Grade 10 written reflections, register and length are the likelier variables — test both (three plain sentences vs. three polished paragraphs describing the same work)." },
-    { num: 3, text: "The Wholeness paradox, named on purpose. The AI cannot know my students; only I can. Wholeness measures whether the output gives me a foothold for recognition — candidate details a knowing teacher can verify — not whether the AI itself recognizes anyone." },
-    { num: 6, text: "Grit is contested. Its predictive validity is weaker than popularly claimed and overlaps heavily with conscientiousness. Grit language can valorize grinding through when the better questions are Why is this so hard? and What support is missing?" },
-    { num: 7, text: "Criteria compliance. Schools model agency vocabulary; students learn to perform it — producing the language of the rubric rather than the learning it describes. Quiet students, or those writing in a plain register, may show agency without sounding agentive." },
-    { num: 8, text: "Hedging cuts both ways. I tried to... may reflect epistemic care or cultural norms — or genuine uncertainty and low self-efficacy. The ambiguity is the point: AI output should prompt a teacher conversation, never a conclusion." },
-  ],
-  partB: [
-    { num: 1, text: "Gate, not dimension. Truthfulness gates Part B because in student-facing feedback, fabrication reaches the student directly — and a student who reads praise for something they never wrote learns the system did not really read their work. Trust damage outlasts the feedback." },
-    { num: 4, text: "Coded praise. Words like articulate, well-organized, and sophisticated can do invisible work, rewarding how a student writes over what they are thinking." },
-    { num: 9, text: "Why truthfulness gates Part B but only cautions Part A. In the teacher-facing tool, a fabricated detail wastes my time; I am in the loop to catch it. In student-facing feedback, fabrication reaches the student directly and affects trust." },
-    { num: 10, text: "Comparison design. Better than none is not a low bar: feedback interventions decreased performance in about a third of studied cases, typically when attention went to the self rather than the task. Score the generated paragraphs against criteria the literature says predict benefit or harm." },
-    { num: 11, text: "What good feedback contains. Person-praise is associated with fragility after later setbacks; process-praise supports persistence. Effective feedback answers Where am I going? How am I going? Where to next? — affirmation-heavy paragraphs answer only the middle question." },
-    { num: 12, text: "Voice authenticity is an empirical question. Students readily distinguish institutional voice from their teacher's, and feedback perceived as automated may be discounted regardless of content — but this cannot be verified without student participants. A limitation, not a finding." },
-  ],
+  partA: methodNotesPartA,
+  partB: methodNotesPartB,
 };
 
 const promptTemplate = `You are assisting a secondary teacher who reviews student reflections to notice
@@ -309,14 +313,32 @@ export default function Assignment2() {
             ))}
           </Panel>
 
-          <Panel title="Evaluation Heuristic — Part A: Teacher-Facing Tool">
-            <CriteriaTable rows={partA} />
-            <p className="mb-2 text-sm">
-              <span className="font-semibold">Efficiency check</span> (not a scored dimension): is token count proportional to meaningful amplification? &ldquo;Juice worth the squeeze?&rdquo;
-            </p>
-            <p className="text-sm italic mb-4">
-              Meta-question after scoring: <span className="font-semibold">Whose students is this tool working best for?</span>
-            </p>
+          <Panel title="Evaluation Heuristic: Can AI Help Me Know My Students Better?">
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-[#B4985B] mb-4">Part A: Teacher-Facing Tool</h3>
+              <CriteriaTable rows={partA} />
+              <p className="mb-2 text-sm mt-4">
+                <span className="font-semibold">Efficiency check</span> (not a scored dimension): is token count proportional to meaningful amplification? &ldquo;Juice worth the squeeze?&rdquo;
+              </p>
+              <p className="text-sm italic">
+                Meta-question after scoring: <span className="font-semibold">Whose students is this tool working best for?</span>
+              </p>
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-[#B4985B] mb-4">Part B: Student-Facing Feedback Test</h3>
+              <p className="mb-4 text-sm italic">
+                Extension question: if the AI drafts feedback a student reads directly, is it better than no feedback at all?
+              </p>
+              <CriteriaTable rows={partB} />
+              <p className="mb-2 text-sm mt-4">
+                <span className="font-semibold">Conditions:</span> no feedback / raw AI / AI + 60-second teacher edit (the realistic scenario).
+              </p>
+              <p className="text-sm italic">
+                Conclusion to defend: better than none if it clears the truthfulness gate and survives light teacher editing; plausibly worse than none delivered raw.
+              </p>
+            </div>
+
             <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -324,40 +346,77 @@ export default function Assignment2() {
                 </svg>
                 Methodological Notes
               </summary>
-              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                {methodNotes.partA.map((note) => (
-                  <div key={note.num} className="border-l-2 border-[#B4985B]/30 pl-3">
-                    <p><span className="font-semibold text-[#B4985B]">{note.num}.</span> {note.text}</p>
-                  </div>
-                ))}
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-4">
+                <div>
+                  <p className="font-semibold text-[#B4985B] mb-2">Part A</p>
+                  {methodNotes.partA.split('\n\n').map((para, i) => (
+                    <p key={i} className="mb-3">{para}</p>
+                  ))}
+                </div>
+                <div className="border-t border-[#B4985B]/30 pt-4 mt-4">
+                  <p className="font-semibold text-[#B4985B] mb-2">Part B</p>
+                  {methodNotes.partB.split('\n\n').map((para, i) => (
+                    <p key={i} className="mb-3">{para}</p>
+                  ))}
+                </div>
               </div>
             </details>
-          </Panel>
 
-          <Panel title="Evaluation Heuristic — Part B: Student-Facing Feedback Test">
-            <p className="mb-4 text-sm italic">
-              Extension question: if the AI drafts feedback a student reads directly, is it better than no feedback at all?
-            </p>
-            <CriteriaTable rows={partB} />
-            <p className="mb-2 text-sm">
-              <span className="font-semibold">Conditions:</span> no feedback / raw AI / AI + 60-second teacher edit (the realistic scenario).
-            </p>
-            <p className="text-sm italic mb-4">
-              Conclusion to defend: better than none if it clears the truthfulness gate and survives light teacher editing; plausibly worse than none delivered raw.
-            </p>
             <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-                Methodological Notes
+                Footnotes
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                {methodNotes.partB.map((note) => (
-                  <div key={note.num} className="border-l-2 border-[#B4985B]/30 pl-3">
-                    <p><span className="font-semibold text-[#B4985B]">{note.num}.</span> {note.text}</p>
-                  </div>
-                ))}
+                <p><span className="font-semibold text-[#B4985B]">1.</span> Gate, not dimension. Equity must clear before anything else is scored — if this gate fails, scores below don't matter. A tool that amplifies my knowledge of some students while obscuring others causes unequally distributed relational damage no efficiency gain can offset.</p>
+                <p><span className="font-semibold text-[#B4985B]">2.</span> What to test, and why. Dialect (home language variety) ≠ register (plain/brief vs. polished academic style); in Grade 10 written reflections, register and length are the likelier variables — test both (three plain sentences vs. three polished paragraphs describing the same work). The risk is documented: LLMs judge African American English text less favorably even when overt bias is suppressed (Hofmann et al., 2024), classifiers disproportionately flag AAVE (Sap et al., 2019), and AI-text detectors falsely flag non-native English writers (Liang et al., 2023) — systems judging fluency markers over substance.</p>
+                <p><span className="font-semibold text-[#B4985B]">3.</span> The Wholeness paradox, named on purpose. The AI cannot know my students; only I can. Wholeness measures whether the output gives me a foothold for recognition — candidate details a knowing teacher can verify — not whether the AI itself "recognizes" anyone.</p>
+                <p><span className="font-semibold text-[#B4985B]">4.</span> Coded praise. Words like "articulate," "well-organized," and "sophisticated" can do invisible work, rewarding how a student writes over what they're thinking (Alim & Smitherman, 2012).</p>
+                <p><span className="font-semibold text-[#B4985B]">5.</span> Testable hypothesis, not established finding. Because LLMs reproduce dominant narrative templates, the AI may under-recognize matter-of-fact effort ("I kept redoing it until it worked") relative to a dramatized struggle story describing the same work. My testing probes this directly.</p>
+                <p><span className="font-semibold text-[#B4985B]">6.</span> Grit is contested. Its predictive validity is weaker than popularly claimed and overlaps heavily with conscientiousness (Credé et al., 2017). Grit language can valorize grinding through when the better questions are Why is this so hard? and What support is missing?</p>
+                <p><span className="font-semibold text-[#B4985B]">7.</span> Criteria compliance. Schools model agency vocabulary; students learn to perform it — producing the language of the rubric rather than the learning it describes (Torrance, 2007). Quiet students, or those writing in a plain register, may show agency without sounding agentive.</p>
+                <p><span className="font-semibold text-[#B4985B]">8.</span> Hedging cuts both ways. "I tried to..." may reflect epistemic care or cultural norms — or genuine uncertainty and low self-efficacy. The ambiguity is the point: AI output should prompt a teacher conversation, never a conclusion.</p>
+                <p><span className="font-semibold text-[#B4985B]">9.</span> Why truthfulness gates Part B but only cautions Part A. In the teacher-facing tool, a fabricated detail wastes my time; I'm in the loop to catch it. In student-facing feedback, fabrication reaches the student directly — and a student who reads praise for something they never wrote learns the system didn't really read their work. Trust damage outlasts the feedback.</p>
+                <p><span className="font-semibold text-[#B4985B]">10.</span> Comparison design. "Better than none" is not a low bar: feedback interventions decreased performance in about a third of studied cases, typically when attention went to the self rather than the task (Kluger & DeNisi, 1996). A true "no feedback" condition can't ethically be run on real students and doesn't need to be — score the generated paragraphs against criteria the literature says predict benefit or harm.</p>
+                <p><span className="font-semibold text-[#B4985B]">11.</span> What good feedback contains. Person-praise is associated with fragility after later setbacks; process-praise supports persistence (Mueller & Dweck, 1998). Effective feedback answers Where am I going? How am I going? Where to next? (Hattie & Timperley, 2007) — affirmation-heavy paragraphs answer only the middle question.</p>
+                <p><span className="font-semibold text-[#B4985B]">12.</span> Voice authenticity is an empirical question. Students readily distinguish institutional voice from their teacher's, and feedback perceived as automated may be discounted regardless of content — but this can't be verified without student participants. A limitation, not a finding.</p>
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                References
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
+                {references.map((r, idx) => {
+                  let citation = `${r.authors} (${r.year}). ${r.title} `;
+                  if (r.type === "book") {
+                    citation += `${r.publisher}`;
+                  } else if (r.type === "conference") {
+                    citation += `${r.conference}.`;
+                  } else {
+                    citation += `${r.journal}, ${r.volume}`;
+                    if (r.issue) citation += `(${r.issue})`;
+                    citation += `, ${r.pages}.`;
+                  }
+                  return (
+                    <p key={idx}>
+                      {r.authors} ({r.year}). {r.title}
+                      {r.type === "book" ? (
+                        <> {r.publisher}</>
+                      ) : r.type === "conference" ? (
+                        <> {r.conference}.</>
+                      ) : (
+                        <> <i>{r.journal}</i>, {r.volume}{r.issue ? `(${r.issue})` : ""}{r.pages ? `, ${r.pages}` : ""}.</>
+                      )}
+                    </p>
+                  );
+                })}
               </div>
             </details>
           </Panel>
@@ -561,10 +620,11 @@ export default function Assignment2() {
 
           <Panel title="AI Use">
             <ul className="list-disc list-inside space-y-2 text-slate-200">
+              <li>Gemini 3.5 Flash was used to analyze student reflections and generate the AI-produced feedback examples</li>
+              <li>The heuristic, reflection, and all underlying concepts and beliefs are my own and created by me &mdash; in some cases these were expanded and reworded for clarity using AI</li>
+              <li>AI was used to test ideas, look for supporting documents, and verify some claims</li>
               <li>AI was used to build this website</li>
-              <li>Heuristic and underlying concepts created by me &mdash; fleshed out and clarified using AI</li>
               <li>Student reflections are modified from real examples</li>
-              <li>AI was used to check for grammar and clarity</li>
             </ul>
           </Panel>
 
