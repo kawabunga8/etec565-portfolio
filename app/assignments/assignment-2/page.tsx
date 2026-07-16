@@ -306,7 +306,7 @@ export default function Assignment2() {
             </details>
           </Panel>
 
-          <Panel title="Sustainability — No Matter How Sweet the Juice">
+          <Panel title="Sustainability – Is the Juice Worth the Squeeze?">
             <p className="mb-4">
               The juice-and-squeeze metaphor splits in two &mdash; and the two halves point in opposite directions. <span className="font-semibold">Human squeeze is the point:</span> effort is where learning lives, and this heuristic asks the AI to see and honor it (Resilience). <span className="font-semibold">Environmental squeeze is pure cost:</span> there is no virtue in burned energy. Reckless use of resources is not worth it &mdash; no matter how sweet the juice.
             </p>
