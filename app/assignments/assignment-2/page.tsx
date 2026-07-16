@@ -311,13 +311,13 @@ export default function Assignment2() {
               The juice-and-squeeze metaphor splits in two &mdash; and the two halves point in opposite directions. <span className="font-semibold">Human squeeze is the point:</span> effort is where learning lives, and this heuristic asks the AI to see and honor it (Resilience). <span className="font-semibold">Environmental squeeze is pure cost:</span> there is no virtue in burned energy. Reckless use of resources is not worth it &mdash; no matter how sweet the juice.
             </p>
             <p className="mb-4">
-              In my classroom, students do hard work &mdash; the squeeze &mdash; and they gain experience, knowledge, and the muscle memory of accomplishing tasks and acquiring new skills. That squeeze produces real juice. But when I use AI, the squeeze is environmental: water, energy, computational resources consumed by large language models. That squeeze produces no corresponding juice for my students or classroom. It is cost without return.
+              When my students do hard work (squeeze), they are gaining experience, knowledge, and the muscle memory of accomplishing tasks and acquiring new skills (the juice). However, in the use of AI there is a large impact on the environment in terms of water use and energy requirements.
             </p>
             <p className="mb-4">
-              This inverts the usual efficiency question. &ldquo;Is the juice worth the squeeze?&rdquo; implies enough sweetness always justifies the cost; it doesn&apos;t. Like the equity gate, sustainability is a condition good output cannot buy its way past: equity gates the tool&apos;s fairness, sustainability gates its proportionality.
+              Resource analysis is complex. Improvements in data centre cooling, energy efficiency, and renewable power would be welcome. But until those improvements happen at scale, I need to think critically about where and how I use these tools&mdash;whether today&apos;s environmental cost is proportional to today&apos;s classroom value.
             </p>
-            <p className="italic text-amber-50/70">
-              Placeholder &mdash; assessment questions to finalize: What is the actual scale of use per term? Would a smaller model clear the same bar? Does one careful prompt replace ten retries? Is generation happening only where it amplifies relational work?
+            <p className="mb-4">
+              There is no easy way to measure energy use, and that analysis is beyond my understanding. Instead, I will use token use as a proxy for energy consumption. This creates a practical tension: I need the AI&apos;s feedback to be genuinely helpful to students, but I also need to minimize energy and token use. The key question becomes: does generating quality feedback require a high-capacity (expensive) model, or can a smaller, cheaper model do the job adequately?
             </p>
           </Panel>
 
