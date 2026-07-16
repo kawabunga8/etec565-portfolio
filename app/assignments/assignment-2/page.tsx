@@ -243,9 +243,11 @@ export default function Assignment2() {
             <p className="text-sm italic mb-4">
               Meta-question after scoring: <span className="font-semibold">Whose students is this tool working best for?</span>
             </p>
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]">
-              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] [&::-webkit-details-marker]:hidden">
-                <span className="inline-block transition-transform duration-200 group-open:rotate-90">&#9656;</span>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
                 Methodological Notes
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
@@ -269,9 +271,11 @@ export default function Assignment2() {
             <p className="text-sm italic mb-4">
               Conclusion to defend: better than none if it clears the truthfulness gate and survives light teacher editing; plausibly worse than none delivered raw.
             </p>
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]">
-              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] [&::-webkit-details-marker]:hidden">
-                <span className="inline-block transition-transform duration-200 group-open:rotate-90">&#9656;</span>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
                 Methodological Notes
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
