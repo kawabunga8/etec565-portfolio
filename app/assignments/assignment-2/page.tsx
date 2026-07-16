@@ -248,11 +248,9 @@ export default function Assignment2() {
     <div className="min-h-screen bg-cover bg-center bg-fixed" style={{backgroundImage: 'url(/StockSnap_O23H6MFZTV.jpg)'}}>
       <div className="border-b border-slate-200 bg-cover bg-center" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
         <div className="max-w-3xl mx-auto px-6 py-12">
-          <div className="mb-4">
-            <a href="/" className="text-sm font-medium text-[#B4985B] hover:underline">
-              &larr; ETEC 565
-            </a>
-          </div>
+          <p className="text-sm text-[#B4985B] font-medium mb-2">
+            ETEC 565 Assignment 2
+          </p>
           <h1 className="text-4xl font-bold text-white mb-4">
             Evaluation Heuristic and Testing
           </h1>
