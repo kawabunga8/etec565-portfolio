@@ -384,30 +384,16 @@ export default function Assignment2() {
                 References
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                {references.map((r, idx) => {
-                  let citation = `${r.authors} (${r.year}). ${r.title} `;
-                  if (r.type === "book") {
-                    citation += `${r.publisher}`;
-                  } else if (r.type === "conference") {
-                    citation += `${r.conference}.`;
-                  } else {
-                    citation += `${r.journal}, ${r.volume}`;
-                    if (r.issue) citation += `(${r.issue})`;
-                    citation += `, ${r.pages}.`;
-                  }
-                  return (
-                    <p key={idx}>
-                      {r.authors} ({r.year}). {r.title}
-                      {r.type === "book" ? (
-                        <> {r.publisher}</>
-                      ) : r.type === "conference" ? (
-                        <> {r.conference}.</>
-                      ) : (
-                        <> <i>{r.journal}</i>, {r.volume}{r.issue ? `(${r.issue})` : ""}{r.pages ? `, ${r.pages}` : ""}.</>
-                      )}
-                    </p>
-                  );
-                })}
+                {references.map((r, idx) => (
+                  <p key={idx}>
+                    {r.authors} ({r.year}). {r.title}
+                    {r.type === "book" ? (
+                      <> {r.publisher}</>
+                    ) : (
+                      <> <i>{r.journal}</i>, {r.volume}{r.issue ? `(${r.issue})` : ""}{r.pages ? `, ${r.pages}` : ""}.</>
+                    )}
+                  </p>
+                ))}
               </div>
             </details>
           </Panel>
