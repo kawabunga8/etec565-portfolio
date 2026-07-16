@@ -59,6 +59,65 @@ const references = [
   { authors: "Torrance, H.", year: 2007, title: "Assessment as learning?", journal: "Assessment in Education: Principles, Policy & Practice", volume: 14, issue: 3, pages: "281–294" },
 ];
 
+const aiAnalyses = [
+  {
+    id: "R002",
+    explore: [
+      "Proactive Synthesis of Feedback: Rather than viewing feedback as a grading mechanism, the student actively integrated it into iterative design cycles (\"created multiple versions... used their suggestions to refine\"). This shows a mature understanding of design as a process, not a one-off task.",
+      "Relational Meta-Cognition: The student identifies a deep, sophisticated realization about collaboration: that it requires understanding \"people's strengths, work styles, and needs.\" They are thinking about human dynamics, not just project checkboxes.",
+      "Embracing Friction: When faced with an unfamiliar design platform, they didn't wait for step-by-step instruction; they relied on \"experimentation and practice\" to build comfort."
+    ],
+    questions: [
+      "\"You realized that great teamwork means understanding different people's strengths and work styles. How did you figure out your teammates' strengths during this project, and how did that change how you worked together?\"",
+      "\"When you were experimenting with that new design platform, what was one specific feature or tool you struggled with, and how did you figure out how to use it?\"",
+      "\"You mentioned learning how to receive and apply feedback. Was there a specific piece of feedback from a teammate that actually changed the entire direction of your design? What was that like?\""
+    ],
+    feedback: "Your growth as both a designer and a collaborator this quarter is outstanding. I am particularly impressed by your mature approach to the design process—creating multiple versions of your work and actively seeking out feedback to make the final product stronger is exactly what professional designers do. Even more impressive is your reflection on teamwork. Recognizing that collaboration is about understanding the unique strengths and work styles of the people around you shows incredible empathy and leadership. As you step into leadership roles next year, keep that human-centered focus; it will make you an invaluable partner on any project."
+  },
+  {
+    id: "R018",
+    explore: [
+      "Resilience as a Life Skill: The student explicitly connects musical mistakes to life outside the classroom (\"This applies not only to performing but also to everyday life\"). They are building an internal philosophy of persistence.",
+      "Stepping Into Vulnerability: Improvisation is highly intimidating for developing musicians. The student's willingness to move from feeling \"uncomfortable and unfamiliar\" to being \"comfortable experimenting\" shows genuine emotional courage and growth.",
+      "Taking Charge of Rhythm: Recognizing their difficulty with pulse, the student self-directed their learning by spending time practicing targeted timing exercises to naturally internalize the beat."
+    ],
+    questions: [
+      "\"You made a beautiful connection between moving past performance mistakes and handling everyday life. Can you share a time outside of music class where you applied that mindset of 'keeping going' after a slip-up?\"",
+      "\"Improvisation can feel like jumping without a safety net. What was the turning point this quarter where making music on the spot started to feel more like 'experimenting' and less like a mistake?\"",
+      "\"When you were working on keeping a steady pulse, what specific timing exercises or strategies did you find most helpful in making the beat feel natural to you?\""
+    ],
+    feedback: "Your reflection shows a wonderful depth of maturity, especially in how you view mistakes. Learning to move forward and maintain focus after a slip-up is one of the hardest parts of performing, and connecting that resilience to everyday life shows you are growing as a whole person, not just a musician. I am also so proud of your progress with improvisation. It takes real courage to play without written notes, and your willingness to step into that discomfort to experiment is fantastic. Keep asking questions and sharing your voice next year—your perspective is incredibly valuable to our ensemble."
+  },
+  {
+    id: "R020",
+    explore: [
+      "Transference of Knowledge: The student actively analyzed their own cognitive patterns, finding \"connections between what I already knew\" (their primary instrument) and the new secondary instrument. This is high-level, self-directed conceptual learning.",
+      "Strategic Self-Regulation: In overcoming technical hurdles, the student didn't just practice blindly; they designed their own practice strategy (\"practiced consistently, took breaks when needed, and focused extra attention on difficult passages\").",
+      "Mapping Their Own Path: Their goal to learn improvisation is highly self-structured. They have already mapped out their own learning curriculum to achieve this: learning scales, active listening, and practicing with backing tracks."
+    ],
+    questions: [
+      "\"You mentioned finding connections between your primary instrument and the new secondary one to help you learn. What was one specific technique or concept that translated perfectly from one to the other?\"",
+      "\"You've laid out a brilliant plan to learn improvisation using scales, active listening, and backing tracks. Which of those areas do you want to tackle first, and how can I help you find the right resources or tracks for it?\"",
+      "\"You spoke about taking deliberate breaks when practice got frustrating. How did you learn to recognize the difference between productive struggle and when your brain just needed a rest?\""
+    ],
+    feedback: "Your musical independence and self-awareness this quarter have been exemplary. Stepping up to learn a secondary instrument for a major production is a massive challenge, and the systematic way you approached it—making connections to your prior knowledge, practicing mindfully, and knowing when to take breaks—is a masterclass in self-directed learning. I am also thrilled by the clear roadmap you've created for your next goal of improvisation. You have an incredibly clear understanding of how you learn best. Thank you for your leadership, your dedication, and for being such a vital, supportive part of our ensemble's culture."
+  },
+  {
+    id: "R023",
+    explore: [
+      "Wrestling with Creative Agency: The student identifies a clear friction point: technical compliance was easy (\"complete most of the required exercises\"), but creative projects forced them to think beyond the template. Resolving this required genuine personal planning and problem-solving.",
+      "Vulnerability in Self-Evaluation: The student is incredibly honest about their attention span and focus (\"stay more focused... minimize distractions\"), taking personal ownership of their habits instead of blaming the environment.",
+      "Iterative Coding: Designing something original required them to go through a rigorous cycle of \"planning, testing, and problem-solving,\" indicating they pushed through the frustration of code breaking to realize their own vision."
+    ],
+    questions: [
+      "\"You mentioned that the creative projects were challenging because they forced you to think beyond the practiced examples. How did you come up with the original idea for your project, and how did it feel when it finally worked?\"",
+      "\"You were very honest about wanting to manage your focus and minimize distractions next year. What are one or two small strategies we could set up in our workspace to help you get back on track when you feel your attention drifting?\"",
+      "\"When you were in the middle of 'planning, testing, and problem-solving' on your creative project, how did you handle the moments when your code didn't work the way you expected?\""
+    ],
+    feedback: "I really appreciate the honesty and depth of your reflection this quarter. It takes a lot of self-awareness to recognize that while technical exercises might come easily, stepping into creative, original design is where the real stretch happens. The persistence you showed in planning, testing, and debugging your own unique projects is exactly what real programming is all about. Your goal to be more intentional with your focus next year is a powerful one, and I want to support you in building habits that help you protect your attention. You've built a fantastic technical foundation this quarter—I can't wait to see how you use it to bring more of your own creative ideas to life!"
+  }
+];
+
 const methodNotes = {
   partA: [
     { num: 1, text: "Gate, not dimension. Equity must clear before anything else is scored — if this gate fails, scores below don't matter. A tool that amplifies my knowledge of some students while obscuring others causes unequally distributed relational damage no efficiency gain can offset." },
@@ -342,6 +401,52 @@ export default function Assignment2() {
             <p className="text-sm">
               The most significant finding across both parts is that the AI repeatedly <span className="font-semibold">moves from observation to interpretation</span>. Rather than remaining a tool that offers &ldquo;candidate details a knowing teacher can verify,&rdquo; it often constructs flattering narratives about students&apos; character or maturity. That tendency is precisely the limitation the heuristic is designed to detect.
             </p>
+
+            <h3 className="mb-4 mt-6 font-semibold text-[#B4985B]">Detailed Analyses</h3>
+            {aiAnalyses.map((analysis) => {
+              const reflection = reflections.find(r => r.id.includes(analysis.id));
+              return (
+                <details key={analysis.id} name="detailed-analyses" className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]">
+                  <summary className="cursor-pointer p-4 font-semibold text-[#B4985B] hover:text-amber-300 flex items-center gap-2">
+                    {analysis.id}
+                    <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </summary>
+                  <div className="px-4 pb-4 pt-2 space-y-4 text-amber-50">
+                    <div>
+                      <h4 className="font-semibold text-[#B4985B] mb-2">Student Reflection</h4>
+                      <p className="text-sm">{reflection?.text}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-[#B4985B] mb-2">AI Analysis Output</h4>
+                      <div className="space-y-4 text-sm">
+                        <div className="border-l-2 border-[#B4985B]/30 pl-3">
+                          <p className="font-semibold text-[#B4985B] mb-2">Areas to Explore</p>
+                          <ul className="space-y-2">
+                            {analysis.explore.map((item, i) => (
+                              <li key={i} className="text-amber-50/90">• {item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="border-l-2 border-[#B4985B]/30 pl-3">
+                          <p className="font-semibold text-[#B4985B] mb-2">Follow-up Questions</p>
+                          <ul className="space-y-2">
+                            {analysis.questions.map((q, i) => (
+                              <li key={i} className="text-amber-50/90 italic">• {q}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="border-l-2 border-[#B4985B]/30 pl-3">
+                          <p className="font-semibold text-[#B4985B] mb-2">Feedback Paragraph</p>
+                          <p className="text-amber-50/90">{analysis.feedback}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              );
+            })}
           </Panel>
 
           <Panel title="Reflection">
