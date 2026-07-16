@@ -49,9 +49,9 @@ const reflectionParas = [
 ];
 
 const references = [
-  { authors: "Bucher, T.", year: 2025, title: "Beyond the hype: Reframing AI through algorithms and culture.", journal: "Journal of Communication", volume: 75, issue: 1, pages: "81–84" },
+  { authors: "Bucher, T.", year: 2025, title: "Beyond the hype: Reframing AI through algorithms and culture.", type: "article", journal: "Journal of Communication", volume: 75, issue: 1, pages: "81–84" },
   { authors: "Horvath, J. C.", year: 2025, title: "The Digital Delusion: How Classroom Technology Harms Our Kids' Learning—and How to Help Them Thrive Again.", type: "book", publisher: "LME Global." },
-  { authors: "Suchman, L.", year: 2023, title: "The uncontroversial 'thingness' of AI.", journal: "Big Data & Society", volume: null, issue: null, pages: "1–5" },
+  { authors: "Suchman, L.", year: 2023, title: "The uncontroversial 'thingness' of AI.", type: "article", journal: "Big Data & Society", volume: null, issue: null, pages: "1–5" },
 ];
 
 const aiAnalyses = [
