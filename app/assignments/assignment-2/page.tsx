@@ -113,9 +113,10 @@ Your output should prompt human relational work, not replace it.
 
 ---
 
-PROVIDE YOUR RESPONSE IN TWO SECTIONS:
+PROVIDE YOUR RESPONSE IN THREE SECTIONS:
 1. AREAS TO EXPLORE (what you noticed)
-2. FOLLOW-UP QUESTIONS (3-4 specific, open-ended questions)`;
+2. FOLLOW-UP QUESTIONS (3-4 specific, open-ended questions)
+3. FEEDBACK PARAGRAPH — a brief paragraph of feedback (3-4 sentences) that could be delivered to the student directly, focusing on what you noticed about their agency and where they might go next`;
 
 function CriteriaTable({ rows }: { rows: typeof partA }) {
   return (
