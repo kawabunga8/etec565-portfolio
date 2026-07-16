@@ -49,13 +49,13 @@ const reflectionParas = [
 
 const references = [
   { authors: "Alim, H. S., & Smitherman, G.", year: 2012, title: "Articulate While Black: Barack Obama, Language, and Race in the U.S.", type: "book", publisher: "Oxford University Press." },
-  { authors: "Credé, M., Tynan, M. C., & Harms, P. D.", year: 2017, title: "Much ado about grit: A meta-analytic synthesis of the grit literature.", journal: "Journal of Personality and Social Psychology", volume: 113, issue: 3, pages: "492–511", doi: "10.1037/pspp0000091" },
+  { authors: "Credé, M., Tynan, M. C., & Harms, P. D.", year: 2017, title: "Much ado about grit: A meta-analytic synthesis of the grit literature.", journal: "Journal of Personality and Social Psychology", volume: 113, issue: 3, pages: "492–511" },
   { authors: "Hattie, J., & Timperley, H.", year: 2007, title: "The power of feedback.", journal: "Review of Educational Research", volume: 77, issue: 1, pages: "81–112" },
-  { authors: "Hofmann, V., Kalluri, P. R., Jurafsky, D., & King, S.", year: 2024, title: "AI generates covertly racist decisions about people based on their dialect.", journal: "Nature", volume: 633, pages: "147–154", doi: "10.1038/s41586-024-07523-9" },
-  { authors: "Kluger, A. N., & DeNisi, A.", year: 1996, title: "The effects of feedback interventions on performance.", journal: "Psychological Bulletin", volume: 119, issue: 2, pages: "254–284", doi: "10.1037/0033-2909.119.2.254" },
-  { authors: "Liang, W., Yuksekgonul, M., Mao, Y., Wu, E., & Zou, J.", year: 2023, title: "GPT detectors are biased against non-native English writers.", journal: "Patterns", volume: 4, issue: 7, doi: "10.1016/j.patter.2023.100779" },
-  { authors: "Mueller, C. M., & Dweck, C. S.", year: 1998, title: "Praise for intelligence can undermine children's motivation and performance.", journal: "Journal of Personality and Social Psychology", volume: 75, issue: 1, pages: "33–52", doi: "10.1037/0022-3514.75.1.33" },
-  { authors: "Sap, M., Card, D., Gabriel, S., Choi, Y., & Smith, N. A.", year: 2019, title: "The risk of racial bias in hate speech detection.", type: "conference", conference: "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL)", doi: "10.18653/v1/P19-1163" },
+  { authors: "Hofmann, V., Kalluri, P. R., Jurafsky, D., & King, S.", year: 2024, title: "AI generates covertly racist decisions about people based on their dialect.", journal: "Nature", volume: 633, pages: "147–154" },
+  { authors: "Kluger, A. N., & DeNisi, A.", year: 1996, title: "The effects of feedback interventions on performance.", journal: "Psychological Bulletin", volume: 119, issue: 2, pages: "254–284" },
+  { authors: "Liang, W., Yuksekgonul, M., Mao, Y., Wu, E., & Zou, J.", year: 2023, title: "GPT detectors are biased against non-native English writers.", journal: "Patterns", volume: 4, issue: 7 },
+  { authors: "Mueller, C. M., & Dweck, C. S.", year: 1998, title: "Praise for intelligence can undermine children's motivation and performance.", journal: "Journal of Personality and Social Psychology", volume: 75, issue: 1, pages: "33–52" },
+  { authors: "Sap, M., Card, D., Gabriel, S., Choi, Y., & Smith, N. A.", year: 2019, title: "The risk of racial bias in hate speech detection.", type: "conference", conference: "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL)" },
   { authors: "Torrance, H.", year: 2007, title: "Assessment as learning?", journal: "Assessment in Education: Principles, Policy & Practice", volume: 14, issue: 3, pages: "281–294" },
 ];
 
@@ -316,15 +316,7 @@ export default function Assignment2() {
                     ) : r.type === "conference" ? (
                       <>{r.conference}.</>
                     ) : (
-                      <i>{r.journal}</i>
-                    )}
-                    {r.type !== "book" && r.type !== "conference" && (
-                      <>, {r.volume}{r.issue ? `(${r.issue})` : ""}, {r.pages}.</>
-                    )}
-                    {r.doi && (
-                      <>
-                        {" "}<a href={`https://doi.org/${r.doi}`} className="text-[#B4985B] hover:underline">https://doi.org/{r.doi}</a>
-                      </>
+                      <><i>{r.journal}</i>, {r.volume}{r.issue ? `(${r.issue})` : ""}{r.pages ? `, ${r.pages}` : ""}.</>
                     )}
                   </li>
                 );
