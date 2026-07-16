@@ -361,6 +361,113 @@ export default function Assignment2() {
             </details>
           </Panel>
 
+          <Panel title="Heuristic Details: "Can AI Help Me Know My Students Better?"">
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Foundation: My Commitments
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
+                <p>I serve my students' wholeness, relational truth, and resilience. My values inform what tools I use and how I use them.</p>
+                <p className="font-semibold">I will use AI only when it either:</p>
+                <ol className="list-decimal list-inside space-y-2 ml-2">
+                  <li>Saves meaningful time for relational work (freeing me to know students better)</li>
+                  <li>Amplifies my strengths as a teacher (helps me notice what I'd otherwise miss)</li>
+                </ol>
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                The Task
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
+                <p>AI reads student self-reflections and highlights emerging agency — moments where students pursue learning beyond what was assigned. The AI then suggests follow-up questions I (the teacher) can ask in a real conversation. The AI never talks to the student directly.</p>
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Threshold Condition: Equity of Recognition
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
+                <p>Before scoring the three dimensions, the tool must clear this gate: Does it work comparably well across student profiles? Specifically, across students whose home language or register differs from academic English, students who write briefly and plainly, and students outside the "good student" prototype.</p>
+                <p>This is a gate, not a dimension: if the tool amplifies my ability to know some students while systematically obscuring others, its scores on the dimensions below don't matter. Time saved isn't worth relational damage distributed unequally.</p>
+                <p className="italic">The evidence base here is real, not hypothetical. Large language models have been shown to exhibit dialect prejudice — assigning less favorable judgments to text with African American English features even when overt bias is suppressed (Hofmann et al., 2024, Nature). Hate-speech classifiers disproportionately flag AAVE as offensive (Sap et al., 2019), and AI-text detectors falsely flag non-native English writers at high rates (Liang et al., 2023, Patterns) — evidence that these systems often judge fluency markers rather than substance.</p>
+                <p>One distinction worth keeping straight in testing: dialect (features of a home language variety appearing in writing) and register (informal vs. academic style, brevity vs. elaboration) are different things. In a Grade 10 written reflection, register and length differences are probably the more common variable — the student who writes three plain sentences vs. the one who writes three polished paragraphs. Test for both.</p>
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Three Evaluation Dimensions
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-4">
+                <div className="border-l-2 border-[#B4985B]/30 pl-3">
+                  <p className="font-semibold text-[#B4985B] mb-2">Wholeness</p>
+                  <p className="mb-2">Does the AI surface something specific to this student — a foothold for my recognition — or does it pattern-match generically?</p>
+                  <p className="italic text-sm mb-2">A deliberate paradox, named on purpose: the AI cannot know my students; only I can. So Wholeness is not measured by whether the AI itself "recognizes" the student — it can't — but by whether its output gives me, the person who knows them, a foothold for recognition.</p>
+                  <p className="font-semibold text-sm mb-1">Success:</p> surfaces embodied, specific details that a person who knows this student can confirm and build on
+                  <p className="font-semibold text-sm mb-1 mt-1">Failure:</p> output could apply to any student with similar grades
+                </div>
+                <div className="border-l-2 border-[#B4985B]/30 pl-3">
+                  <p className="font-semibold text-[#B4985B] mb-2">Resilience</p>
+                  <p className="mb-2">Does the AI understand the quality of struggle — the mundane, ongoing effort? Or just celebrate the outcome?</p>
+                  <p className="font-semibold text-sm mb-1">Success:</p> sees the work behind the growth, names specific struggle
+                  <p className="font-semibold text-sm mb-1 mt-1">Failure:</p> treats struggle as background noise; focuses only on achievement
+                </div>
+                <div className="border-l-2 border-[#B4985B]/30 pl-3">
+                  <p className="font-semibold text-[#B4985B] mb-2">Agency</p>
+                  <p className="mb-2">Does the AI distinguish genuine self-direction from fluent agency-language? Can it detect quiet agency? Does it fall for the trap of sophisticated vocabulary disguising compliance?</p>
+                  <p className="font-semibold text-sm mb-1">Success:</p> recognizes what's real vs. performed; sees hidden agency
+                  <p className="font-semibold text-sm mb-1 mt-1">Failure:</p> rewards vocabulary; misses genuine pursuit; gets fooled by fluent compliance
+                </div>
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Additional Measure
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
+                <p><span className="font-semibold">Energy Cost:</span> Token count as a proxy for compute cost. "Is the juice worth the squeeze?" — meaningful amplification justifies the compute cost. (Equity is handled separately as the threshold condition above; this measure is strictly about efficiency.)</p>
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Scoring Note
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
+                <p>When scoring the four Claude outputs, watch specifically for:</p>
+                <ul className="list-disc list-inside space-y-2 ml-2">
+                  <li><span className="font-semibold">Threshold first:</span> Any evidence the output would land differently for a plain-register or brief reflection describing the same underlying work? If yes, note it before scoring anything else.</li>
+                  <li><span className="font-semibold">Wholeness:</span> Did the AI surface details about this student that I can verify, or generic "good engagement" markers?</li>
+                  <li><span className="font-semibold">Resilience:</span> Did it recognize the kind of effort without imposing a single struggle narrative?</li>
+                  <li><span className="font-semibold">Agency:</span> Did it catch what's real, or did it get fooled by vocabulary? Did it miss quiet agency?</li>
+                </ul>
+                <p className="italic">And one meta-question: Whose students is this tool working best for? If it's amplifying my ability to know some students while obscuring others, I've learned something important about its limits.</p>
+              </div>
+            </details>
+          </Panel>
+
           <Panel title="Sustainability – Is the Juice Worth the Squeeze?">
             <p className="mb-4">
               Although I did not add an environmental assessment to my heuristic, I want to emphasize that I do believe this issue is important. As I have begun to explore the impacts, I am realizing how complex and multi-tiered they are&mdash;hidden layers of consequence I hadn&apos;t fully considered. I flip the &ldquo;juice is worth the squeeze&rdquo; saying on its head. This metaphor is helpful for me as a mental picture of what I need to remember. Applied to human work, the juice may sometimes appear insignificant for the amount of effort. On the other hand, for AI work, the abundant juice seems to appear with little effort.
