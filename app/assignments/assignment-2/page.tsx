@@ -562,7 +562,7 @@ export default function Assignment2() {
               return (
                 <details key={analysis.id} name="detailed-analyses" className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]">
                   <summary className="cursor-pointer p-4 font-semibold text-[#B4985B] hover:text-amber-300 flex items-center gap-2">
-                    {analysis.id}
+                    Student {analysis.id}
                     <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <polyline points="9 18 15 12 9 6" />
                     </svg>
