@@ -311,6 +311,9 @@ export default function Assignment2() {
               The juice-and-squeeze metaphor splits in two &mdash; and the two halves point in opposite directions. <span className="font-semibold">Human squeeze is the point:</span> effort is where learning lives, and this heuristic asks the AI to see and honor it (Resilience). <span className="font-semibold">Environmental squeeze is pure cost:</span> there is no virtue in burned energy. Reckless use of resources is not worth it &mdash; no matter how sweet the juice.
             </p>
             <p className="mb-4">
+              In my classroom, students do hard work &mdash; the squeeze &mdash; and they gain experience, knowledge, and the muscle memory of accomplishing tasks and acquiring new skills. That squeeze produces real juice. But when I use AI, the squeeze is environmental: water, energy, computational resources consumed by large language models. That squeeze produces no corresponding juice for my students or classroom. It is cost without return.
+            </p>
+            <p className="mb-4">
               This inverts the usual efficiency question. &ldquo;Is the juice worth the squeeze?&rdquo; implies enough sweetness always justifies the cost; it doesn&apos;t. Like the equity gate, sustainability is a condition good output cannot buy its way past: equity gates the tool&apos;s fairness, sustainability gates its proportionality.
             </p>
             <p className="italic text-amber-50/70">
