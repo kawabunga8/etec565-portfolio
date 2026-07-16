@@ -387,7 +387,7 @@ export default function Assignment2() {
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-                References
+                Footnotes References
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
                 {references.map((r, idx) => (
@@ -611,7 +611,7 @@ export default function Assignment2() {
             </ul>
           </Panel>
 
-          <Panel title="References">
+          <Panel title="Reflection References">
             <ul className="space-y-3 text-sm">
               {references.map((r, idx) => (
                 <li key={idx}>
