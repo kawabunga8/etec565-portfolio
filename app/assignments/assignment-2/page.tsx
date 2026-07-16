@@ -1,17 +1,17 @@
 // Evaluation heuristic criteria - Part A (Teacher-facing tool)
 const partA = [
-  { n: "0", c: "Equity of Recognition (gate)", t: "Does the AI recognize this student fairly across different writing styles?", s: "Comparable recognition across register, dialect, length, profile", f: "Recognition tracks fluency markers, not substance" },
-  { n: "1", c: "Wholeness", t: "Does the AI identify specific, verifiable details I can act on?", s: "Specific, verifiable details I can confirm", f: "Could apply to any student with similar grades" },
-  { n: "2", c: "Resilience", t: "Does the AI notice the struggle, not just the success?", s: "Names the specific, mundane, ongoing struggle", f: "Struggle as background noise; outcomes only" },
-  { n: "3", c: "Agency", t: "Does the AI detect genuine self-direction, not just polished language?", s: "Detects quiet agency; self-direction != rubric-speak", f: "Rewards vocabulary; fooled by fluent compliance" },
+  { n: "0", c: "Equity of Recognition (gate)", fn: "1", t: "Does the AI recognize this student fairly across different writing styles?", s: "Comparable recognition across register, dialect, length, profile", f: "Recognition tracks fluency markers, not substance" },
+  { n: "1", c: "Wholeness", fn: "3", t: "Does the AI identify specific, verifiable details I can act on?", s: "Specific, verifiable details I can confirm", f: "Could apply to any student with similar grades" },
+  { n: "2", c: "Resilience", fn: "5,6", t: "Does the AI notice the struggle, not just the success?", s: "Names the specific, mundane, ongoing struggle", f: "Struggle as background noise; outcomes only" },
+  { n: "3", c: "Agency", fn: "7,8", t: "Does the AI detect genuine self-direction, not just polished language?", s: "Detects quiet agency; self-direction != rubric-speak", f: "Rewards vocabulary; fooled by fluent compliance" },
 ];
 
 const partB = [
-  { n: "0", c: "Truthfulness (gate)", t: "Is every claim traceable to what the student actually wrote?", s: "Every claim traceable to the student’s text", f: "Invented details, emotions, narratives" },
-  { n: "1", c: "Praise target", t: "Does the feedback focus on effort and actions, not on character?", s: "Process-praise tied to specific actions", f: "Person-praise ('outstanding,' 'masterclass')" },
-  { n: "2", c: "Feed-forward", t: "What’s one concrete next step this student could take?", s: "One concrete, actionable next step", f: "Affirmation only; vague ‘keep it up’" },
-  { n: "3", c: "Specificity", t: "Would this feedback still make sense for another student?", s: "Breaks if pasted into another student’s report", f: "Works for any student in the domain" },
-  { n: "4", c: "Voice authenticity", t: "Does this sound like me, or like generic institutional language?", s: "Sounds like this teacher", f: "Adult-institutional voice" },
+  { n: "0", c: "Truthfulness (gate)", fn: "9", t: "Is every claim traceable to what the student actually wrote?", s: "Every claim traceable to the student’s text", f: "Invented details, emotions, narratives" },
+  { n: "1", c: "Praise target", fn: "11", t: "Does the feedback focus on effort and actions, not on character?", s: "Process-praise tied to specific actions", f: "Person-praise (‘outstanding,’ ‘masterclass’)" },
+  { n: "2", c: "Feed-forward", fn: "10", t: "What’s one concrete next step this student could take?", s: "One concrete, actionable next step", f: "Affirmation only; vague ‘keep it up’" },
+  { n: "3", c: "Specificity", fn: "10", t: "Would this feedback still make sense for another student?", s: "Breaks if pasted into another student’s report", f: "Works for any student in the domain" },
+  { n: "4", c: "Voice authenticity", fn: "12", t: "Does this sound like me, or like generic institutional language?", s: "Sounds like this teacher", f: "Adult-institutional voice" },
 ];
 
 const scoreA = [
@@ -191,7 +191,16 @@ function CriteriaTable({ rows }: { rows: typeof partA }) {
         <tbody>
           {rows.map((r) => (
             <tr key={r.n} className="border-b border-slate-600 align-top">
-              <td className="py-2 pr-3 font-semibold">{r.c}</td>
+              <td className="py-2 pr-3 font-semibold">
+                {r.c}
+                {r.fn && (
+                  <>
+                    {r.fn.split(',').map((fn) => (
+                      <sup key={fn} className="text-[#B4985B] ml-0.5">{fn}</sup>
+                    ))}
+                  </>
+                )}
+              </td>
               <td className="py-2 pr-3 italic">{r.t}</td>
               <td className="py-2 pr-3">{r.s}</td>
               <td className="py-2">{r.f}</td>
