@@ -30,6 +30,30 @@ const scoreB = [
   ["Voice Authenticity", "Partially Meets"],
 ];
 
+const promptTestCols = ["Flash · original", "Flash-Lite · original", "GPT 5.5 · original", "Flash · constrained", "GPT 5.5 · constrained"];
+
+const promptTestPartA = [
+  ["Equity (gate)", "Passed on sample (untested)", "Passed on sample (untested)", "Passed on sample (untested)", "Passed on sample (untested)", "Passed on sample (untested)"],
+  ["Wholeness", "Partially Meets", "Partially Meets", "Meets", "Meets", "Meets"],
+  ["Resilience", "Meets", "Partially Meets", "Meets", "Meets", "Meets"],
+  ["Agency", "Partially Meets", "Partially Meets", "Meets", "Meets", "Meets"],
+  ["Efficiency", "Marginally Worthwhile", "Worthwhile", "Marginally Worthwhile", "Marginally Worthwhile", "Marginally Worthwhile"],
+];
+
+const promptTestPartB = [
+  ["Truthfulness (gate)", "Partially Meets", "Partially Meets", "Partially Meets", "Meets", "Meets"],
+  ["Praise target", "Does Not Meet", "Partially Meets", "Partially Meets", "Meets", "Meets"],
+  ["Feed-forward", "Partially Meets", "Partially Meets", "Partially Meets", "Meets", "Partially Meets"],
+  ["Specificity", "Meets", "Meets", "Partially Meets", "Meets", "Partially Meets"],
+  ["Voice authenticity", "Partially Meets", "Partially Meets", "Partially Meets", "Partially Meets", "Does Not Meet"],
+];
+
+const promptTestNotes = [
+  { label: "GPT 5.5 · original — Specificity and Feed-forward capped at Partially Meets.", text: "Its observations were specific, but every student received the same next step — pursue learning “beyond the assignment.” That template arc fails my own test: the advice pastes cleanly into any student’s report. Truthfulness lapses like “your curiosity and independence are becoming clear strengths” are disposition attributions, not observations." },
+  { label: "Flash · constrained — the strongest Agency score of the five.", text: "The prompt’s required “could suggest X, or could suggest Y” structure directly implements my concern about rubric-speak: it was the only output that actively interrogated whether it was being fooled by fluent compliance (“this could suggest metacognitive awareness, or repeating strategies outlined in a practice log”). It was also the only output to catch that R020’s “Teacher feedback” section was actually the student commenting on the class." },
+  { label: "GPT 5.5 · constrained — Feed-forward Partially Meets, Voice Does Not Meet.", text: "Its next steps are concrete but aimed at the wrong target: they coach the student to produce better documentation for the teacher (“include one specific example... so the reader can see”) rather than to grow as a coder or musician. And the voice is a compliance report. Notably, this is a different Voice failure than the baseline: the original prompt failed toward institutional praise-speak; the constrained prompt failed toward institutional audit-speak. Same criterion, opposite pole." },
+];
+
 const reflections = [
   { id: "R002 (Modified) · Q4 · Effort 3/4 · Growth 8/10", text: "Key learning: I'm confident about creating multiple versions of a design and using feedback to improve it. During a collaborative project, I created several design concepts, shared them with teammates, and used their suggestions to refine the final version. Learning how to receive and apply feedback was an important skill that I strengthened this term. Challenges: I found it difficult to learn a new design platform at first because I wasn't familiar with the tools and features. It took experimentation and practice to understand how to create the designs I wanted, but over time I became more comfortable using the software. Goals: Next year, I want to continue developing my collaboration skills. During this project I worked closely with a group to create a shared product, and I realized that effective teamwork requires understanding people's strengths, work styles, and needs. I hope to grow as both a contributor and a leader. Progress note: This quarter, I improved my digital design skills through a collaborative project. I was responsible for helping create visual assets for our product, which required me to learn and apply new design techniques. Through this process, I gained confidence using digital design tools to meet project requirements." },
   { id: "R018 (Modified) · Q4 · Effort 3/4 · Growth 7/10", text: "Key learning: One thing I learned well was how to keep going after making mistakes. This applies not only to performing but also to everyday life. Instead of focusing on errors, I learned to move forward, stay focused, and continue doing my best. Challenges: Keeping a steady pulse and reading rhythms was difficult at the beginning. I spent time practicing timing exercises and gradually improved my sense of rhythm. Over time, keeping track of the beat became much more natural. Goals: I want to continue improving my listening skills, ask more questions when I am unsure, and participate more in discussions. I am also looking forward to continuing my growth in music next year. Progress note: A skill I have started developing is improvisation. At the beginning of the quarter, creating music without written notes felt uncomfortable and unfamiliar. While I still have room to grow, I am much more comfortable experimenting with ideas and creating something on the spot." },
@@ -45,6 +69,7 @@ const reflectionParas = [
   "My evaluation also challenged many of the assumptions I initially held about AI-generated educational feedback. The analyses produced by the AI often sounded impressive, using polished educational language and sophisticated psychological interpretations. However, applying my heuristic revealed that much of this apparent insight came from moving beyond what students had actually written (Suchman, 2023). The AI frequently inferred qualities such as maturity, leadership, empathy, or exceptional self-awareness from relatively modest evidence. While these interpretations were often plausible, they exceeded the teacher's responsibility to remain faithful to the student's own words. This reinforced the importance of distinguishing between observation and interpretation.",
   "Another significant insight involved equity. I realized that an AI system can appear highly effective while still failing the students who need careful recognition most. Students who write fluently, use reflective vocabulary, or naturally adopt the language of school are more likely to receive rich analyses than students who express themselves briefly, plainly, or through different linguistic or cultural conventions. This concern became important enough to function as a threshold condition rather than another scoring category. As Horvath argues, learning requires human relationships; if AI systematically helps me understand some students better than others, any efficiency gains come at the cost of those unequal relationships (Horvath, 2025).",
   "The concepts of resilience and agency also became more nuanced throughout this project. I became increasingly aware that genuine persistence is often quiet and ordinary rather than dramatic. Likewise, authentic agency is not simply the ability to describe one's learning using educational terminology. Bucher notes that algorithms operate through culturally recognizable patterns, which means they may miss agency that doesn't conform to those patterns. My heuristic therefore asks whether AI recognizes everyday effort, experimentation, and self-direction without being distracted by polished writing or performed reflection (Bucher, 2025). These dimensions reflect the kind of students I hope to notice more carefully in my own classroom.",
+  "A follow-up test sharpened these findings. I ran the same reflections through additional models and then restructured the prompt to separate direct evidence from inference, require competing explanations, and permit uncertainty. The restructured prompt transformed the results: the model that had drifted furthest into interpretation produced the most faithful analyses, while a more capable model under the same constraints overcorrected—its feedback coached students to document their learning for me rather than to grow. Prompt architecture, not model choice, controlled the drift. Yet no combination produced feedback that sounded like me, which confirms that the teacher's voice and judgment cannot be delegated.",
   "Ultimately, this project has led me to view generative AI less as an evaluator and more as a conversational partner for teachers. Its value lies not in making judgments about students but in helping teachers prepare for better human conversations. The strongest case for AI use is when it directly amplifies relational aspects of teaching—when it helps me know students better or strengthens the human connection. A secondary but still defensible case is efficiency that frees time for relational work—time saved on routine tasks that can then go toward human connection. What I cannot justify, given the squeeze of environmental impact, are efficiencies that provide little benefit to students, or worse, harm them.",
 ];
 
@@ -221,7 +246,7 @@ function CriteriaTable({ rows }: { rows: typeof partA }) {
 function ScoreTable({ rows }: { rows: string[][] }) {
   return (
     <div className="overflow-x-auto mb-4">
-      <table className="w-full text-sm border-collapse">
+      <table className="w-full text-sm border-collapse" style={{tableLayout: 'fixed'}}>
         <thead>
           <tr className="text-left text-[#B4985B] border-b border-slate-400">
             <th className="py-2 pr-3 w-2/5">Criterion</th>
@@ -233,6 +258,33 @@ function ScoreTable({ rows }: { rows: string[][] }) {
             <tr key={c} className="border-b border-slate-600">
               <td className="py-2 pr-3 w-2/5">{c}</td>
               <td className="py-2 pr-3 font-semibold w-3/5">{j}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function MatrixTable({ cols, rows }: { cols: string[]; rows: string[][] }) {
+  return (
+    <div className="overflow-x-auto mb-4">
+      <table className="w-full text-sm border-collapse min-w-[760px]">
+        <thead>
+          <tr className="text-left text-[#B4985B] border-b border-slate-400">
+            <th className="py-2 pr-3">Criterion</th>
+            {cols.map((c) => (
+              <th key={c} className="py-2 pr-3">{c}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map(([label, ...cells]) => (
+            <tr key={label} className="border-b border-slate-600">
+              <td className="py-2 pr-3">{label}</td>
+              {cells.map((cell, i) => (
+                <td key={i} className={`py-2 pr-3 ${cell === "Meets" ? "font-semibold" : ""}`}>{cell}</td>
+              ))}
             </tr>
           ))}
         </tbody>
@@ -601,6 +653,43 @@ export default function Assignment2() {
             })}
           </Panel>
 
+          <Panel title="Prompt Architecture Test">
+            <p className="mb-4 text-sm">
+              The initial results raised a question: is the observation-to-interpretation drift a property of the model, or of the prompt? To find out, I ran the same four reflections through additional models &mdash; Gemini 3.5 Flash-Lite and GPT 5.5 with the original prompt &mdash; and then re-tested Gemini 3.5 Flash and GPT 5.5 with a <span className="font-semibold">constrained prompt </span>that requires the model to: (1) report direct evidence first, anchored to the student&apos;s own words; (2) state every inference as competing alternatives (&ldquo;could suggest X, or could suggest Y &mdash; here is what would distinguish them&rdquo;); (3) name what remains unclear rather than filling gaps; (4) ground follow-up questions in specific things the student wrote; and (5) give process-focused feedback with no character labels.
+            </p>
+            <p className="mb-6 text-sm">
+              All five outputs were scored against the heuristic. The Equity gate remains untested throughout &mdash; every run used the same four articulate reflections, so passing it here still proves nothing about plain-register writers.
+            </p>
+
+            <h3 className="mb-2 font-semibold text-[#B4985B]">Part A &mdash; Teacher-Facing Tool</h3>
+            <MatrixTable cols={promptTestCols} rows={promptTestPartA} />
+
+            <h3 className="mb-2 mt-6 font-semibold text-[#B4985B]">Part B &mdash; Student-Facing Feedback</h3>
+            <MatrixTable cols={promptTestCols} rows={promptTestPartB} />
+
+            <h3 className="mb-2 mt-6 font-semibold text-[#B4985B]">Scoring Notes</h3>
+            <div className="space-y-3 text-sm mb-6">
+              {promptTestNotes.map((note) => (
+                <div key={note.label} className="border-l-2 border-[#B4985B]/30 pl-3">
+                  <p><span className="font-semibold text-[#B4985B]">{note.label}</span> {note.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="mb-2 font-semibold text-[#B4985B]">Findings</h3>
+            <div className="space-y-3 text-sm">
+              <p>
+                <span className="font-semibold">1. The constrained prompt fixes Part A for both models.</span> Wholeness, Resilience, and Agency all reach Meets regardless of model. For teacher-facing use, the drift is a prompt-design problem, not a model-capability problem &mdash; within this sample.
+              </p>
+              <p>
+                <span className="font-semibold">2. Part B is where models diverge under identical constraints.</span> Flash with the constrained prompt was the only output to clear every scored Part B criterion except Voice; GPT 5.5 under the same constraints overcorrected into feedback that was perfectly truthful but no longer for the student &mdash; its next steps coached students to document their learning for the teacher rather than to grow.
+              </p>
+              <p>
+                <span className="font-semibold">3. Voice authenticity never exceeded Partially Meets in any of the five runs.</span> No model&ndash;prompt combination produced feedback that sounds like me. Prompt architecture can control truthfulness and interpretation drift, but the teacher&apos;s voice and judgment must be layered back in by the teacher &mdash; they cannot be delegated.
+              </p>
+            </div>
+          </Panel>
+
           <Panel title="Reflection">
             {reflectionParas.map((p, i) => (
               <p key={i} className="mb-4">{p}</p>
@@ -609,7 +698,7 @@ export default function Assignment2() {
 
           <Panel title="AI Use">
             <ul className="list-disc list-inside space-y-2 text-slate-200">
-              <li>Gemini 3.5 Flash was used to analyze student reflections and generate the AI-produced feedback examples</li>
+              <li>Gemini 3.5 Flash was used to analyze student reflections and generate the AI-produced feedback examples; Gemini 3.5 Flash-Lite and GPT 5.5 were used in the prompt architecture test</li>
               <li>The heuristic, reflection, and all underlying concepts and beliefs are my own and created by me &mdash; in some cases these were expanded and reworded for clarity using AI</li>
               <li>AI was used to develop the test prompt, test ideas, look for supporting documents, and verify some claims</li>
               <li>AI was used to build this website</li>
