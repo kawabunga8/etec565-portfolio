@@ -183,7 +183,6 @@ function CriteriaTable({ rows }: { rows: typeof partA }) {
       <table className="w-full text-sm border-collapse">
         <thead>
           <tr className="text-left text-[#B4985B] border-b border-slate-400">
-            <th className="py-2 pr-3">#</th>
             <th className="py-2 pr-3">Criterion</th>
             <th className="py-2 pr-3">Shorthand test</th>
             <th className="py-2 pr-3">Success looks like</th>
@@ -193,7 +192,6 @@ function CriteriaTable({ rows }: { rows: typeof partA }) {
         <tbody>
           {rows.map((r) => (
             <tr key={r.n} className="border-b border-slate-600 align-top">
-              <td className="py-2 pr-3">{r.n}</td>
               <td className="py-2 pr-3 font-semibold">{r.c}</td>
               <td className="py-2 pr-3 italic">{r.t}</td>
               <td className="py-2 pr-3">{r.s}</td>
