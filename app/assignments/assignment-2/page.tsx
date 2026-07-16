@@ -235,6 +235,11 @@ export default function Assignment2() {
             </p>
           </Panel>
 
+          <Panel title="Prompt Template">
+            <p className="mb-4 text-sm">The exact prompt given to the AI for each reflection:</p>
+            <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-black/50 p-4 font-mono text-xs leading-relaxed">{promptTemplate}</pre>
+          </Panel>
+
           <Panel title="Evaluation Heuristic — Part A: Teacher-Facing Tool">
             <CriteriaTable rows={partA} />
             <p className="mb-2 text-sm">
@@ -298,11 +303,6 @@ export default function Assignment2() {
             <p className="italic text-amber-50/70">
               Placeholder &mdash; assessment questions to finalize: What is the actual scale of use per term? Would a smaller model clear the same bar? Does one careful prompt replace ten retries? Is generation happening only where it amplifies relational work?
             </p>
-          </Panel>
-
-          <Panel title="Prompt Template">
-            <p className="mb-4 text-sm">The exact prompt given to the AI for each reflection:</p>
-            <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-black/50 p-4 font-mono text-xs leading-relaxed">{promptTemplate}</pre>
           </Panel>
 
           <Panel title="Test Data: Student Reflections">
