@@ -184,7 +184,7 @@ function CriteriaTable({ rows }: { rows: typeof partA }) {
         <thead>
           <tr className="text-left text-[#B4985B] border-b border-slate-400">
             <th className="py-2 pr-3">Criterion</th>
-            <th className="py-2 pr-3">Shorthand test</th>
+            <th className="py-2 pr-3">Focus Question</th>
             <th className="py-2 pr-3">Success looks like</th>
             <th className="py-2">Failure looks like</th>
           </tr>
