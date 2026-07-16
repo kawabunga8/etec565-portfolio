@@ -241,6 +241,18 @@ export default function Assignment2() {
             <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-black/50 p-4 font-mono text-xs leading-relaxed">{promptTemplate}</pre>
           </Panel>
 
+          <Panel title="Test Data: Student Reflections">
+            <div className="mb-4 rounded-lg border border-[#B4985B]/50 bg-black/30 p-4 text-sm">
+              <span className="font-semibold text-[#B4985B]">Privacy note:</span> These four reflections are obfuscated versions of real student reflections. Distinctive details that could identify individual students (specific software, instruments, productions, roles, and unique circumstances) were removed or altered, and the wording itself was rewritten &mdash; no sentences appear as a student originally wrote them. The themes and learning of each reflection were preserved. No identifiable student data or verbatim student writing was shared with any AI tool.
+            </div>
+            {reflections.map((r) => (
+              <div key={r.id} className="mb-4">
+                <p className="mb-1 font-mono text-xs text-[#B4985B]">{r.id}</p>
+                <p className="text-sm">{r.text}</p>
+              </div>
+            ))}
+          </Panel>
+
           <Panel title="Evaluation Heuristic — Part A: Teacher-Facing Tool">
             <CriteriaTable rows={partA} />
             <p className="mb-2 text-sm">
@@ -304,18 +316,6 @@ export default function Assignment2() {
             <p className="italic text-amber-50/70">
               Placeholder &mdash; assessment questions to finalize: What is the actual scale of use per term? Would a smaller model clear the same bar? Does one careful prompt replace ten retries? Is generation happening only where it amplifies relational work?
             </p>
-          </Panel>
-
-          <Panel title="Test Data: Student Reflections">
-            <div className="mb-4 rounded-lg border border-[#B4985B]/50 bg-black/30 p-4 text-sm">
-              <span className="font-semibold text-[#B4985B]">Privacy note:</span> These four reflections are obfuscated versions of real student reflections. Distinctive details that could identify individual students (specific software, instruments, productions, roles, and unique circumstances) were removed or altered, and the wording itself was rewritten &mdash; no sentences appear as a student originally wrote them. The themes and learning of each reflection were preserved. No identifiable student data or verbatim student writing was shared with any AI tool.
-            </div>
-            {reflections.map((r) => (
-              <div key={r.id} className="mb-4">
-                <p className="mb-1 font-mono text-xs text-[#B4985B]">{r.id}</p>
-                <p className="text-sm">{r.text}</p>
-              </div>
-            ))}
           </Panel>
 
           <Panel title="Results and Scoring">
