@@ -317,11 +317,8 @@ export default function Assignment2() {
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-[#B4985B] mb-4">Part A: Teacher-Facing Tool</h3>
               <CriteriaTable rows={partA} />
-              <p className="mb-2 text-sm mt-4">
+              <p className="text-sm mt-4">
                 <span className="font-semibold">Efficiency check</span> (not a scored dimension): is token count proportional to meaningful amplification? &ldquo;Juice worth the squeeze?&rdquo;
-              </p>
-              <p className="text-sm italic">
-                Meta-question after scoring: <span className="font-semibold">Whose students is this tool working best for?</span>
               </p>
             </div>
 
