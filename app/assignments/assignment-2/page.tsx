@@ -307,21 +307,21 @@ function ScoreTable({ rows }: { rows: string[][] }) {
 function MatrixTable({ cols, rows }: { cols: string[]; rows: string[][] }) {
   return (
     <div className="overflow-x-auto mb-4">
-      <table className="w-full text-sm border-collapse min-w-[760px]">
+      <table className="w-full text-xs border-collapse">
         <thead>
           <tr className="text-left text-[#B4985B] border-b border-slate-400">
-            <th className="py-2 pr-3">Criterion</th>
+            <th className="py-2 pr-2 align-bottom">Criterion</th>
             {cols.map((c) => (
-              <th key={c} className="py-2 pr-3">{c}</th>
+              <th key={c} className="py-2 pr-2 align-bottom">{c}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {rows.map(([label, ...cells]) => (
             <tr key={label} className="border-b border-slate-600">
-              <td className="py-2 pr-3">{label}</td>
+              <td className="py-1.5 pr-2 align-top">{label}</td>
               {cells.map((cell, i) => (
-                <td key={i} className={`py-2 pr-3 ${cell === "Meets" ? "font-semibold" : ""}`}>{cell}</td>
+                <td key={i} className={`py-1.5 pr-2 align-top ${cell === "Meets" ? "font-semibold" : ""}`}>{cell}</td>
               ))}
             </tr>
           ))}
@@ -375,7 +375,7 @@ export default function Assignment2() {
             This project asks an important question for my practice: Can AI help me know my students better? My values inform what tools I use and how I use them. As an educator, I want my students to be whole, not fractured; connected and relational, not alone; resilient and able to persist through mundane struggle. Any tool I adopt must serve those commitments.
           </p>
           <p className="text-amber-50 mb-6">
-            I designed a use case in which AI reads student self-reflections and highlights emerging agency to support my understanding and planning. Ideally, this remains a tool for the teacher—helping me know students better and preparing me for real conversations. However, there are realistic scenarios where time or circumstances might lead me to share the AI&apos;s feedback directly with a student. So I built a two-part heuristic: Part A evaluates the teacher-facing analysis; Part B tests whether that same tool&apos;s output, when shared as student feedback, still serves my commitments. Both parts share a foundation—three core dimensions: Wholeness, Resilience, and Agency.
+            I designed a use case in which AI reads student self-reflections and highlights emerging agency—along with the wholeness, relational truth, and resilience my prompt names as its guiding values—to support my understanding and planning. Ideally, this remains a tool for the teacher—helping me know students better and preparing me for real conversations. However, there are realistic scenarios where time or circumstances might lead me to share the AI&apos;s feedback directly with a student. So I built a two-part heuristic: Part A evaluates the teacher-facing analysis; Part B tests whether that same tool&apos;s output, when shared as student feedback, still serves my commitments. Both parts share a foundation—three core dimensions: Wholeness, Resilience, and Agency.
           </p>
           <p className="text-amber-50 mb-6">
             I tested the heuristic against four composite student reflections. What follows is the heuristic itself, the test results, and my reflection on what both revealed—about the tool, and about the framework itself.
@@ -736,13 +736,13 @@ export default function Assignment2() {
             <h3 className="mb-2 font-semibold text-[#B4985B]">Findings</h3>
             <div className="space-y-3 text-sm">
               <p>
-                <span className="font-semibold">1. The constrained prompt fixes Part A for both models.</span> Wholeness, Resilience, and Agency all reach Meets regardless of model. For teacher-facing use, the drift is a prompt-design problem, not a model-capability problem &mdash; within this sample.
+                <span className="font-semibold">1. The constrained prompt fixes Part A for both models. </span>Wholeness, Resilience, and Agency all reach Meets regardless of model. For teacher-facing use, the drift is a prompt-design problem, not a model-capability problem &mdash; within this sample.
               </p>
               <p>
-                <span className="font-semibold">2. Part B is where models diverge under identical constraints.</span> Flash with the constrained prompt was the only output to clear every scored Part B criterion except Voice; GPT 5.5 under the same constraints overcorrected into feedback that was perfectly truthful but no longer for the student &mdash; its next steps coached students to document their learning for the teacher rather than to grow.
+                <span className="font-semibold">2. Part B is where models diverge under identical constraints. </span>Flash with the constrained prompt was the only output to clear every scored Part B criterion except Voice; GPT 5.5 under the same constraints overcorrected into feedback that was perfectly truthful but no longer for the student &mdash; its next steps coached students to document their learning for the teacher rather than to grow.
               </p>
               <p>
-                <span className="font-semibold">3. Voice authenticity never exceeded Partially Meets in any of the five runs.</span> No model&ndash;prompt combination produced feedback that sounds like me. Prompt architecture can control truthfulness and interpretation drift, but the teacher&apos;s voice and judgment must be layered back in by the teacher &mdash; they cannot be delegated.
+                <span className="font-semibold">3. Voice authenticity never exceeded Partially Meets in any of the five runs. </span>No model&ndash;prompt combination produced feedback that sounds like me. Prompt architecture can control truthfulness and interpretation drift, but the teacher&apos;s voice and judgment must be layered back in by the teacher &mdash; they cannot be delegated.
               </p>
             </div>
               </div>
@@ -785,10 +785,10 @@ export default function Assignment2() {
                 <span className="font-semibold">1. Register did not change how much the AI saw &mdash; it changed how charitably the AI judged it. </span>The plain twin&apos;s effort was recognized but discounted: the same practice behavior earned neutral framing in fluent packaging and a &ldquo;low-agency&rdquo; label in plain packaging. A student who practices exactly as effectively but describes it plainly gets their effort read as less sophisticated. Under my heuristic this is an Equity failure even though no analysis was thinner.
               </p>
               <p>
-                <span className="font-semibold">2. The constrained prompt eliminated the gap on this sample.</span> The competing-alternatives requirement converted the register-driven verdict into an open question for the teacher, giving the plain-register student the same evidence-first treatment as the fluent one.
+                <span className="font-semibold">2. The constrained prompt eliminated the gap on this sample. </span>The competing-alternatives requirement converted the register-driven verdict into an open question for the teacher, giving the plain-register student the same evidence-first treatment as the fluent one.
               </p>
               <p>
-                <span className="font-semibold">3. The gate&apos;s status changes from &ldquo;untested&rdquo; to &ldquo;tested once&rdquo; &mdash; not to &ldquo;passed.&rdquo;</span> One matched pair on one register dimension is a first data point. It found a real crack and a working mitigation, which is exactly what a gate criterion is for.
+                <span className="font-semibold">3. The gate&apos;s status changes from &ldquo;untested&rdquo; to &ldquo;tested once&rdquo; &mdash; not to &ldquo;passed.&rdquo; </span>One matched pair on one register dimension is a first data point. It found a real crack and a working mitigation, which is exactly what a gate criterion is for.
               </p>
             </div>
 
