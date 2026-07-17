@@ -192,7 +192,9 @@ const methodNotesPartA = `Testing equity requires attention to how language vari
 
 Wholeness measures whether the AI output gives me candidate details I can verify against what I actually know about this student. The question is not whether the AI itself "recognizes" anyone, but whether the generated observation helps me see something true about a student I already know.`;
 
-const methodNotesPartB = `Truthfulness gates Part B because in student-facing feedback, fabrication reaches the student directly. A student who reads praise for something they never wrote learns the system did not really read their work—trust damage outlasts the feedback. In the teacher-facing tool, a fabricated detail wastes my time, but I catch it; in student-facing feedback, that same fabrication reaches the student and affects trust.
+const methodNotesPartB = `Extension question: if the AI drafts feedback a student reads directly, is it better than no feedback at all? Three scenarios would test this: no feedback (baseline) / raw AI feedback (unedited) / AI feedback with light teacher editing (approximately 60 seconds—the realistic scenario). The testing in this assignment scores the middle scenario; the baseline and lightly-edited comparisons remain future work.
+
+Truthfulness gates Part B because in student-facing feedback, fabrication reaches the student directly. A student who reads praise for something they never wrote learns the system did not really read their work—trust damage outlasts the feedback. In the teacher-facing tool, a fabricated detail wastes my time, but I catch it; in student-facing feedback, that same fabrication reaches the student and affects trust.
 
 What constitutes good feedback matters greatly. Words like "articulate," "well-organized," and "sophisticated" can do invisible work, rewarding how a student writes over what they are thinking. Person-praise is associated with fragility after later setbacks; process-praise supports persistence. Effective feedback answers three questions: Where am I going? How am I going? Where to next? Many AI-generated paragraphs answer only the middle question with affirmation-heavy language.
 
@@ -432,20 +434,11 @@ export default function Assignment2() {
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-[#B4985B] mb-4">Part A: Teacher-Facing Tool</h3>
               <CriteriaTable rows={partA} />
-              <p className="text-sm mt-6 mb-6">
-                <span className="font-semibold">Efficiency check </span>(not a scored dimension): is token count proportional to meaningful amplification? &ldquo;Juice worth the squeeze?&rdquo;
-              </p>
             </div>
 
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-[#B4985B] mb-4">Part B: Student-Facing Feedback Test</h3>
-              <p className="mb-4 text-sm italic">
-                Extension question: if the AI drafts feedback a student reads directly, is it better than no feedback at all?
-              </p>
               <CriteriaTable rows={partB} />
-              <p className="mb-4 text-sm mt-4">
-                <span className="font-semibold">Three scenarios to test:</span> no feedback (baseline) / raw AI feedback (unedited) / AI feedback with light teacher editing (approximately 60 seconds—the realistic scenario).
-              </p>
             </div>
 
             <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
