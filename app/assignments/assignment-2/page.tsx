@@ -15,7 +15,7 @@ const partB = [
 ];
 
 const scoreA = [
-  ["Equity of Recognition", "Passed on sample (see judgment above)"],
+  ["Equity of Recognition", "Passed on sample (gate failure found in follow-up test)"],
   ["Wholeness", "Partially Meets"],
   ["Resilience", "Meets"],
   ["Agency", "Partially Meets"],
@@ -249,13 +249,7 @@ function CriteriaTable({ rows }: { rows: typeof partA }) {
             <tr key={r.n} className="border-b border-slate-600 align-top">
               <td className="py-2 pr-3 font-semibold">
                 {r.c}
-                {r.fn && (
-                  <>
-                    {r.fn.split(',').map((fn) => (
-                      <sup key={fn} className="text-[#B4985B] ml-0.5">{fn}</sup>
-                    ))}
-                  </>
-                )}
+                {r.fn && <sup className="text-[#B4985B] ml-0.5">{r.fn}</sup>}
               </td>
               <td className="py-2 pr-3 italic">{r.t}</td>
               <td className="py-2 pr-3">{r.s}</td>
