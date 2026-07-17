@@ -99,7 +99,7 @@ const reflections = [
   equityTwin,
 ];
 
-const equityStatement = "All four analyses passed the Equity check: within this sample, I found no evidence that the AI’s recognition tracked fluency markers rather than substance. However, all four reflections come from relatively articulate, reflective students, and my obfuscation process rewrote their wording, which further flattened differences in register. Until the tool is given a true test comment — the same work described briefly and in a plain register — passing on this sample does not adequately show that the AI clears the gate. A first matched-pair test of exactly that kind is reported in the Equity Gate Test section below.";
+const equityStatement = "All four analyses passed the Equity check: within this sample, I found no evidence that the AI’s recognition tracked fluency markers rather than substance. However, all four reflections come from relatively articulate, reflective students, and my obfuscation process rewrote their wording, which further flattened differences in register. Until the tool is given a true test comment — the same work described briefly and in a plain register — passing on this sample does not adequately show that the AI clears the gate. A first matched-pair test of exactly that kind is reported under Follow-up Tests at the end of this section.";
 
 const reflectionParas = [
   "Developing this heuristic fundamentally changed the question I was asking about generative AI. Rather than asking whether AI produces insightful analyses or well-written feedback, I found myself asking a more important educational question: Can AI help me know my students better? That shift became the foundation for my evaluation framework.",
@@ -394,11 +394,19 @@ export default function Assignment2() {
             <p className="mb-4">
               The four reflections vary in length and detail, but all come from relatively articulate, reflective students. This is actually a limitation: the Equity of Recognition gate asks whether the tool works equally well across different student profiles, including those who write plainly or briefly. To truly test this gate, I would need the same content written in two versions — one polished, one plain — to see if recognition changes with register. These four reflections alone cannot answer that question. They can show whether the tool produces reasonable analyses for reflective students, but not whether bias emerges across different writing profiles.
             </p>
-          </Panel>
 
-          <Panel title="Prompt Template">
-            <p className="mb-4 text-sm">The exact prompt given to the AI for each reflection:</p>
-            <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-black/50 p-4 font-mono text-xs leading-relaxed">{promptTemplate}</pre>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Prompt Template
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50">
+                <p className="mb-4 text-sm">The exact prompt given to the AI for each reflection:</p>
+                <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-black/50 p-4 font-mono text-xs leading-relaxed">{promptTemplate}</pre>
+              </div>
+            </details>
           </Panel>
 
           <Panel title="Test Data: Student Reflections">
@@ -690,9 +698,15 @@ export default function Assignment2() {
                 </details>
               );
             })}
-          </Panel>
-
-          <Panel title="Prompt Architecture Test">
+            <h3 className="mb-4 mt-6 font-semibold text-[#B4985B]">Follow-up Tests</h3>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Prompt Architecture Test
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50">
             <p className="mb-4 text-sm">
               The initial results raised a question: is the observation-to-interpretation drift a property of the model, or of the prompt? To find out, I ran the same four reflections through additional models &mdash; Gemini 3.5 Flash-Lite and GPT 5.5 with the original prompt &mdash; and then re-tested Gemini 3.5 Flash and GPT 5.5 with a <span className="font-semibold">constrained prompt </span>that requires the model to: (1) report direct evidence first, anchored to the student&apos;s own words; (2) state every inference as competing alternatives (&ldquo;could suggest X, or could suggest Y &mdash; here is what would distinguish them&rdquo;); (3) name what remains unclear rather than filling gaps; (4) ground follow-up questions in specific things the student wrote; and (5) give process-focused feedback with no character labels.
             </p>
@@ -727,9 +741,17 @@ export default function Assignment2() {
                 <span className="font-semibold">3. Voice authenticity never exceeded Partially Meets in any of the five runs.</span> No model&ndash;prompt combination produced feedback that sounds like me. Prompt architecture can control truthfulness and interpretation drift, but the teacher&apos;s voice and judgment must be layered back in by the teacher &mdash; they cannot be delegated.
               </p>
             </div>
-          </Panel>
+              </div>
+            </details>
 
-          <Panel title="Equity Gate Test">
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Equity Gate Test
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50">
             <p className="mb-4 text-sm">
               Every earlier run used the same four articulate reflections, which left the Equity gate untested: passing on fluent writers proves nothing about how the AI treats a student who describes the same work briefly and plainly. To test the gate directly, I created a matched pair. R-EQ1 is a synthetic twin of R020 &mdash; the same underlying work (independent practice leading to a real performance, an interference problem solved deliberately, an improvisation goal with a concrete plan, deadline-driven sight-reading growth, peer collaboration) rewritten at roughly 140 words instead of 330, in plain register, with no educational vocabulary. Both twins were run fresh through Gemini 3.5 Flash under the original and constrained prompts, so any gap between the analyses is attributable to register alone.
             </p>
@@ -772,6 +794,8 @@ export default function Assignment2() {
                 <li key={i}>{l}</li>
               ))}
             </ul>
+              </div>
+            </details>
           </Panel>
 
           <Panel title="Reflection">
