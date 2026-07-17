@@ -188,24 +188,9 @@ const aiAnalyses = [
   }
 ];
 
-const methodNotesPartA = `Testing equity requires attention to how language variation affects recognition. Dialect (home language variety) and register (plain/brief vs. polished academic style) are distinct; in Grade 10 written reflections, register and length are the likelier variables to test. The verification method: present the same content in two versions—three plain sentences vs. three polished paragraphs describing identical work—to see if the AI's recognition shifts with presentation rather than substance. This approach isolates whether the system recognizes effort and insight across different writing styles, or only when students present their work in fluent, polished language.
-
-Wholeness measures whether the AI output gives me candidate details I can verify against what I actually know about this student. The question is not whether the AI itself "recognizes" anyone, but whether the generated observation helps me see something true about a student I already know.`;
-
 const methodNotesPartB = `Extension question: if the AI drafts feedback a student reads directly, is it better than no feedback at all? Three scenarios would test this: no feedback (baseline) / raw AI feedback (unedited) / AI feedback with light teacher editing (approximately 60 seconds—the realistic scenario). The testing in this assignment scores the middle scenario; the baseline and lightly-edited comparisons remain future work.
 
-Truthfulness gates Part B because in student-facing feedback, fabrication reaches the student directly. A student who reads praise for something they never wrote learns the system did not really read their work—trust damage outlasts the feedback. In the teacher-facing tool, a fabricated detail wastes my time, but I catch it; in student-facing feedback, that same fabrication reaches the student and affects trust.
-
-What constitutes good feedback matters greatly. Words like "articulate," "well-organized," and "sophisticated" can do invisible work, rewarding how a student writes over what they are thinking. Person-praise is associated with fragility after later setbacks; process-praise supports persistence. Effective feedback answers three questions: Where am I going? How am I going? Where to next? Many AI-generated paragraphs answer only the middle question with affirmation-heavy language.
-
-The baseline is not "Is this perfect?" but "Is it better than none?" Feedback interventions decreased performance in about a third of studied cases, typically when attention went to the student (person-praise) rather than the task (process-praise). Generated feedback should be scored against criteria the literature predicts will benefit or harm, not against an ideal.
-
 Feed-forward requires concrete next steps. The feedback should suggest one specific, actionable direction the student could pursue. Specificity itself serves as a check: effective feedback should break if pasted into another student's report. If the same paragraph works equally well for any student, it's too generic to support individual growth.`;
-
-const methodNotes = {
-  partA: methodNotesPartA,
-  partB: methodNotesPartB,
-};
 
 const promptTemplate = `You are assisting a secondary teacher who reviews student reflections to notice
 emerging agency—moments where students pursue learning beyond what was assigned,
@@ -352,18 +337,20 @@ export default function Assignment2() {
     <div className="min-h-screen bg-cover bg-center bg-fixed" style={{backgroundImage: 'url(/StockSnap_O23H6MFZTV.jpg)'}}>
       <div className="border-b border-slate-200 bg-cover bg-center" style={{backgroundImage: 'url(/StockSnap_H5CCPV9ZFQ.jpg)'}}>
         <div className="max-w-3xl mx-auto px-6 py-12">
-          <p className="text-sm text-[#B4985B] font-medium mb-2">
-            ETEC 565 Assignment 2
-          </p>
+          <div className="mb-4">
+            <span className="text-sm font-medium text-[#B4985B]">
+              ETEC 565 Assignment 2
+            </span>
+          </div>
           <h1 className="text-4xl font-bold text-white mb-4">
             Evaluation Heuristic and Testing
           </h1>
-          <p className="text-amber-50 mb-4 italic">
-            Can AI help me know my students better? An evaluation framework for GenAI-assisted reading of student self-reflections.
+          <p className="text-amber-50 mb-4">
+            Shingo Kawamura
           </p>
           <div className="text-sm text-amber-50 mb-4">
-            <p>Shingo Kawamura &middot; ETEC 565: Ethical, Critical, and Professional Use of Generative AI in Teaching and Learning</p>
-            <p className="font-medium text-white">Summer 2026 &middot; In Progress</p>
+            <p>UBC Master of Educational Technology, Summer Institute</p>
+            <p className="font-medium text-white">Instructors: Dr. Sam McCready & Dr. Jen Jenson</p>
           </div>
         </div>
       </div>
@@ -380,7 +367,7 @@ export default function Assignment2() {
             I designed a use case in which AI reads student self-reflections and highlights emerging agency—along with the wholeness, relational truth, and resilience my prompt names as its guiding values—to support my understanding and planning. Ideally, this remains a tool for the teacher—helping me know students better and preparing me for real conversations. However, there are realistic scenarios where time or circumstances might lead me to share the AI&apos;s feedback directly with a student. So I built a two-part heuristic: Part A evaluates the teacher-facing analysis; Part B tests whether that same tool&apos;s output, when shared as student feedback, still serves my commitments. Both parts share a foundation—three core dimensions: Wholeness, Resilience, and Agency.
           </p>
           <p className="text-amber-50 mb-6">
-            I tested the heuristic against four composite student reflections. What follows is the heuristic itself, the test results, and my reflection on what both revealed—about the tool, and about the framework itself.
+            I tested the heuristic against four composite student reflections, then followed the initial results with two further tests: a prompt architecture comparison across three models, and a direct test of the Equity gate using a synthesized plain-register twin of one reflection. What follows is the heuristic itself, the test results, and my reflection on what they revealed—about the tool, and about the framework itself.
           </p>
         </section>
 
@@ -393,7 +380,7 @@ export default function Assignment2() {
               The reflections follow a consistent structure: each student names one area of confident learning, describes a challenge they faced, sets a goal for the future, and notes progress made. This structure is realistic — it mirrors prompts I actually use — but the wording has been altered throughout. No sentences appear as students originally wrote them; themes and learning are preserved, not quotations.
             </p>
             <p className="mb-4">
-              The four reflections vary in length and detail, but all come from relatively articulate, reflective students. This is actually a limitation: the Equity of Recognition gate asks whether the tool works equally well across different student profiles, including those who write plainly or briefly. To truly test this gate, I would need the same content written in two versions — one polished, one plain — to see if recognition changes with register. These four reflections alone cannot answer that question. They can show whether the tool produces reasonable analyses for reflective students, but not whether bias emerges across different writing profiles.
+              The four reflections vary in length and detail, but all come from relatively articulate, reflective students. This is a limitation: the Equity of Recognition gate asks whether the tool works equally well across different student profiles, including those who write plainly or briefly. Testing that gate requires the same content written in two versions — one polished, one plain — to see if recognition changes with register. The fifth reflection below, R-EQ1, is exactly that: a synthesized plain-register twin of R020, created for the matched-pair test reported in Results and Scoring under Follow-up Tests.
             </p>
 
             <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
@@ -450,14 +437,8 @@ export default function Assignment2() {
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-4">
                 <div>
-                  <p className="font-semibold text-[#B4985B] mb-2">Part A</p>
-                  {methodNotes.partA.split('\n\n').map((para, i) => (
-                    <p key={i} className="mb-3">{para}</p>
-                  ))}
-                </div>
-                <div className="border-t border-[#B4985B]/30 pt-4 mt-4">
                   <p className="font-semibold text-[#B4985B] mb-2">Part B</p>
-                  {methodNotes.partB.split('\n\n').map((para, i) => (
+                  {methodNotesPartB.split('\n\n').map((para, i) => (
                     <p key={i} className="mb-3">{para}</p>
                   ))}
                 </div>
