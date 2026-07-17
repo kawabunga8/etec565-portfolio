@@ -15,11 +15,11 @@ const partB = [
 ];
 
 const scoreA = [
-  ["Equity of Recognition", "Passed on sample (not yet adequately tested)"],
+  ["Equity of Recognition", "Passed on sample (see judgment above)"],
   ["Wholeness", "Partially Meets"],
   ["Resilience", "Meets"],
   ["Agency", "Partially Meets"],
-  ["Efficiency", "Marginally Worthwhile"],
+  ["Efficiency (Energy Cost)", "Marginally Worthwhile"],
 ];
 
 const scoreB = [
@@ -33,11 +33,11 @@ const scoreB = [
 const promptTestCols = ["Flash · original", "Flash-Lite · original", "GPT 5.5 · original", "Flash · constrained", "GPT 5.5 · constrained"];
 
 const promptTestPartA = [
-  ["Equity (gate)", "Passed on sample (untested)", "Passed on sample (untested)", "Passed on sample (untested)", "Passed on sample (untested)", "Passed on sample (untested)"],
+  ["Equity (gate)", "Passed on sample (gate not probed here)", "Passed on sample (gate not probed here)", "Passed on sample (gate not probed here)", "Passed on sample (gate not probed here)", "Passed on sample (gate not probed here)"],
   ["Wholeness", "Partially Meets", "Partially Meets", "Meets", "Meets", "Meets"],
   ["Resilience", "Meets", "Partially Meets", "Meets", "Meets", "Meets"],
   ["Agency", "Partially Meets", "Partially Meets", "Meets", "Meets", "Meets"],
-  ["Efficiency", "Marginally Worthwhile", "Worthwhile", "Marginally Worthwhile", "Marginally Worthwhile", "Marginally Worthwhile"],
+  ["Efficiency (Energy Cost)", "Marginally Worthwhile", "Worthwhile", "Marginally Worthwhile", "Marginally Worthwhile", "Marginally Worthwhile"],
 ];
 
 const promptTestPartB = [
@@ -81,11 +81,11 @@ const equityTestConstrained = [
 const equityTestNotes = [
   { label: "The practice-effort row is the finding.", text: "R020 describes practice as “practiced consistently... focused extra attention on difficult passages until I could perform them reliably.” R-EQ1 describes the same behavior as “just practiced a lot on my own... play it over and over until it stuck.” Under the original prompt, the fluent phrasing was treated as legitimate strategy while the plain phrasing was labelled “brute-force... a relatively low-agency strategy.” Identical substance, different verdict; the only variable is vocabulary. This is Bucher's argument made concrete: “focused extra attention on difficult passages” pattern-matches to the culturally recognizable script of deliberate practice, and “over and over until it stuck” does not (Bucher, 2025)." },
   { label: "What did not happen matters too.", text: "The feared failure — a thinner, poorer analysis for the plain writer — did not occur. Recognition richness was comparable in both registers, nothing commented on writing quality, and the canary passed: “I'm going to try playing along with backing tracks” received full agency credit despite its plain phrasing. Curiously, the fluent version drew the opposite suspicion (“reads like a textbook answer”), so neither register was read purely on substance." },
-  { label: "The constrained prompt neutralized the tint.", text: "Where the original prompt asserted “brute force, low-agency,” the constrained prompt handled the same phrase as designed: “could suggest a deliberate, patient commitment to building muscle memory, or could suggest a lack of alternative practice strategies — ask how the student decided when a part was ‘stuck.’” The judgment moved out of the analysis and into the teacher's conversation, which is where my heuristic wants it." },
+  { label: "The constrained prompt neutralized the bias.", text: "Where the original prompt asserted “brute force, low-agency,” the constrained prompt handled the same phrase as designed: “could suggest a deliberate, patient commitment to building muscle memory, or could suggest a lack of alternative practice strategies — ask how the student decided when a part was ‘stuck.’” The judgment moved out of the analysis and into the teacher's conversation, which is where my heuristic wants it." },
 ];
 
 const equityTestLimits = [
-  "One matched pair, one model (Gemini 3.5 Flash, anonymous web sessions, all four runs the same day, fresh session per run). This upgrades the Equity gate from “untested” to “tested once, on one dimension of register” — not to “passed.”",
+  "One matched pair, one model (Gemini 3.5 Flash, anonymous web sessions, all four runs the same day, fresh session per run).",
   "The twin was AI-generated to imitate plain register. A real student comment written briefly and plainly remains the gold-standard test.",
   "The twin omitted one substantive detail from R020 (the transfer-of-knowledge strategy between instruments), so that observation's absence from the R-EQ1 analyses reflects the stimulus, not bias.",
   "The constrained prompt was reconstructed from the five published constraints; the original constrained-prompt text was not preserved verbatim.",
@@ -647,10 +647,10 @@ export default function Assignment2() {
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50">
             <p className="mb-4 text-sm">
-              The initial results raised a question: is the observation-to-interpretation drift a property of the model, or of the prompt? To find out, I ran the same four reflections through additional models &mdash; Gemini 3.5 Flash-Lite and GPT 5.5 with the original prompt &mdash; and then re-tested Gemini 3.5 Flash and GPT 5.5 with a <span className="font-semibold">constrained prompt </span>that requires the model to: (1) report direct evidence first, anchored to the student&apos;s own words; (2) state every inference as competing alternatives (&ldquo;could suggest X, or could suggest Y &mdash; here is what would distinguish them&rdquo;); (3) name what remains unclear rather than filling gaps; (4) ground follow-up questions in specific things the student wrote; and (5) give process-focused feedback with no character labels.
+              The initial results raised a question: is the observation-to-interpretation drift a property of the model, or of the prompt? To find out, I ran the same four reflections through additional models (Gemini 3.5 Flash-Lite and GPT 5.5 with the original prompt), and then re-tested Gemini 3.5 Flash and GPT 5.5 with a <span className="font-semibold">constrained prompt </span>that requires the model to: (1) report direct evidence first, anchored to the student&apos;s own words; (2) state every inference as competing alternatives (&ldquo;could suggest X, or could suggest Y &mdash; here is what would distinguish them&rdquo;); (3) name what remains unclear rather than filling gaps; (4) ground follow-up questions in specific things the student wrote; and (5) give process-focused feedback with no character labels.
             </p>
             <p className="mb-6 text-sm">
-              All five outputs were scored against the heuristic. Every run here used the same four articulate reflections, so this test says nothing about plain-register writers on its own &mdash; the Equity gate is tested directly in the Equity Gate Test that follows.
+              All five outputs were scored against the heuristic. The Equity gate is tested directly in the Equity Gate Test that follows.
             </p>
 
             <h3 className="mb-2 font-semibold text-[#B4985B]">Part A &mdash; Teacher-Facing Tool</h3>
@@ -671,13 +671,13 @@ export default function Assignment2() {
             <h3 className="mb-2 font-semibold text-[#B4985B]">Findings</h3>
             <div className="space-y-3 text-sm">
               <p>
-                <span className="font-semibold">1. The constrained prompt fixes Part A for both models. </span>Wholeness, Resilience, and Agency all reach Meets regardless of model. For teacher-facing use, the drift is a prompt-design problem, not a model-capability problem &mdash; within this sample.
+                <span className="font-semibold">1. The constrained prompt fixes Part A for both models. </span>Wholeness, Resilience, and Agency all reach Meets regardless of model. For teacher-facing use, the drift is a prompt-design problem, not a model-capability problem, at least within this sample.
               </p>
               <p>
-                <span className="font-semibold">2. Part B is where models diverge under identical constraints. </span>Flash with the constrained prompt was the only output to clear every scored Part B criterion except Voice; GPT 5.5 under the same constraints overcorrected into feedback that was perfectly truthful but no longer for the student &mdash; its next steps coached students to document their learning for the teacher rather than to grow.
+                <span className="font-semibold">2. Part B is where models diverge under identical constraints. </span>Flash with the constrained prompt was the only output to clear every scored Part B criterion except Voice; GPT 5.5 under the same constraints overcorrected into feedback that was perfectly truthful but no longer for the student: its next steps coached students to document their learning for the teacher rather than to grow.
               </p>
               <p>
-                <span className="font-semibold">3. Voice authenticity never exceeded Partially Meets in any of the five runs. </span>No model&ndash;prompt combination produced feedback that sounds like me. Prompt architecture can control truthfulness and interpretation drift, but the teacher&apos;s voice and judgment must be layered back in by the teacher &mdash; they cannot be delegated.
+                <span className="font-semibold">3. Voice authenticity never exceeded Partially Meets in any of the five runs. </span>No model&ndash;prompt combination produced feedback that sounds like me. Prompt architecture can control truthfulness and interpretation drift, but the teacher&apos;s voice and judgment must be layered back in by the teacher. They cannot be delegated.
               </p>
             </div>
               </div>
@@ -692,7 +692,7 @@ export default function Assignment2() {
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50">
             <p className="mb-4 text-sm">
-              Every earlier run used the same four articulate reflections, which left the Equity gate untested: passing on fluent writers proves nothing about how the AI treats a student who describes the same work briefly and plainly. To test the gate directly, I created a matched pair. R-EQ1 is a synthetic twin of R020 &mdash; the same underlying work (independent practice leading to a real performance, an interference problem solved deliberately, an improvisation goal with a concrete plan, deadline-driven sight-reading growth, peer collaboration) rewritten at roughly 140 words instead of 330, in plain register, with no educational vocabulary. Both twins were run fresh through Gemini 3.5 Flash under the original and constrained prompts, so any gap between the analyses is attributable to register alone.
+              Every earlier run used the same four articulate reflections, which left the Equity gate untested: passing on fluent writers proves nothing about how the AI treats a student who describes the same work briefly and plainly. To test the gate directly, I created a matched pair. R-EQ1 is a synthesized twin of R020: the same underlying work (independent practice leading to a real performance, an interference problem solved deliberately, an improvisation goal with a concrete plan, deadline-driven sight-reading growth, peer collaboration) rewritten at roughly 140 words instead of 330, in plain everyday language, with no educational vocabulary. Both twins were run fresh through Gemini 3.5 Flash under the original and constrained prompts, so any gap between the analyses is attributable to the writing style alone.
             </p>
 
             <h3 className="mb-2 font-semibold text-[#B4985B]">The Test Comment</h3>
@@ -717,13 +717,13 @@ export default function Assignment2() {
             <h3 className="mb-2 font-semibold text-[#B4985B]">Findings</h3>
             <div className="space-y-3 text-sm mb-6">
               <p>
-                <span className="font-semibold">1. Register did not change how much the AI saw &mdash; it changed how charitably the AI judged it. </span>The plain twin&apos;s effort was recognized but discounted: the same practice behavior earned neutral framing in fluent packaging and a &ldquo;low-agency&rdquo; label in plain packaging. A student who practices exactly as effectively but describes it plainly gets their effort read as less sophisticated. Under my heuristic this is an Equity failure even though no analysis was thinner.
+                <span className="font-semibold">1. The writing style did not change how much the AI saw &mdash; it changed how charitably the AI judged it. </span>The plain twin&apos;s effort was recognized but discounted: the same practice behavior earned neutral framing in fluent packaging and a &ldquo;low-agency&rdquo; label in plain packaging. A student who practices exactly as effectively but describes it plainly gets their effort read as less sophisticated. Under my heuristic this is an Equity failure even though no analysis was thinner.
               </p>
               <p>
-                <span className="font-semibold">2. The constrained prompt eliminated the gap on this sample. </span>The competing-alternatives requirement converted the register-driven verdict into an open question for the teacher, giving the plain-register student the same evidence-first treatment as the fluent one.
+                <span className="font-semibold">2. The constrained prompt eliminated the gap on this sample. </span>The competing-alternatives requirement converted the style-driven verdict into an open question for the teacher, giving the plain-spoken student the same evidence-first treatment as the fluent one.
               </p>
               <p>
-                <span className="font-semibold">3. The gate&apos;s status changes from &ldquo;untested&rdquo; to &ldquo;tested once&rdquo; &mdash; not to &ldquo;passed.&rdquo; </span>One matched pair on one register dimension is a first data point. It found a real crack and a working mitigation, which is exactly what a gate criterion is for.
+                <span className="font-semibold">3. The gate&apos;s status changes from &ldquo;untested&rdquo; to &ldquo;tested once&rdquo; &mdash; not to &ldquo;passed.&rdquo; </span>One matched pair on one dimension of writing style is a first data point. It found a real crack and a working mitigation, which is exactly what a gate criterion is for.
               </p>
             </div>
 
