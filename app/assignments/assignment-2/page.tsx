@@ -358,142 +358,31 @@ export default function Assignment2() {
       <main className="max-w-3xl mx-auto px-6 py-12 bg-black/60 rounded-lg m-6 backdrop-blur-sm">
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-[#B4985B] mb-6">
-            Overview
+            Abstract
           </h2>
           <p className="text-amber-50 mb-6">
-            This project asks an important question for my practice: Can AI help me know my students better? My values inform what tools I use and how I use them. As an educator, I want my students to be whole, not fractured; connected and relational, not alone; resilient and able to persist through mundane struggle. Any tool I adopt must serve those commitments.
-          </p>
-          <p className="text-amber-50 mb-6">
-            I designed a use case in which AI reads student self-reflections to sift through their words and reveal a roadmap of their learning. I am hoping to find trails to walk alongside students and listen to their stories, specifically mining for indicators of emerging agency, relational wholeness, and resilience to support my formative assessment. Ideally, AI remains a tool for the experienced teacher, but there are realistic scenarios where time or circumstances might lead me to share AI feedback directly with a student. I built a two-part heuristic: Part A evaluates the teacher-facing analysis; Part B tests whether that same tool&apos;s output, when shared as student feedback, still serves my commitments. Both parts share a foundation built on these three dimensions.
-          </p>
-          <p className="text-amber-50 mb-6">
-            I tested the heuristic against four composite student reflections, then followed the initial results with two further tests: a prompt architecture comparison across three models, and a direct test of an Equity gate using a synthesized plain-register twin of one reflection. What follows is the heuristic itself, the test results, and my reflection on what they revealed.
+            This project asks an important question for my practice: Can AI help me know my students better? I built a two-part heuristic: Part A evaluates the teacher-facing analysis; Part B tests whether that same tool&apos;s output, when shared as student feedback, still serves my commitments. I tested the heuristic against four composite student reflections, then followed the initial results with two further tests: a prompt architecture comparison across three models, and a direct test of an Equity gate using a synthesized plain-register twin of one reflection. The most significant finding across both parts is that the AI repeatedly moves from observation to interpretation, constructing flattering narratives about students&apos; character rather than remaining a tool that offers candidate details a knowing teacher can verify.
           </p>
         </section>
 
         <section className="mb-12">
-          <Panel title="The Use Case">
-            <p className="mb-4">
-              To test this tool, I needed student reflections that would reveal whether the AI could recognize and describe student learning accurately and fairly. I used four composite student reflections, each based on real reflections from my students and modified to protect privacy. All come from end-of-quarter self-assessments in band and technology classes.
+          <Panel title="1. Introduction">
+            <p className="mb-6">
+              This project asks an important question for my practice: Can AI help me know my students better? My values inform what tools I use and how I use them. As an educator, I want my students to be whole, not fractured; connected and relational, not alone; resilient and able to persist through mundane struggle. Any tool I adopt must serve those commitments.
             </p>
-            <p className="mb-4">
-              The reflections follow a consistent structure: each student names one area of confident learning, describes a challenge they faced, sets a goal for the future, and notes progress made. This structure mirrors the reflection prompts I actually use.
+            <p className="mb-6">
+              I designed a use case in which AI reads student self-reflections to sift through their words and reveal a roadmap of their learning. I am hoping to find trails to walk alongside students and listen to their stories, specifically mining for indicators of emerging agency, relational wholeness, and resilience to support my formative assessment. Ideally, AI remains a tool for the experienced teacher, but there are realistic scenarios where time or circumstances might lead me to share AI feedback directly with a student. I built a two-part heuristic: Part A evaluates the teacher-facing analysis; Part B tests whether that same tool&apos;s output, when shared as student feedback, still serves my commitments. Both parts share a foundation built on these three dimensions.
             </p>
-            <p className="mb-4">
-              The four reflections vary in length and detail, but all come from relatively articulate, reflective students. This is a limitation: the Equity of Recognition gate asks whether the tool works equally well across different student profiles, including those who write plainly or briefly. Testing that gate requires the same content written in two versions, one polished and one plain, to see if recognition changes with how the student writes. The fifth reflection below, R-EQ1, is exactly that: a synthesized plain-register twin of R020, created for the comparison reported in Results and Scoring under Follow-up Tests.
+            <p className="mb-6">
+              I tested the heuristic against four composite student reflections, then followed the initial results with two further tests: a prompt architecture comparison across three models, and a direct test of an Equity gate using a synthesized plain-register twin of one reflection. What follows is the heuristic itself, the test results, and my reflection on what they revealed.
             </p>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
-              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
-                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-                Prompt Template
-              </summary>
-              <div className="px-4 pb-4 pt-2 text-amber-50">
-                <p className="mb-4 text-sm">The exact prompt given to the AI for each reflection:</p>
-                <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-black/50 p-4 font-mono text-xs leading-relaxed">{promptTemplate}</pre>
-              </div>
-            </details>
-
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
-              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
-                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-                Test Data: Student Reflections
-              </summary>
-              <div className="px-4 pb-4 pt-2 text-amber-50">
-            <div className="mb-4 rounded-lg border border-[#B4985B]/50 bg-black/30 p-4 text-sm">
-              <span className="font-semibold text-[#B4985B]">Privacy note:</span> The first four reflections are obfuscated versions of real student reflections. Distinctive details that could identify individual students (specific software, instruments, productions, roles, and unique circumstances) were removed or altered, and the wording itself was rewritten: no sentences appear as a student originally wrote them. The themes and learning of each reflection were preserved. The fifth, R-EQ1, is fully synthesized. It is an AI-generated plain-register twin of R020 created for the Equity gate test and contains no student writing at all. No identifiable student data or verbatim student writing was shared with any AI tool.
-            </div>
-            {reflections.map((r) => (
-              <div key={r.id} className="mb-4">
-                <p className="mb-1 font-mono text-xs text-[#B4985B]">{r.id}</p>
-                <p className="text-sm">{r.text}</p>
-              </div>
-            ))}
-              </div>
-            </details>
-          </Panel>
-
-          <Panel title="Evaluation Heuristic: Can AI Help Me Know My Students Better?">
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold text-[#B4985B] mb-4">Part A: Teacher-Facing Tool</h3>
-              <CriteriaTable rows={partA} />
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold text-[#B4985B] mb-4">Part B: Student-Facing Feedback Test</h3>
-              <CriteriaTable rows={partB} />
-            </div>
-
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
-              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
-                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-                Methodological Notes (Part B)
-              </summary>
-              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-4">
-                {methodNotesPartB.split('\n\n').map((para, i) => (
-                  <p key={i} className="mb-3">{para}</p>
-                ))}
-              </div>
-            </details>
-
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
-              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
-                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-                Footnotes
-              </summary>
-              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                <p><span className="font-semibold text-[#B4985B]">1.</span> Gate, not dimension. Equity must clear before anything else is scored — if this gate fails, scores below don't matter. A tool that amplifies my knowledge of some students while obscuring others causes unequally distributed relational damage no efficiency gain can offset.</p>
-                <p><span className="font-semibold text-[#B4985B]">2.</span> What to test, and why. Dialect (a home language variety) is not the same as register (plain, brief style vs. polished academic style); in Grade 10 written reflections, register and length are the likelier variables — test both (three plain sentences vs. three polished paragraphs describing the same work). The risk is documented: LLMs judge African American English text less favorably even when overt bias is suppressed (Hofmann et al., 2024), classifiers disproportionately flag AAVE (Sap et al., 2019), and AI-text detectors falsely flag non-native English writers (Liang et al., 2023) — systems rewarding polished writing over substance. Of the two variables, register has now been tested once — the plain-register twin reported under Follow-up Tests in Results and Scoring; dialect remains untested.</p>
-                <p><span className="font-semibold text-[#B4985B]">3.</span> The Wholeness paradox, named on purpose. The AI cannot know my students; only I can. Wholeness measures whether the output gives me a foothold for recognition — candidate details a knowing teacher can verify — not whether the AI itself "recognizes" anyone.</p>
-                <p><span className="font-semibold text-[#B4985B]">4.</span> Coded praise. Words like "articulate," "well-organized," and "sophisticated" can do invisible work, rewarding how a student writes over what they're thinking (Alim & Smitherman, 2012).</p>
-                <p><span className="font-semibold text-[#B4985B]">5.</span> Hypothesis, now tested once. Because LLMs reproduce dominant narrative templates, the AI may under-recognize matter-of-fact effort ("I kept redoing it until it worked") relative to a dramatized struggle story describing the same work. The plain-register twin test probed this directly: under the original prompt, the AI discounted exactly this kind of effort — see Follow-up Tests.</p>
-                <p><span className="font-semibold text-[#B4985B]">6.</span> Grit is contested. Its predictive validity is weaker than popularly claimed and overlaps heavily with conscientiousness (Credé et al., 2017). Grit language can valorize grinding through when the better questions are Why is this so hard? and What support is missing?</p>
-                <p><span className="font-semibold text-[#B4985B]">7.</span> Criteria compliance. Schools model agency vocabulary; students learn to perform it — producing the language of the rubric rather than the learning it describes (Torrance, 2007). Quiet students, or those writing in a plain register, may show agency without sounding agentive.</p>
-                <p><span className="font-semibold text-[#B4985B]">8.</span> Hedging cuts both ways. "I tried to..." may reflect epistemic care or cultural norms — or genuine uncertainty and low self-efficacy. The ambiguity is the point: AI output should prompt a teacher conversation, never a conclusion.</p>
-                <p><span className="font-semibold text-[#B4985B]">9.</span> Why truthfulness gates Part B but only cautions Part A. In the teacher-facing tool, a fabricated detail wastes my time; I'm in the loop to catch it. In student-facing feedback, fabrication reaches the student directly — and a student who reads praise for something they never wrote learns the system didn't really read their work. Trust damage outlasts the feedback.</p>
-                <p><span className="font-semibold text-[#B4985B]">10.</span> Comparison design. "Better than none" is not a low bar: feedback interventions decreased performance in about a third of studied cases, typically when attention went to the self rather than the task (Kluger & DeNisi, 1996). A true "no feedback" condition can't ethically be run on real students; instead, score the generated paragraphs against criteria the literature says predict benefit or harm.</p>
-                <p><span className="font-semibold text-[#B4985B]">11.</span> What good feedback contains. Person-praise is associated with fragility after later setbacks; process-praise supports persistence (Mueller & Dweck, 1998). Effective feedback answers Where am I going? How am I going? Where to next? (Hattie & Timperley, 2007) — affirmation-heavy paragraphs answer only the middle question.</p>
-                <p><span className="font-semibold text-[#B4985B]">12.</span> Voice authenticity is an empirical question. Students readily distinguish institutional voice from their teacher's, and feedback perceived as automated may be discounted regardless of content — but this can't be verified without student participants. A limitation, not a finding.</p>
-              </div>
-            </details>
-
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
-              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
-                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-                Footnotes References
-              </summary>
-              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                {footnoteReferences.map((r, idx) => (
-                  <p key={idx}>
-                    {r.authors} ({r.year}). {r.title}
-                    {r.type === "book" ? (
-                      <> {r.publisher}</>
-                    ) : (
-                      <> <i>{r.journal}</i>, {r.volume}{r.issue ? `(${r.issue})` : ""}{r.pages ? `, ${r.pages}` : ""}.</>
-                    )}
-                  </p>
-                ))}
-              </div>
-            </details>
-          </Panel>
-
-          <Panel title="Heuristic Details">
             <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-                Foundation: Commitments, Task, and Equity Gate
+                Foundation: Commitments and the Task
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
                 <p className="font-semibold text-[#B4985B]">My Commitments</p>
@@ -505,9 +394,21 @@ export default function Assignment2() {
                 </ol>
                 <p className="font-semibold text-[#B4985B] pt-2">The Task</p>
                 <p>AI reads student self-reflections and highlights emerging agency along with aspects that point to wholeness and resilience. The AI then suggests follow-up questions I (the teacher) can ask in a real conversation. In this primary use, the AI never talks to the student directly. But because time or circumstances could realistically lead me to pass its drafted feedback along, the prompt also produces a student-facing feedback paragraph. Part B of the heuristic exists to judge it.</p>
-                <p className="font-semibold text-[#B4985B] pt-2">Threshold Condition: Equity of Recognition</p>
+              </div>
+            </details>
+          </Panel>
+
+          <Panel title="2. The Evaluation Heuristic">
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Threshold Condition: Equity of Recognition
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
                 <p>Before scoring the three dimensions, the tool must clear this gate: Does it work comparably well across student profiles? Specifically, across students whose home language or writing style differs from academic English, students who write briefly and plainly, and students outside the "good student" prototype.</p>
-                <p>This is a gate, not a dimension: if the tool amplifies my ability to know some students while systematically obscuring others, its scores on the dimensions below don't matter. The documented evidence base for this concern, the distinction between dialect and register that shapes how to test it, and the current testing status are detailed in Footnotes 1 and 2 of the Evaluation Heuristic.</p>
+                <p>This is a gate, not a dimension: if the tool amplifies my ability to know some students while systematically obscuring others, its scores on the dimensions below don't matter. The documented evidence base for this concern, the distinction between dialect and register that shapes how to test it, and the current testing status are detailed in Footnotes 1 and 2 below.</p>
               </div>
             </details>
 
@@ -566,14 +467,75 @@ export default function Assignment2() {
                   Because I cannot measure energy use directly, token count stands in as a proxy. This creates a practical tension: I need the AI&apos;s feedback to be genuinely helpful to students, but I also need to minimize energy and token use. The key question becomes: does generating quality feedback require a high-capacity (expensive) model, or can a smaller, cheaper model do the job adequately?
                 </p>
                 <p>
-                  For this assignment, I decided to start with Gemini 3.5 Flash, a middle-level model in terms of compute requirements. This choice directly tested the sustainability question: can quality feedback be generated at a moderate compute cost, or would a high-capacity model be necessary? The Prompt Architecture Test under Results and Scoring later returned a direct answer: prompt design, not model capacity, controlled output quality. The higher-capacity model earned no score the mid-level model could not match once the prompt was constrained.
+                  For this assignment, I decided to start with Gemini 3.5 Flash, a middle-level model in terms of compute requirements. This choice directly tested the sustainability question: can quality feedback be generated at a moderate compute cost, or would a high-capacity model be necessary? The Prompt Architecture Test in the Results section later returned a direct answer: prompt design, not model capacity, controlled output quality. The higher-capacity model earned no score the mid-level model could not match once the prompt was constrained.
                 </p>
               </div>
             </details>
 
+            <div className="mb-8 mt-4">
+              <h3 className="text-lg font-semibold text-[#B4985B] mb-4">Part A: Teacher-Facing Tool</h3>
+              <CriteriaTable rows={partA} />
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-[#B4985B] mb-4">Part B: Student-Facing Feedback Test</h3>
+              <CriteriaTable rows={partB} />
+            </div>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Methodological Notes (Part B)
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-4">
+                {methodNotesPartB.split('\n\n').map((para, i) => (
+                  <p key={i} className="mb-3">{para}</p>
+                ))}
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Footnotes
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
+                <p><span className="font-semibold text-[#B4985B]">1.</span> Gate, not dimension. Equity must clear before anything else is scored — if this gate fails, scores below don't matter. A tool that amplifies my knowledge of some students while obscuring others causes unequally distributed relational damage no efficiency gain can offset.</p>
+                <p><span className="font-semibold text-[#B4985B]">2.</span> What to test, and why. Dialect (a home language variety) is not the same as register (plain, brief style vs. polished academic style); in Grade 10 written reflections, register and length are the likelier variables — test both (three plain sentences vs. three polished paragraphs describing the same work). The risk is documented: LLMs judge African American English text less favorably even when overt bias is suppressed (Hofmann et al., 2024), classifiers disproportionately flag AAVE (Sap et al., 2019), and AI-text detectors falsely flag non-native English writers (Liang et al., 2023) — systems rewarding polished writing over substance. Of the two variables, register has now been tested once — the plain-register twin reported under Follow-up Tests in the Results section; dialect remains untested.</p>
+                <p><span className="font-semibold text-[#B4985B]">3.</span> The Wholeness paradox, named on purpose. The AI cannot know my students; only I can. Wholeness measures whether the output gives me a foothold for recognition — candidate details a knowing teacher can verify — not whether the AI itself "recognizes" anyone.</p>
+                <p><span className="font-semibold text-[#B4985B]">4.</span> Coded praise. Words like "articulate," "well-organized," and "sophisticated" can do invisible work, rewarding how a student writes over what they're thinking (Alim & Smitherman, 2012).</p>
+                <p><span className="font-semibold text-[#B4985B]">5.</span> Hypothesis, now tested once. Because LLMs reproduce dominant narrative templates, the AI may under-recognize matter-of-fact effort ("I kept redoing it until it worked") relative to a dramatized struggle story describing the same work. The plain-register twin test probed this directly: under the original prompt, the AI discounted exactly this kind of effort — see Follow-up Tests.</p>
+                <p><span className="font-semibold text-[#B4985B]">6.</span> Grit is contested. Its predictive validity is weaker than popularly claimed and overlaps heavily with conscientiousness (Credé et al., 2017). Grit language can valorize grinding through when the better questions are Why is this so hard? and What support is missing?</p>
+                <p><span className="font-semibold text-[#B4985B]">7.</span> Criteria compliance. Schools model agency vocabulary; students learn to perform it — producing the language of the rubric rather than the learning it describes (Torrance, 2007). Quiet students, or those writing in a plain register, may show agency without sounding agentive.</p>
+                <p><span className="font-semibold text-[#B4985B]">8.</span> Hedging cuts both ways. "I tried to..." may reflect epistemic care or cultural norms — or genuine uncertainty and low self-efficacy. The ambiguity is the point: AI output should prompt a teacher conversation, never a conclusion.</p>
+                <p><span className="font-semibold text-[#B4985B]">9.</span> Why truthfulness gates Part B but only cautions Part A. In the teacher-facing tool, a fabricated detail wastes my time; I'm in the loop to catch it. In student-facing feedback, fabrication reaches the student directly — and a student who reads praise for something they never wrote learns the system didn't really read their work. Trust damage outlasts the feedback.</p>
+                <p><span className="font-semibold text-[#B4985B]">10.</span> Comparison design. "Better than none" is not a low bar: feedback interventions decreased performance in about a third of studied cases, typically when attention went to the self rather than the task (Kluger & DeNisi, 1996). A true "no feedback" condition can't ethically be run on real students; instead, score the generated paragraphs against criteria the literature says predict benefit or harm.</p>
+                <p><span className="font-semibold text-[#B4985B]">11.</span> What good feedback contains. Person-praise is associated with fragility after later setbacks; process-praise supports persistence (Mueller & Dweck, 1998). Effective feedback answers Where am I going? How am I going? Where to next? (Hattie & Timperley, 2007) — affirmation-heavy paragraphs answer only the middle question.</p>
+                <p><span className="font-semibold text-[#B4985B]">12.</span> Voice authenticity is an empirical question. Students readily distinguish institutional voice from their teacher's, and feedback perceived as automated may be discounted regardless of content — but this can't be verified without student participants. A limitation, not a finding.</p>
+              </div>
+            </details>
           </Panel>
 
-          <Panel title="Results and Scoring">
+          <Panel title="3. Methodology">
+            <p className="mb-4">
+              To test this tool, I needed student reflections that would reveal whether the AI could recognize and describe student learning accurately and fairly. I used four composite student reflections, each based on real reflections from my students and modified to protect privacy. All come from end-of-quarter self-assessments in band and technology classes.
+            </p>
+            <p className="mb-4">
+              The reflections follow a consistent structure: each student names one area of confident learning, describes a challenge they faced, sets a goal for the future, and notes progress made. This structure mirrors the reflection prompts I actually use.
+            </p>
+            <p className="mb-4">
+              The four reflections vary in length and detail, but all come from relatively articulate, reflective students. This is a limitation: the Equity of Recognition gate asks whether the tool works equally well across different student profiles, including those who write plainly or briefly. Testing that gate requires the same content written in two versions, one polished and one plain, to see if recognition changes with how the student writes. R-EQ1 is exactly that: a synthesized plain-register twin of R020, created for the comparison reported under Follow-up Tests in the Results section.
+            </p>
+            <p className="mb-4 text-sm italic text-slate-300">
+              The exact prompt template appears in Appendix A; the full set of student reflections, including the synthesized twin R-EQ1, appears in Appendix B.
+            </p>
+          </Panel>
+
+          <Panel title="4. Results">
             <h3 className="mb-2 font-semibold text-[#B4985B]">Threshold Condition: Equity of Recognition</h3>
             <p className="mb-2 text-sm font-semibold">Judgment: Passed on the four original reflections &mdash; but failed when the same work was rewritten in plain language. A stricter prompt corrected this in one test.</p>
             <p className="mb-6 text-sm">{equityStatement}</p>
@@ -592,51 +554,10 @@ export default function Assignment2() {
               The most significant finding across both parts is that the AI repeatedly <span className="font-semibold">moves from observation to interpretation</span>. Rather than remaining a tool that offers &ldquo;candidate details a knowing teacher can verify,&rdquo; it often constructs flattering narratives about students&apos; character or maturity. That tendency is precisely the limitation the heuristic is designed to detect.
             </p>
 
-            <h3 className="mb-4 mt-6 font-semibold text-[#B4985B]">Detailed Analyses</h3>
-            {aiAnalyses.map((analysis) => {
-              const reflection = reflections.find(r => r.id.includes(analysis.id));
-              return (
-                <details key={analysis.id} name="detailed-analyses" className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30">
-                  <summary className="cursor-pointer p-4 font-semibold text-[#B4985B] hover:text-amber-300 flex items-center gap-2">
-                    Student {analysis.id}
-                    <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </summary>
-                  <div className="px-4 pb-4 pt-2 space-y-4 text-amber-50">
-                    <div>
-                      <h4 className="font-semibold text-[#B4985B] mb-2">Student Reflection</h4>
-                      <p className="text-sm">{reflection?.text}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-[#B4985B] mb-2">AI Analysis Output</h4>
-                      <div className="space-y-4 text-sm">
-                        <div className="border-l-2 border-[#B4985B]/30 pl-3">
-                          <p className="font-semibold text-[#B4985B] mb-2">Areas to Explore</p>
-                          <ul className="space-y-2">
-                            {analysis.explore.map((item, i) => (
-                              <li key={i} className="text-amber-50/90">• {item}</li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="border-l-2 border-[#B4985B]/30 pl-3">
-                          <p className="font-semibold text-[#B4985B] mb-2">Follow-up Questions</p>
-                          <ul className="space-y-2">
-                            {analysis.questions.map((q, i) => (
-                              <li key={i} className="text-amber-50/90 italic">• {q}</li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="border-l-2 border-[#B4985B]/30 pl-3">
-                          <p className="font-semibold text-[#B4985B] mb-2">Feedback Paragraph</p>
-                          <p className="text-amber-50/90">{analysis.feedback}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-              );
-            })}
+            <p className="mb-4 text-sm italic text-slate-300">
+              The per-student analyses, each reflection paired with its full AI output, appear in Appendix C.
+            </p>
+
             <h3 className="mb-4 mt-6 font-semibold text-[#B4985B]">Follow-up Tests</h3>
             <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
@@ -737,50 +658,148 @@ export default function Assignment2() {
             </details>
           </Panel>
 
-          <Panel title="Reflection">
+          <Panel title="5. Discussion">
             {reflectionParas.map((p, i) => (
               <p key={i} className="mb-4">{p}</p>
             ))}
           </Panel>
 
-          <Panel title="AI Use">
-            <div className="space-y-4 text-slate-200 text-sm">
-              <div>
-                <p className="font-semibold text-[#B4985B] mb-2">Core Concepts & Writing</p>
-                <p>The evaluation heuristic, final reflection, and all underlying beliefs are entirely my own original work. AI was used strictly as an editorial partner to refine, expand, and tighten the phrasing for clarity.</p>
-              </div>
-              <div>
-                <p className="font-semibold text-[#B4985B] mb-2">Data Processing & Testing</p>
-                <p>Gemini 3.5 Flash was used to analyze the student reflections and generate the baseline feedback examples. Gemini 3.5 Flash-Lite and GPT 5.5 were utilized specifically for the prompt architecture and constraint testing.</p>
-              </div>
-              <div>
-                <p className="font-semibold text-[#B4985B] mb-2">Research & Ideation</p>
-                <p>AI served as a conversational partner to brainstorm test methodologies, draft the initial prompt templates, locate supporting literature, and verify claims.</p>
-              </div>
-              <div>
-                <p className="font-semibold text-[#B4985B] mb-2">Data Privacy & Synthesis</p>
-                <p>The four core student reflections are heavily modified composites based on real examples, with all identifying details removed. The plain-register reflection (R-EQ1) contains no actual student writing; it is a fully AI-synthesized twin of R020 created specifically to test the Equity gate.</p>
-              </div>
-              <div>
-                <p className="font-semibold text-[#B4985B] mb-2">Development</p>
-                <p>AI coding assistants were used to build and style the structural elements of this website.</p>
-              </div>
-            </div>
-          </Panel>
-
-          <Panel title="Reflection References">
+          <Panel title="6. References">
             <ul className="space-y-3 text-sm">
-              {reflectionReferences.map((r, idx) => (
+              {[...footnoteReferences, ...reflectionReferences]
+                .sort((a, b) => a.authors.localeCompare(b.authors))
+                .map((r, idx) => (
                 <li key={idx}>
                   {r.authors} ({r.year}). {r.title}
                   {r.type === "book" ? (
-                    <> <i>{r.publisher}</i></>
+                    <> {r.publisher}</>
                   ) : (
                     <> <i>{r.journal}</i>{r.volume ? `, ${r.volume}` : ""}{r.issue ? `(${r.issue})` : ""}{r.pages ? `, ${r.pages}` : ""}.</>
                   )}
                 </li>
               ))}
             </ul>
+          </Panel>
+
+          <Panel title="Appendices">
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Appendix A: Prompt Template
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50">
+                <p className="mb-4 text-sm">The exact prompt given to the AI for each reflection:</p>
+                <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-black/50 p-4 font-mono text-xs leading-relaxed">{promptTemplate}</pre>
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Appendix B: Student Reflections
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50">
+                <div className="mb-4 rounded-lg border border-[#B4985B]/50 bg-black/30 p-4 text-sm">
+                  <span className="font-semibold text-[#B4985B]">Privacy note:</span> The first four reflections are obfuscated versions of real student reflections. Distinctive details that could identify individual students (specific software, instruments, productions, roles, and unique circumstances) were removed or altered, and the wording itself was rewritten: no sentences appear as a student originally wrote them. The themes and learning of each reflection were preserved. The fifth, R-EQ1, is fully synthesized. It is an AI-generated plain-register twin of R020 created for the Equity gate test and contains no student writing at all. No identifiable student data or verbatim student writing was shared with any AI tool.
+                </div>
+                {reflections.map((r) => (
+                  <div key={r.id} className="mb-4">
+                    <p className="mb-1 font-mono text-xs text-[#B4985B]">{r.id}</p>
+                    <p className="text-sm">{r.text}</p>
+                  </div>
+                ))}
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Appendix C: Detailed Analyses
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50">
+                {aiAnalyses.map((analysis) => {
+                  const reflection = reflections.find(r => r.id.includes(analysis.id));
+                  return (
+                    <details key={analysis.id} name="detailed-analyses" className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30">
+                      <summary className="cursor-pointer p-4 font-semibold text-[#B4985B] hover:text-amber-300 flex items-center gap-2">
+                        Student {analysis.id}
+                        <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                      </summary>
+                      <div className="px-4 pb-4 pt-2 space-y-4 text-amber-50">
+                        <div>
+                          <h4 className="font-semibold text-[#B4985B] mb-2">Student Reflection</h4>
+                          <p className="text-sm">{reflection?.text}</p>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-[#B4985B] mb-2">AI Analysis Output</h4>
+                          <div className="space-y-4 text-sm">
+                            <div className="border-l-2 border-[#B4985B]/30 pl-3">
+                              <p className="font-semibold text-[#B4985B] mb-2">Areas to Explore</p>
+                              <ul className="space-y-2">
+                                {analysis.explore.map((item, i) => (
+                                  <li key={i} className="text-amber-50/90">• {item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                            <div className="border-l-2 border-[#B4985B]/30 pl-3">
+                              <p className="font-semibold text-[#B4985B] mb-2">Follow-up Questions</p>
+                              <ul className="space-y-2">
+                                {analysis.questions.map((q, i) => (
+                                  <li key={i} className="text-amber-50/90 italic">• {q}</li>
+                                ))}
+                              </ul>
+                            </div>
+                            <div className="border-l-2 border-[#B4985B]/30 pl-3">
+                              <p className="font-semibold text-[#B4985B] mb-2">Feedback Paragraph</p>
+                              <p className="text-amber-50/90">{analysis.feedback}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </details>
+                  );
+                })}
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Appendix D: AI Use
+              </summary>
+              <div className="px-4 pb-4 pt-2 space-y-4 text-slate-200 text-sm">
+                <div>
+                  <p className="font-semibold text-[#B4985B] mb-2">Core Concepts & Writing</p>
+                  <p>The evaluation heuristic, final reflection, and all underlying beliefs are entirely my own original work. AI was used strictly as an editorial partner to refine, expand, and tighten the phrasing for clarity.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-[#B4985B] mb-2">Data Processing & Testing</p>
+                  <p>Gemini 3.5 Flash was used to analyze the student reflections and generate the baseline feedback examples. Gemini 3.5 Flash-Lite and GPT 5.5 were utilized specifically for the prompt architecture and constraint testing.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-[#B4985B] mb-2">Research & Ideation</p>
+                  <p>AI served as a conversational partner to brainstorm test methodologies, draft the initial prompt templates, locate supporting literature, and verify claims.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-[#B4985B] mb-2">Data Privacy & Synthesis</p>
+                  <p>The four core student reflections are heavily modified composites based on real examples, with all identifying details removed. The plain-register reflection (R-EQ1) contains no actual student writing; it is a fully AI-synthesized twin of R020 created specifically to test the Equity gate.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-[#B4985B] mb-2">Development</p>
+                  <p>AI coding assistants were used to build and style the structural elements of this website.</p>
+                </div>
+              </div>
+            </details>
           </Panel>
 
         </section>
