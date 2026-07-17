@@ -188,9 +188,9 @@ const aiAnalyses = [
   }
 ];
 
-const methodNotesPartB = `Extension question: if the AI drafts feedback a student reads directly, is it better than no feedback at all? Three scenarios would test this: no feedback (baseline) / raw AI feedback (unedited) / AI feedback with light teacher editing (approximately 60 seconds—the realistic scenario). The testing in this assignment scores the middle scenario; the baseline and lightly-edited comparisons remain future work.
+const methodNotesPartB = `Extension question: if the AI drafts feedback a student reads directly, is it better than no feedback at all? Three scenarios would test this: no feedback, raw AI feedback, and AI feedback with light teacher editing (about 60 seconds of work, the realistic scenario). The testing in this assignment scores the middle scenario; the other two comparisons remain future work.
 
-Feed-forward requires concrete next steps. The feedback should suggest one specific, actionable direction the student could pursue. Specificity itself serves as a check: effective feedback should break if pasted into another student's report. If the same paragraph works equally well for any student, it's too generic to support individual growth.`;
+Feed-forward requires one concrete, actionable next step the student could pursue. Specificity itself serves as a check: effective feedback should break if pasted into another student's report. If the same paragraph works equally well for any student, it's too generic to support individual growth.`;
 
 const promptTemplate = `You are assisting a secondary teacher who reviews student reflections to notice
 emerging agency—moments where students pursue learning beyond what was assigned,
@@ -433,15 +433,12 @@ export default function Assignment2() {
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-                Methodological Notes
+                Methodological Notes (Part B)
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-4">
-                <div>
-                  <p className="font-semibold text-[#B4985B] mb-2">Part B</p>
-                  {methodNotesPartB.split('\n\n').map((para, i) => (
-                    <p key={i} className="mb-3">{para}</p>
-                  ))}
-                </div>
+                {methodNotesPartB.split('\n\n').map((para, i) => (
+                  <p key={i} className="mb-3">{para}</p>
+                ))}
               </div>
             </details>
 
