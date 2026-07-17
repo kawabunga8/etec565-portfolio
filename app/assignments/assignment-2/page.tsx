@@ -99,7 +99,7 @@ const reflections = [
   equityTwin,
 ];
 
-const equityStatement = "All four original analyses passed the Equity check: within that sample, I found no evidence that the AI’s recognition tracked fluency markers rather than substance. However, all four reflections come from relatively articulate, reflective students, so passing on them could not show that the AI clears the gate. The matched-pair test reported under Follow-up Tests — the same work described briefly and in a plain register — gave a direct answer: the AI saw the same substance in both registers but judged the plain version less charitably, dismissing the same practice behavior as “brute force.” Under the original prompt the gate therefore fails on register tint. The constrained prompt eliminated the gap in that one test, making the gate’s current status “tested once, failure found and mitigated” — not “passed.”";
+const equityStatement = "All four original analyses passed this check: I found no sign that the AI was rewarding polished writing rather than what students actually did. But all four reflections come from students who already write fluently, so this was not a real test of the question that matters: does the tool treat a student who writes plainly as fairly as one who writes well? To find out, I rewrote one reflection in short, plain sentences — same events, same effort, simpler words — and ran both versions through the AI (the full comparison is under Follow-up Tests below). The AI noticed the same facts in both versions, but judged them differently: practice habits it praised as deliberate strategy in the polished version were dismissed as “brute force” in the plain one. With my original prompt, then, the tool fails this check. A stricter, rewritten prompt closed the gap — but one successful test is not proof. The honest status is: tested once, problem found, promising fix — not “passed.”";
 
 const reflectionParas = [
   "Developing this heuristic fundamentally changed the question I was asking about generative AI. Rather than asking whether AI produces insightful analyses or well-written feedback, I found myself asking a more important educational question: Can AI help me know my students better? That shift became the foundation for my evaluation framework.",
@@ -615,7 +615,7 @@ export default function Assignment2() {
 
           <Panel title="Results and Scoring">
             <h3 className="mb-2 font-semibold text-[#B4985B]">Threshold Condition: Equity of Recognition</h3>
-            <p className="mb-2 text-sm font-semibold">Judgment: Passed on the four original samples; failed the matched-pair register test under the original prompt (mitigated by the constrained prompt)</p>
+            <p className="mb-2 text-sm font-semibold">Judgment: Passed on the four original reflections &mdash; but failed when the same work was rewritten in plain language. A stricter prompt corrected this in one test.</p>
             <p className="mb-6 text-sm">{equityStatement}</p>
 
             <h3 className="mb-2 font-semibold text-[#B4985B]">Part A &mdash; Teacher-Facing Tool</h3>
