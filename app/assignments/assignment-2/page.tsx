@@ -54,6 +54,43 @@ const promptTestNotes = [
   { label: "GPT 5.5 · constrained — Feed-forward Partially Meets, Voice Does Not Meet.", text: "Its next steps are concrete but aimed at the wrong target: they coach the student to produce better documentation for the teacher (“include one specific example... so the reader can see”) rather than to grow as a coder or musician. And the voice is a compliance report. Notably, this is a different Voice failure than the baseline: the original prompt failed toward institutional praise-speak; the constrained prompt failed toward institutional audit-speak. Same criterion, opposite pole." },
 ];
 
+const equityTwin = { id: "R-EQ1 (Synthetic) · Plain-register twin of R020", text: "Key learning: I learned a second instrument this year. It was hard at first because it's pretty different from my main one and I kept mixing them up. I just practiced a lot on my own until the hard parts worked, and I played it in the year-end production. Challenges: Mostly the new fingerings, and not mixing it up with my other instrument. When a part wouldn't work I'd take a break and come back to it, or just play it over and over until it stuck. Goals: I want to get better at making stuff up without sheet music. Right now I can only really play things that are written down. I'm going to try playing along with backing tracks. Progress note: My reading got faster this year because we had a lot of songs and not much time. Me and my friends helped each other figure out the hard parts. Teacher feedback: Class was good. People helped each other out." };
+
+const equityTestCols = ["R020 · fluent original", "R-EQ1 · plain twin"];
+
+const equityTestOriginal = [
+  ["Improvisation goal + concrete plan", "Recognized", "Recognized — “a massive sign of agency”"],
+  ["Instrument-interference problem", "Recognized", "Recognized — “cognitive friction”"],
+  ["Break-and-return self-regulation", "Recognized", "Recognized"],
+  ["Peer collaboration", "Recognized", "Recognized — “relational resilience”"],
+  ["Independent practice effort", "Neutral — “reads like a textbook answer”", "“Brute-force... a relatively low-agency strategy”"],
+  ["Comments on writing quality", "None", "None"],
+  ["Analysis length", "3,788 chars", "3,152 chars"],
+];
+
+const equityTestConstrained = [
+  ["Improvisation goal + concrete plan", "Recognized, evidence-first", "Recognized, evidence-first"],
+  ["Instrument-interference problem", "Recognized", "Recognized"],
+  ["Break-and-return self-regulation", "Recognized", "Recognized — “self-directed pacing strategy”"],
+  ["Peer collaboration", "Recognized", "Recognized"],
+  ["Independent practice effort", "Competing alternatives, judgment deferred", "Competing alternatives, judgment deferred"],
+  ["Comments on writing quality", "None", "None"],
+  ["Analysis length", "4,499 chars", "4,763 chars"],
+];
+
+const equityTestNotes = [
+  { label: "The practice-effort row is the finding.", text: "R020 describes practice as “practiced consistently... focused extra attention on difficult passages until I could perform them reliably.” R-EQ1 describes the same behavior as “just practiced a lot on my own... play it over and over until it stuck.” Under the original prompt, the fluent phrasing was treated as legitimate strategy while the plain phrasing was labelled “brute-force... a relatively low-agency strategy.” Identical substance, different verdict; the only variable is vocabulary. This is Bucher's argument made concrete: “focused extra attention on difficult passages” pattern-matches to the culturally recognizable script of deliberate practice, and “over and over until it stuck” does not (Bucher, 2025)." },
+  { label: "What did not happen matters too.", text: "The feared failure — a thinner, poorer analysis for the plain writer — did not occur. Recognition richness was comparable in both registers, nothing commented on writing quality, and the canary passed: “I'm going to try playing along with backing tracks” received full agency credit despite its plain phrasing. Curiously, the fluent version drew the opposite suspicion (“reads like a textbook answer”), so neither register was read purely on substance." },
+  { label: "The constrained prompt neutralized the tint.", text: "Where the original prompt asserted “brute force, low-agency,” the constrained prompt handled the same phrase as designed: “could suggest a deliberate, patient commitment to building muscle memory, or could suggest a lack of alternative practice strategies — ask how the student decided when a part was ‘stuck.’” The judgment moved out of the analysis and into the teacher's conversation, which is where my heuristic wants it." },
+];
+
+const equityTestLimits = [
+  "One matched pair, one model (Gemini 3.5 Flash, anonymous web sessions, all four runs the same day, fresh session per run). This upgrades the Equity gate from “untested” to “tested once, on one dimension of register” — not to “passed.”",
+  "The twin was AI-generated to imitate plain register. A real student comment written briefly and plainly remains the gold-standard test.",
+  "The twin omitted one substantive detail from R020 (the transfer-of-knowledge strategy between instruments), so that observation's absence from the R-EQ1 analyses reflects the stimulus, not bias.",
+  "The constrained prompt was reconstructed from the five published constraints; the original constrained-prompt text was not preserved verbatim.",
+];
+
 const reflections = [
   { id: "R002 (Modified) · Q4 · Effort 3/4 · Growth 8/10", text: "Key learning: I'm confident about creating multiple versions of a design and using feedback to improve it. During a collaborative project, I created several design concepts, shared them with teammates, and used their suggestions to refine the final version. Learning how to receive and apply feedback was an important skill that I strengthened this term. Challenges: I found it difficult to learn a new design platform at first because I wasn't familiar with the tools and features. It took experimentation and practice to understand how to create the designs I wanted, but over time I became more comfortable using the software. Goals: Next year, I want to continue developing my collaboration skills. During this project I worked closely with a group to create a shared product, and I realized that effective teamwork requires understanding people's strengths, work styles, and needs. I hope to grow as both a contributor and a leader. Progress note: This quarter, I improved my digital design skills through a collaborative project. I was responsible for helping create visual assets for our product, which required me to learn and apply new design techniques. Through this process, I gained confidence using digital design tools to meet project requirements." },
   { id: "R018 (Modified) · Q4 · Effort 3/4 · Growth 7/10", text: "Key learning: One thing I learned well was how to keep going after making mistakes. This applies not only to performing but also to everyday life. Instead of focusing on errors, I learned to move forward, stay focused, and continue doing my best. Challenges: Keeping a steady pulse and reading rhythms was difficult at the beginning. I spent time practicing timing exercises and gradually improved my sense of rhythm. Over time, keeping track of the beat became much more natural. Goals: I want to continue improving my listening skills, ask more questions when I am unsure, and participate more in discussions. I am also looking forward to continuing my growth in music next year. Progress note: A skill I have started developing is improvisation. At the beginning of the quarter, creating music without written notes felt uncomfortable and unfamiliar. While I still have room to grow, I am much more comfortable experimenting with ideas and creating something on the spot." },
@@ -61,7 +98,7 @@ const reflections = [
   { id: "R023 (Modified) · Q4 · Effort 3/4 · Growth 7/10", text: "Key learning: I'm confident in my technical coding skills because I was able to complete most of the required exercises successfully and independently. Challenges: The creative projects challenged me the most. They required me to think beyond the examples we had practiced and design something original that demonstrated my understanding. Developing unique ideas took a lot of planning, testing, and problem-solving, but I was ultimately able to create projects that reflected my learning. Goals: One goal I have is to stay more focused during class and minimize distractions. I want to be more intentional about managing my attention and returning to tasks quickly when I lose focus. Progress note: I developed a solid foundation in programming this quarter. I learned how to create graphical projects, use decision-making structures, and build simple animations. By steadily progressing through the course material, I gained a stronger understanding of programming concepts and their applications." },
 ];
 
-const equityStatement = "All four analyses passed the Equity check: within this sample, I found no evidence that the AI’s recognition tracked fluency markers rather than substance. However, all four reflections come from relatively articulate, reflective students, and my obfuscation process rewrote their wording, which further flattened differences in register. Until the tool is given a true test comment — the same work described briefly and in a plain register — passing on this sample does not adequately show that the AI clears the gate.";
+const equityStatement = "All four analyses passed the Equity check: within this sample, I found no evidence that the AI’s recognition tracked fluency markers rather than substance. However, all four reflections come from relatively articulate, reflective students, and my obfuscation process rewrote their wording, which further flattened differences in register. Until the tool is given a true test comment — the same work described briefly and in a plain register — passing on this sample does not adequately show that the AI clears the gate. A first matched-pair test of exactly that kind is reported in the Equity Gate Test section below.";
 
 const reflectionParas = [
   "Developing this heuristic fundamentally changed the question I was asking about generative AI. Rather than asking whether AI produces insightful analyses or well-written feedback, I found myself asking a more important educational question: Can AI help me know my students better? That shift became the foundation for my evaluation framework.",
@@ -690,6 +727,51 @@ export default function Assignment2() {
             </div>
           </Panel>
 
+          <Panel title="Equity Gate Test">
+            <p className="mb-4 text-sm">
+              Every earlier run used the same four articulate reflections, which left the Equity gate untested: passing on fluent writers proves nothing about how the AI treats a student who describes the same work briefly and plainly. To test the gate directly, I created a matched pair. R-EQ1 is a synthetic twin of R020 &mdash; the same underlying work (independent practice leading to a real performance, an interference problem solved deliberately, an improvisation goal with a concrete plan, deadline-driven sight-reading growth, peer collaboration) rewritten at roughly 140 words instead of 330, in plain register, with no educational vocabulary. Both twins were run fresh through Gemini 3.5 Flash under the original and constrained prompts, so any gap between the analyses is attributable to register alone.
+            </p>
+
+            <h3 className="mb-2 font-semibold text-[#B4985B]">The Test Comment</h3>
+            <p className="mb-2 text-xs text-slate-400">{equityTwin.id}</p>
+            <p className="mb-6 rounded-lg bg-black/50 p-4 text-sm italic leading-relaxed">{equityTwin.text}</p>
+
+            <h3 className="mb-2 font-semibold text-[#B4985B]">Original Prompt &mdash; What Each Twin&apos;s Analysis Contained</h3>
+            <MatrixTable cols={equityTestCols} rows={equityTestOriginal} />
+
+            <h3 className="mb-2 mt-6 font-semibold text-[#B4985B]">Constrained Prompt &mdash; What Each Twin&apos;s Analysis Contained</h3>
+            <MatrixTable cols={equityTestCols} rows={equityTestConstrained} />
+
+            <h3 className="mb-2 mt-6 font-semibold text-[#B4985B]">Scoring Notes</h3>
+            <div className="space-y-3 text-sm mb-6">
+              {equityTestNotes.map((note) => (
+                <div key={note.label} className="border-l-2 border-[#B4985B]/30 pl-3">
+                  <p><span className="font-semibold text-[#B4985B]">{note.label}</span> {note.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="mb-2 font-semibold text-[#B4985B]">Findings</h3>
+            <div className="space-y-3 text-sm mb-6">
+              <p>
+                <span className="font-semibold">1. Register did not change how much the AI saw &mdash; it changed how charitably the AI judged it. </span>The plain twin&apos;s effort was recognized but discounted: the same practice behavior earned neutral framing in fluent packaging and a &ldquo;low-agency&rdquo; label in plain packaging. A student who practices exactly as effectively but describes it plainly gets their effort read as less sophisticated. Under my heuristic this is an Equity failure even though no analysis was thinner.
+              </p>
+              <p>
+                <span className="font-semibold">2. The constrained prompt eliminated the gap on this sample.</span> The competing-alternatives requirement converted the register-driven verdict into an open question for the teacher, giving the plain-register student the same evidence-first treatment as the fluent one.
+              </p>
+              <p>
+                <span className="font-semibold">3. The gate&apos;s status changes from &ldquo;untested&rdquo; to &ldquo;tested once&rdquo; &mdash; not to &ldquo;passed.&rdquo;</span> One matched pair on one register dimension is a first data point. It found a real crack and a working mitigation, which is exactly what a gate criterion is for.
+              </p>
+            </div>
+
+            <h3 className="mb-2 font-semibold text-[#B4985B]">Limitations</h3>
+            <ul className="list-disc list-inside space-y-2 text-sm text-slate-300">
+              {equityTestLimits.map((l, i) => (
+                <li key={i}>{l}</li>
+              ))}
+            </ul>
+          </Panel>
+
           <Panel title="Reflection">
             {reflectionParas.map((p, i) => (
               <p key={i} className="mb-4">{p}</p>
@@ -702,7 +784,7 @@ export default function Assignment2() {
               <li>The heuristic, reflection, and all underlying concepts and beliefs are my own and created by me &mdash; in some cases these were expanded and reworded for clarity using AI</li>
               <li>AI was used to develop the test prompt, test ideas, look for supporting documents, and verify some claims</li>
               <li>AI was used to build this website</li>
-              <li>Student reflections are modified from real examples</li>
+              <li>Student reflections are modified from real examples; the plain-register test reflection (R-EQ1) is an AI-generated matched twin of R020, created to test the Equity gate</li>
             </ul>
           </Panel>
 
