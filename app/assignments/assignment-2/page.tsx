@@ -715,7 +715,7 @@ export default function Assignment2() {
               The initial results raised a question: is the observation-to-interpretation drift a property of the model, or of the prompt? To find out, I ran the same four reflections through additional models &mdash; Gemini 3.5 Flash-Lite and GPT 5.5 with the original prompt &mdash; and then re-tested Gemini 3.5 Flash and GPT 5.5 with a <span className="font-semibold">constrained prompt </span>that requires the model to: (1) report direct evidence first, anchored to the student&apos;s own words; (2) state every inference as competing alternatives (&ldquo;could suggest X, or could suggest Y &mdash; here is what would distinguish them&rdquo;); (3) name what remains unclear rather than filling gaps; (4) ground follow-up questions in specific things the student wrote; and (5) give process-focused feedback with no character labels.
             </p>
             <p className="mb-6 text-sm">
-              All five outputs were scored against the heuristic. The Equity gate remains untested throughout &mdash; every run used the same four articulate reflections, so passing it here still proves nothing about plain-register writers.
+              All five outputs were scored against the heuristic. Every run here used the same four articulate reflections, so this test says nothing about plain-register writers on its own &mdash; the Equity gate is tested directly in the Equity Gate Test that follows.
             </p>
 
             <h3 className="mb-2 font-semibold text-[#B4985B]">Part A &mdash; Teacher-Facing Tool</h3>
