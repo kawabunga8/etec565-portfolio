@@ -493,40 +493,21 @@ export default function Assignment2() {
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-                Foundation: My Commitments
+                Foundation: Commitments, Task, and Equity Gate
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                <p>I seek to enhance relational truth and encourage wholeness and resilience. My values inform what tools I use and how I use them.</p>
+                <p className="font-semibold text-[#B4985B]">My Commitments</p>
+                <p>I seek to enhance relational truth and encourage wholeness and resilience.</p>
                 <p className="font-semibold">I will use AI only when it either:</p>
                 <ol className="list-decimal list-inside space-y-2 ml-2">
-                  <li>Saves meaningful time for relational work (freeing me to know students better)</li>
+                  <li>Saves meaningful time for relational work (frees me to know students better)</li>
                   <li>Amplifies my strengths as a teacher (helps me notice what I'd otherwise miss)</li>
                 </ol>
-              </div>
-            </details>
-
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
-              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
-                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-                The Task
-              </summary>
-              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                <p>AI reads student self-reflections and highlights emerging agency, and aspects that point to wholeness and resilience. The AI then suggests follow-up questions I (the teacher) can ask in a real conversation. In this primary use, the AI never talks to the student directly. But because time or circumstances could realistically lead me to pass its drafted feedback along, the prompt also produces a student-facing feedback paragraph &mdash; and Part B of the heuristic exists to judge it.</p>
-              </div>
-            </details>
-
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
-              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
-                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-                Threshold Condition: Equity of Recognition
-              </summary>
-              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                <p>Before scoring the three dimensions, the tool must clear this gate: Does it work comparably well across student profiles? Specifically, across students whose home language or register differs from academic English, students who write briefly and plainly, and students outside the "good student" prototype.</p>
-                <p>This is a gate, not a dimension: if the tool amplifies my ability to know some students while systematically obscuring others, its scores on the dimensions below don't matter. The documented evidence base for this concern, the dialect/register distinction that shapes how to test it, and the current testing status are detailed in Footnotes 1 and 2 of the Evaluation Heuristic.</p>
+                <p className="font-semibold text-[#B4985B] pt-2">The Task</p>
+                <p>AI reads student self-reflections and highlights emerging agency along with aspects that point to wholeness and resilience. The AI then suggests follow-up questions I (the teacher) can ask in a real conversation. In this primary use, the AI never talks to the student directly. But because time or circumstances could realistically lead me to pass its drafted feedback along, the prompt also produces a student-facing feedback paragraph. Part B of the heuristic exists to judge it.</p>
+                <p className="font-semibold text-[#B4985B] pt-2">Threshold Condition: Equity of Recognition</p>
+                <p>Before scoring the three dimensions, the tool must clear this gate: Does it work comparably well across student profiles? Specifically, across students whose home language or writing style differs from academic English, students who write briefly and plainly, and students outside the "good student" prototype.</p>
+                <p>This is a gate, not a dimension: if the tool amplifies my ability to know some students while systematically obscuring others, its scores on the dimensions below don't matter. The documented evidence base for this concern, the distinction between dialect and register that shapes how to test it, and the current testing status are detailed in Footnotes 1 and 2 of the Evaluation Heuristic.</p>
               </div>
             </details>
 
@@ -540,20 +521,20 @@ export default function Assignment2() {
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-4">
                 <div className="border-l-2 border-[#B4985B]/30 pl-3">
                   <p className="font-semibold text-[#B4985B] mb-2">Wholeness</p>
-                  <p className="mb-2">Does the AI surface something specific to this student — a foothold for my recognition — or does it pattern-match generically?</p>
-                  <p className="italic text-sm mb-2">A deliberate paradox, named on purpose: the AI cannot know my students; only I can. So Wholeness is not measured by whether the AI itself "recognizes" the student — it can't — but by whether its output gives me, the person who knows them, a foothold for recognition.</p>
+                  <p className="mb-2">Does the AI surface something specific to this student, a foothold for my recognition, or does it pattern-match generically?</p>
+                  <p className="italic text-sm mb-2">A paradox, named on purpose: the AI cannot know my students; only I can. So Wholeness is not measured by whether the AI itself "recognizes" the student (it can't) but by whether its output gives me, the person who knows them, a foothold for recognition.</p>
                   <p className="font-semibold text-sm mb-1">Success:</p> surfaces embodied, specific details that a person who knows this student can confirm and build on
                   <p className="font-semibold text-sm mb-1 mt-1">Failure:</p> output could apply to any student with similar grades
                 </div>
                 <div className="border-l-2 border-[#B4985B]/30 pl-3">
                   <p className="font-semibold text-[#B4985B] mb-2">Resilience</p>
-                  <p className="mb-2">Does the AI understand the quality of struggle — the mundane, ongoing effort? Or just celebrate the outcome?</p>
+                  <p className="mb-2">Does the AI understand the quality of struggle, the mundane ongoing effort, or does it just celebrate the outcome?</p>
                   <p className="font-semibold text-sm mb-1">Success:</p> sees the work behind the growth, names specific struggle
-                  <p className="font-semibold text-sm mb-1 mt-1">Failure:</p> treats struggle as background noise; focuses only on achievement
+                  <p className="font-semibold text-sm mb-1 mt-1">Failure:</p> treats struggle as background noise; focuses only on achievement; or imposes a single dramatic struggle narrative on quiet, mundane effort
                 </div>
                 <div className="border-l-2 border-[#B4985B]/30 pl-3">
                   <p className="font-semibold text-[#B4985B] mb-2">Agency</p>
-                  <p className="mb-2">Does the AI distinguish genuine self-direction from fluent agency-language? Can it detect quiet agency? Does it fall for the trap of sophisticated vocabulary disguising compliance?</p>
+                  <p className="mb-2">Does the AI distinguish genuine self-direction from fluent agency-language? Can it detect quiet agency? Is it fooled by sophisticated vocabulary disguising compliance?</p>
                   <p className="font-semibold text-sm mb-1">Success:</p> recognizes what's real vs. performed; sees hidden agency
                   <p className="font-semibold text-sm mb-1 mt-1">Failure:</p> rewards vocabulary; misses genuine pursuit; gets fooled by fluent compliance
                 </div>
@@ -565,49 +546,31 @@ export default function Assignment2() {
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-                Sustainability &ndash; Is the Juice Worth the Squeeze?
+                Sustainability: Is the Juice Worth the Squeeze?
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                <p><span className="font-semibold">Energy Cost:</span> Token count as a proxy for compute cost. "Is the juice worth the squeeze?" — meaningful amplification justifies the compute cost. (Equity is handled separately as the threshold condition above; this measure is strictly about efficiency.)</p>
+                <p><span className="font-semibold">Energy Cost:</span> Token count as a proxy for compute cost; meaningful amplification must justify that cost. (Equity is handled separately as the threshold condition above; this measure is strictly about efficiency.)</p>
                 <p>
                   Although I did not add an environmental assessment to my heuristic, I believe this issue is important, and as I explore the impacts I keep finding hidden layers of consequence. The saying &ldquo;the juice is worth the squeeze&rdquo; &mdash; the result justifies the effort &mdash; is my mental picture here, because AI breaks it in two directions at once.
                 </p>
                 <p>
-                  In my classroom, the squeeze is the point. When students do hard work, the visible product (the juice) can look small next to the effort, but the squeeze itself is where the value lives: experience, knowledge, and the muscle memory of acquiring new skills. AI inverts this picture. Abundant juice appears with seemingly no squeeze at all &mdash; but the squeeze has not disappeared. It has moved out of sight, into the energy and water demands of data centres. The &ldquo;free&rdquo; juice comes from a squeeze happening somewhere else, to be paid by someone else.
+                  In my classroom, the squeeze is the point. When students do hard work, the visible product (the juice) can look small next to the effort, but the squeeze itself is where the value lives: experience, knowledge, and the muscle memory of acquiring new skills. AI inverts this picture. Abundant juice appears with seemingly no squeeze at all. But the squeeze has not disappeared. It has moved out of sight, into the energy and water demands of data centres. The &ldquo;free&rdquo; juice comes from a squeeze happening somewhere else, to be paid by someone else.
                 </p>
                 <p>
-                  So the question &ldquo;is the juice worth the squeeze?&rdquo; still applies to AI use &mdash; the difficulty is that the squeeze is now hidden, and I have to account for a cost I cannot directly see.
+                  So the question &ldquo;is the juice worth the squeeze?&rdquo; still applies to AI use. The difficulty is that the squeeze is now hidden, and I have to account for a cost I cannot directly see.
                 </p>
                 <p>
-                  Resource analysis is complex. Improvements in data centre cooling, energy efficiency, and renewable power would be welcome. But until those improvements happen at scale, I need to think critically about where and how I use these tools&mdash;whether today&apos;s environmental cost is proportional to today&apos;s classroom value.
+                  Resource analysis is complex. Improvements in data centre cooling, energy efficiency, and renewable power would be welcome. But until those improvements happen at scale, I need to think critically about where and how I use these tools: whether today&apos;s environmental cost is proportional to today&apos;s classroom value.
                 </p>
                 <p>
-                  There is no easy way to measure energy use, and that analysis is beyond my understanding. Instead, I will use token use as a proxy for energy consumption. This creates a practical tension: I need the AI&apos;s feedback to be genuinely helpful to students, but I also need to minimize energy and token use. The key question becomes: does generating quality feedback require a high-capacity (expensive) model, or can a smaller, cheaper model do the job adequately?
+                  Because I cannot measure energy use directly, token count stands in as a proxy. This creates a practical tension: I need the AI&apos;s feedback to be genuinely helpful to students, but I also need to minimize energy and token use. The key question becomes: does generating quality feedback require a high-capacity (expensive) model, or can a smaller, cheaper model do the job adequately?
                 </p>
                 <p>
-                  For this assignment, I decided to start with Gemini 3.5 Flash, a middle-level model in terms of compute requirements. This choice directly tests the sustainability question: can quality feedback be generated at a moderate compute cost, or would a high-capacity model be necessary? The Prompt Architecture Test under Results and Scoring later returned a direct answer: prompt design, not model capacity, controlled output quality &mdash; the higher-capacity model earned no score the mid-level model could not match once the prompt was constrained.
+                  For this assignment, I decided to start with Gemini 3.5 Flash, a middle-level model in terms of compute requirements. This choice directly tested the sustainability question: can quality feedback be generated at a moderate compute cost, or would a high-capacity model be necessary? The Prompt Architecture Test under Results and Scoring later returned a direct answer: prompt design, not model capacity, controlled output quality. The higher-capacity model earned no score the mid-level model could not match once the prompt was constrained.
                 </p>
               </div>
             </details>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
-              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
-                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-                Scoring Note
-              </summary>
-              <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
-                <p>When scoring the outputs, watch specifically for:</p>
-                <ul className="list-disc list-inside space-y-2 ml-2">
-                  <li><span className="font-semibold">Threshold first:</span> Any evidence the output would land differently for a plain-register or brief reflection describing the same underlying work? If yes, note it before scoring anything else.</li>
-                  <li><span className="font-semibold">Wholeness:</span> Did the AI surface details about this student that I can verify, or generic "good engagement" markers?</li>
-                  <li><span className="font-semibold">Resilience:</span> Did it recognize the kind of effort without imposing a single struggle narrative?</li>
-                  <li><span className="font-semibold">Agency:</span> Did it catch what's real, or did it get fooled by vocabulary? Did it miss quiet agency?</li>
-                </ul>
-                <p className="italic">And one meta-question: Which students is this tool working best and least for? If it's amplifying my ability to know some students while obscuring others, I've learned something important about its limits.</p>
-              </div>
-            </details>
           </Panel>
 
           <Panel title="Results and Scoring">
