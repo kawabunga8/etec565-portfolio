@@ -99,7 +99,7 @@ const reflections = [
   equityTwin,
 ];
 
-const equityStatement = "All four analyses passed the Equity check: within this sample, I found no evidence that the AI’s recognition tracked fluency markers rather than substance. However, all four reflections come from relatively articulate, reflective students, and my obfuscation process rewrote their wording, which further flattened differences in register. Until the tool is given a true test comment — the same work described briefly and in a plain register — passing on this sample does not adequately show that the AI clears the gate. A first matched-pair test of exactly that kind is reported under Follow-up Tests at the end of this section.";
+const equityStatement = "All four original analyses passed the Equity check: within that sample, I found no evidence that the AI’s recognition tracked fluency markers rather than substance. However, all four reflections come from relatively articulate, reflective students, so passing on them could not show that the AI clears the gate. The matched-pair test reported under Follow-up Tests — the same work described briefly and in a plain register — gave a direct answer: the AI saw the same substance in both registers but judged the plain version less charitably, dismissing the same practice behavior as “brute force.” Under the original prompt the gate therefore fails on register tint. The constrained prompt eliminated the gap in that one test, making the gate’s current status “tested once, failure found and mitigated” — not “passed.”";
 
 const reflectionParas = [
   "Developing this heuristic fundamentally changed the question I was asking about generative AI. Rather than asking whether AI produces insightful analyses or well-written feedback, I found myself asking a more important educational question: Can AI help me know my students better? That shift became the foundation for my evaluation framework.",
@@ -394,7 +394,7 @@ export default function Assignment2() {
               The four reflections vary in length and detail, but all come from relatively articulate, reflective students. This is actually a limitation: the Equity of Recognition gate asks whether the tool works equally well across different student profiles, including those who write plainly or briefly. To truly test this gate, I would need the same content written in two versions — one polished, one plain — to see if recognition changes with register. These four reflections alone cannot answer that question. They can show whether the tool produces reasonable analyses for reflective students, but not whether bias emerges across different writing profiles.
             </p>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -407,7 +407,7 @@ export default function Assignment2() {
               </div>
             </details>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -448,7 +448,7 @@ export default function Assignment2() {
               </p>
             </div>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -471,7 +471,7 @@ export default function Assignment2() {
               </div>
             </details>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -494,7 +494,7 @@ export default function Assignment2() {
               </div>
             </details>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -517,7 +517,7 @@ export default function Assignment2() {
           </Panel>
 
           <Panel title="Heuristic Details: 'Can AI Help Me Know My Students Better?'">
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -534,7 +534,7 @@ export default function Assignment2() {
               </div>
             </details>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -546,7 +546,7 @@ export default function Assignment2() {
               </div>
             </details>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -561,7 +561,7 @@ export default function Assignment2() {
               </div>
             </details>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -591,7 +591,7 @@ export default function Assignment2() {
               </div>
             </details>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -618,7 +618,7 @@ export default function Assignment2() {
               </div>
             </details>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -640,7 +640,7 @@ export default function Assignment2() {
 
           <Panel title="Results and Scoring">
             <h3 className="mb-2 font-semibold text-[#B4985B]">Threshold Condition: Equity of Recognition</h3>
-            <p className="mb-2 text-sm font-semibold">Judgment: Passed on all four samples (gate not yet adequately tested)</p>
+            <p className="mb-2 text-sm font-semibold">Judgment: Passed on the four original samples; failed the matched-pair register test under the original prompt (mitigated by the constrained prompt)</p>
             <p className="mb-6 text-sm">{equityStatement}</p>
 
             <h3 className="mb-2 font-semibold text-[#B4985B]">Part A &mdash; Teacher-Facing Tool</h3>
@@ -661,7 +661,7 @@ export default function Assignment2() {
             {aiAnalyses.map((analysis) => {
               const reflection = reflections.find(r => r.id.includes(analysis.id));
               return (
-                <details key={analysis.id} name="detailed-analyses" className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]">
+                <details key={analysis.id} name="detailed-analyses" className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30">
                   <summary className="cursor-pointer p-4 font-semibold text-[#B4985B] hover:text-amber-300 flex items-center gap-2">
                     Student {analysis.id}
                     <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -703,7 +703,7 @@ export default function Assignment2() {
               );
             })}
             <h3 className="mb-4 mt-6 font-semibold text-[#B4985B]">Follow-up Tests</h3>
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -748,7 +748,7 @@ export default function Assignment2() {
               </div>
             </details>
 
-            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
               <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
