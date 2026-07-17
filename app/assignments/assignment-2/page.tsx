@@ -575,10 +575,13 @@ export default function Assignment2() {
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
                 <p><span className="font-semibold">Energy Cost:</span> Token count as a proxy for compute cost. "Is the juice worth the squeeze?" — meaningful amplification justifies the compute cost. (Equity is handled separately as the threshold condition above; this measure is strictly about efficiency.)</p>
                 <p>
-                  Although I did not add an environmental assessment to my heuristic, I want to emphasize that I do believe this issue is important. As I have begun to explore the impacts, I am realizing how complex and multi-tiered they are&mdash;hidden layers of consequence I hadn&apos;t fully considered. I flip the &ldquo;juice is worth the squeeze&rdquo; saying on its head. This metaphor is helpful for me as a mental picture of what I need to remember. Applied to human work, the juice may sometimes appear insignificant for the amount of effort. On the other hand, for AI work, the abundant juice seems to appear with little effort.
+                  Although I did not add an environmental assessment to my heuristic, I believe this issue is important, and as I explore the impacts I keep finding hidden layers of consequence. The saying &ldquo;the juice is worth the squeeze&rdquo; &mdash; the result justifies the effort &mdash; is my mental picture here, because AI breaks it in two directions at once.
                 </p>
                 <p>
-                  When my students do hard work (squeeze), they are gaining experience, knowledge, and the muscle memory of accomplishing tasks and acquiring new skills (the juice). However, AI use requires significant environmental resources. The &ldquo;sweet juice&rdquo; of AI output comes at a cost of an alarming &ldquo;squeeze&rdquo;!
+                  In my classroom, the squeeze is the point. When students do hard work, the visible product (the juice) can look small next to the effort, but the squeeze itself is where the value lives: experience, knowledge, and the muscle memory of acquiring new skills. AI inverts this picture. Abundant juice appears with seemingly no squeeze at all &mdash; but the squeeze has not disappeared. It has moved out of sight, into the energy and water demands of data centres. The &ldquo;free&rdquo; juice comes from a squeeze happening somewhere else, to be paid by someone else.
+                </p>
+                <p>
+                  So the question &ldquo;is the juice worth the squeeze?&rdquo; still applies to AI use &mdash; the difficulty is that the squeeze is now hidden, and I have to account for a cost I cannot directly see.
                 </p>
                 <p>
                   Resource analysis is complex. Improvements in data centre cooling, energy efficiency, and renewable power would be welcome. But until those improvements happen at scale, I need to think critically about where and how I use these tools&mdash;whether today&apos;s environmental cost is proportional to today&apos;s classroom value.
