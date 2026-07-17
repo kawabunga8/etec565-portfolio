@@ -406,9 +406,15 @@ export default function Assignment2() {
                 <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-black/50 p-4 font-mono text-xs leading-relaxed">{promptTemplate}</pre>
               </div>
             </details>
-          </Panel>
 
-          <Panel title="Test Data: Student Reflections">
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Test Data: Student Reflections
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50">
             <div className="mb-4 rounded-lg border border-[#B4985B]/50 bg-black/30 p-4 text-sm">
               <span className="font-semibold text-[#B4985B]">Privacy note:</span> The first four reflections are obfuscated versions of real student reflections. Distinctive details that could identify individual students (specific software, instruments, productions, roles, and unique circumstances) were removed or altered, and the wording itself was rewritten &mdash; no sentences appear as a student originally wrote them. The themes and learning of each reflection were preserved. The fifth, R-EQ1, is fully synthesized &mdash; an AI-generated plain-register twin of R020 created for the Equity gate test &mdash; and contains no student writing at all. No identifiable student data or verbatim student writing was shared with any AI tool.
             </div>
@@ -418,6 +424,8 @@ export default function Assignment2() {
                 <p className="text-sm">{r.text}</p>
               </div>
             ))}
+              </div>
+            </details>
           </Panel>
 
           <Panel title="Evaluation Heuristic: Can AI Help Me Know My Students Better?">
@@ -588,10 +596,25 @@ export default function Assignment2() {
                 <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-                Additional Measure
+                Sustainability &ndash; Is the Juice Worth the Squeeze?
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
                 <p><span className="font-semibold">Energy Cost:</span> Token count as a proxy for compute cost. "Is the juice worth the squeeze?" — meaningful amplification justifies the compute cost. (Equity is handled separately as the threshold condition above; this measure is strictly about efficiency.)</p>
+                <p>
+                  Although I did not add an environmental assessment to my heuristic, I want to emphasize that I do believe this issue is important. As I have begun to explore the impacts, I am realizing how complex and multi-tiered they are&mdash;hidden layers of consequence I hadn&apos;t fully considered. I flip the &ldquo;juice is worth the squeeze&rdquo; saying on its head. This metaphor is helpful for me as a mental picture of what I need to remember. Applied to human work, the juice may sometimes appear insignificant for the amount of effort. On the other hand, for AI work, the abundant juice seems to appear with little effort.
+                </p>
+                <p>
+                  When my students do hard work (squeeze), they are gaining experience, knowledge, and the muscle memory of accomplishing tasks and acquiring new skills (the juice). However, AI use requires significant environmental resources. The &ldquo;sweet juice&rdquo; of AI output comes at a cost of an alarming &ldquo;squeeze&rdquo;!
+                </p>
+                <p>
+                  Resource analysis is complex. Improvements in data centre cooling, energy efficiency, and renewable power would be welcome. But until those improvements happen at scale, I need to think critically about where and how I use these tools&mdash;whether today&apos;s environmental cost is proportional to today&apos;s classroom value.
+                </p>
+                <p>
+                  There is no easy way to measure energy use, and that analysis is beyond my understanding. Instead, I will use token use as a proxy for energy consumption. This creates a practical tension: I need the AI&apos;s feedback to be genuinely helpful to students, but I also need to minimize energy and token use. The key question becomes: does generating quality feedback require a high-capacity (expensive) model, or can a smaller, cheaper model do the job adequately?
+                </p>
+                <p>
+                  For this assignment, I decided to start with Gemini 3.5 Flash, a middle-level model in terms of compute requirements. This choice directly tests the sustainability question: can quality feedback be generated at a moderate compute cost, or would a high-capacity model be necessary?
+                </p>
               </div>
             </details>
 
@@ -613,24 +636,6 @@ export default function Assignment2() {
                 <p className="italic">And one meta-question: Which students is this tool working best and least for? If it's amplifying my ability to know some students while obscuring others, I've learned something important about its limits.</p>
               </div>
             </details>
-          </Panel>
-
-          <Panel title="Sustainability – Is the Juice Worth the Squeeze?">
-            <p className="mb-4">
-              Although I did not add an environmental assessment to my heuristic, I want to emphasize that I do believe this issue is important. As I have begun to explore the impacts, I am realizing how complex and multi-tiered they are&mdash;hidden layers of consequence I hadn&apos;t fully considered. I flip the &ldquo;juice is worth the squeeze&rdquo; saying on its head. This metaphor is helpful for me as a mental picture of what I need to remember. Applied to human work, the juice may sometimes appear insignificant for the amount of effort. On the other hand, for AI work, the abundant juice seems to appear with little effort.
-            </p>
-            <p className="mb-4">
-              When my students do hard work (squeeze), they are gaining experience, knowledge, and the muscle memory of accomplishing tasks and acquiring new skills (the juice). However, AI use requires significant environmental resources. The &ldquo;sweet juice&rdquo; of AI output comes at a cost of an alarming &ldquo;squeeze&rdquo;!
-            </p>
-            <p className="mb-4">
-              Resource analysis is complex. Improvements in data centre cooling, energy efficiency, and renewable power would be welcome. But until those improvements happen at scale, I need to think critically about where and how I use these tools&mdash;whether today&apos;s environmental cost is proportional to today&apos;s classroom value.
-            </p>
-            <p className="mb-4">
-              There is no easy way to measure energy use, and that analysis is beyond my understanding. Instead, I will use token use as a proxy for energy consumption. This creates a practical tension: I need the AI&apos;s feedback to be genuinely helpful to students, but I also need to minimize energy and token use. The key question becomes: does generating quality feedback require a high-capacity (expensive) model, or can a smaller, cheaper model do the job adequately?
-            </p>
-            <p className="mb-4">
-              For this assignment, I decided to start with Gemini 3.5 Flash, a middle-level model in terms of compute requirements. This choice directly tests the sustainability question: can quality feedback be generated at a moderate compute cost, or would a high-capacity model be necessary?
-            </p>
           </Panel>
 
           <Panel title="Results and Scoring">
