@@ -374,13 +374,13 @@ export default function Assignment2() {
         <section className="mb-12">
           <Panel title="The Use Case">
             <p className="mb-4">
-              To test this tool, I needed student reflections that would reveal whether the AI could recognize and describe student learning accurately and fairly. I used four composite student reflections — each based on real reflections from my students, modified to remove identifying details and adjust phrasing. All come from end-of-quarter self-assessments in band and technology classes.
+              To test this tool, I needed student reflections that would reveal whether the AI could recognize and describe student learning accurately and fairly. I used four composite student reflections, each based on real reflections from my students and modified to protect privacy. All come from end-of-quarter self-assessments in band and technology classes.
             </p>
             <p className="mb-4">
-              The reflections follow a consistent structure: each student names one area of confident learning, describes a challenge they faced, sets a goal for the future, and notes progress made. This structure is realistic — it mirrors prompts I actually use — but the wording has been altered throughout. No sentences appear as students originally wrote them; themes and learning are preserved, not quotations.
+              The reflections follow a consistent structure: each student names one area of confident learning, describes a challenge they faced, sets a goal for the future, and notes progress made. This structure mirrors the reflection prompts I actually use.
             </p>
             <p className="mb-4">
-              The four reflections vary in length and detail, but all come from relatively articulate, reflective students. This is a limitation: the Equity of Recognition gate asks whether the tool works equally well across different student profiles, including those who write plainly or briefly. Testing that gate requires the same content written in two versions — one polished, one plain — to see if recognition changes with register. The fifth reflection below, R-EQ1, is exactly that: a synthesized plain-register twin of R020, created for the matched-pair test reported in Results and Scoring under Follow-up Tests.
+              The four reflections vary in length and detail, but all come from relatively articulate, reflective students. This is a limitation: the Equity of Recognition gate asks whether the tool works equally well across different student profiles, including those who write plainly or briefly. Testing that gate requires the same content written in two versions, one polished and one plain, to see if recognition changes with how the student writes. The fifth reflection below, R-EQ1, is exactly that: a synthesized plain-register twin of R020, created for the comparison reported in Results and Scoring under Follow-up Tests.
             </p>
 
             <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
@@ -405,7 +405,7 @@ export default function Assignment2() {
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50">
             <div className="mb-4 rounded-lg border border-[#B4985B]/50 bg-black/30 p-4 text-sm">
-              <span className="font-semibold text-[#B4985B]">Privacy note:</span> The first four reflections are obfuscated versions of real student reflections. Distinctive details that could identify individual students (specific software, instruments, productions, roles, and unique circumstances) were removed or altered, and the wording itself was rewritten &mdash; no sentences appear as a student originally wrote them. The themes and learning of each reflection were preserved. The fifth, R-EQ1, is fully synthesized &mdash; an AI-generated plain-register twin of R020 created for the Equity gate test &mdash; and contains no student writing at all. No identifiable student data or verbatim student writing was shared with any AI tool.
+              <span className="font-semibold text-[#B4985B]">Privacy note:</span> The first four reflections are obfuscated versions of real student reflections. Distinctive details that could identify individual students (specific software, instruments, productions, roles, and unique circumstances) were removed or altered, and the wording itself was rewritten: no sentences appear as a student originally wrote them. The themes and learning of each reflection were preserved. The fifth, R-EQ1, is fully synthesized. It is an AI-generated plain-register twin of R020 created for the Equity gate test and contains no student writing at all. No identifiable student data or verbatim student writing was shared with any AI tool.
             </div>
             {reflections.map((r) => (
               <div key={r.id} className="mb-4">
