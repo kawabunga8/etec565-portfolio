@@ -193,15 +193,12 @@ const methodNotesPartB = `Extension question: if the AI drafts feedback a studen
 
 Feed-forward requires one concrete, actionable next step the student could pursue. Specificity itself serves as a check: effective feedback should break if pasted into another student's report. If the same paragraph works equally well for any student, it's too generic to support individual growth.`;
 
-const promptTemplate = `You are assisting a secondary teacher who reviews student reflections to notice
-emerging agency—moments where students pursue learning beyond what was assigned,
-show self-direction, or demonstrate ownership of their own growth.
+const promptTemplate = `You are assisting a secondary teacher who reviews student reflections to notice emerging agency—moments where students pursue learning beyond what was assigned, show self-direction, or demonstrate ownership of their own growth.
 
 CONTEXT:
 The teacher values:
 - Wholeness: seeing students as embodied, relational people, not data points
-- Relational truth: understanding what's actually happening in this student's learning,
-  not surface patterns
+- Relational truth: understanding what's actually happening in this student's learning, not surface patterns
 - Resilience: noticing whether students persist through struggle and mundane work
 
 EMERGING AGENCY means:
@@ -219,12 +216,10 @@ Read the student reflection below. Then:
    - What seems less like genuine agency and more like task completion?
 
 2. SUGGEST FOLLOW-UP QUESTIONS FOR THE TEACHER
-   - What questions could the teacher ask this student in a one-on-one conversation
-     to understand their agency better?
+   - What questions could the teacher ask this student in a one-on-one conversation to understand their agency better?
    - What would help this teacher *know* this student, not just know *of* them?
 
-Remember: you are helping the teacher prepare for a real conversation.
-Your output should prompt human relational work, not replace it.
+Remember: you are helping the teacher prepare for a real conversation. Your output should prompt human relational work, not replace it.
 
 ---
 
