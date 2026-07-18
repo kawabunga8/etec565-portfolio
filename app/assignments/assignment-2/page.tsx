@@ -381,7 +381,7 @@ export default function Assignment2() {
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50 text-sm space-y-3">
                 <p className="font-semibold text-[#B4985B]">My Commitments</p>
-                <p>I seek to enhance relational truth and encourage wholeness and resilience.</p>
+                <p>I seek to enhance relational truth (understanding what is actually happening in a student's learning, not its surface patterns) and encourage wholeness and resilience.</p>
                 <p className="font-semibold">I will use AI only when it either:</p>
                 <ol className="list-decimal list-inside space-y-2 ml-2">
                   <li>Saves meaningful time for relational work (frees me to know students better)</li>
