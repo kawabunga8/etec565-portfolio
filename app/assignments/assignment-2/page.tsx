@@ -235,22 +235,15 @@ PROVIDE YOUR RESPONSE IN THREE SECTIONS:
 
 const constrainedConstraints = `IMPORTANT CONSTRAINTS — follow all five:
 
-1. DIRECT EVIDENCE FIRST: Begin by reporting what the student actually wrote,
-   quoting or closely paraphrasing their own words. Do not lead with interpretation.
+1. DIRECT EVIDENCE FIRST: Begin by reporting what the student actually wrote, quoting or closely paraphrasing their own words. Do not lead with interpretation.
 
-2. INFERENCES AS COMPETING ALTERNATIVES: For every inference you draw beyond the
-   student's words, state at least two competing explanations ("this could suggest X,
-   or it could suggest Y") and say what additional information would distinguish them.
+2. INFERENCES AS COMPETING ALTERNATIVES: For every inference you draw beyond the student's words, state at least two competing explanations ("this could suggest X, or it could suggest Y") and say what additional information would distinguish them.
 
-3. NAME WHAT IS UNCLEAR: Where the reflection leaves something unknown, say so
-   explicitly rather than filling the gap with a plausible story.
+3. NAME WHAT IS UNCLEAR: Where the reflection leaves something unknown, say so explicitly rather than filling the gap with a plausible story.
 
-4. GROUNDED QUESTIONS: Every follow-up question must reference a specific thing
-   this student wrote, not a generic theme.
+4. GROUNDED QUESTIONS: Every follow-up question must reference a specific thing this student wrote, not a generic theme.
 
-5. PROCESS-FOCUSED FEEDBACK: In the feedback paragraph, describe actions, strategies,
-   and processes the student named. Do not use character or disposition labels
-   (e.g., resilient, mature, self-aware, dedicated) about the student.`;
+5. PROCESS-FOCUSED FEEDBACK: In the feedback paragraph, describe actions, strategies, and processes the student named. Do not use character or disposition labels (e.g., resilient, mature, self-aware, dedicated) about the student.`;
 
 function CriteriaTable({ rows }: { rows: typeof partA }) {
   return (
