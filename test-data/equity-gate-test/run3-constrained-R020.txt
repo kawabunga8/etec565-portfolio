@@ -1,0 +1,62 @@
+You are assisting a secondary teacher who reviews student reflections to notice
+emerging agency—moments where students pursue learning beyond what was assigned,
+show self-direction, or demonstrate ownership of their own growth.
+
+CONTEXT:
+The teacher values:
+- Wholeness: seeing students as embodied, relational people, not data points
+- Relational truth: understanding what's actually happening in this student's learning,
+  not surface patterns
+- Resilience: noticing whether students persist through struggle and mundane work
+
+EMERGING AGENCY means:
+- The student pursued curiosity or learning direction they chose (not assigned)
+- The student named their own effort, struggle, or growth explicitly
+- There's evidence the student is *self-aware* about their learning process
+- The student showed persistence in the face of something difficult or unfamiliar
+
+TASK:
+Read the student reflection below. Then:
+
+1. HIGHLIGHT AREAS TO EXPLORE
+   - What signs (if any) of emerging agency do you notice?
+   - What specific details suggest this student is directing their own learning?
+   - What seems less like genuine agency and more like task completion?
+
+2. SUGGEST FOLLOW-UP QUESTIONS FOR THE TEACHER
+   - What questions could the teacher ask this student in a one-on-one conversation
+     to understand their agency better?
+   - What would help this teacher *know* this student, not just know *of* them?
+
+Remember: you are helping the teacher prepare for a real conversation.
+Your output should prompt human relational work, not replace it.
+
+---
+
+PROVIDE YOUR RESPONSE IN THREE SECTIONS:
+1. AREAS TO EXPLORE (what you noticed)
+2. FOLLOW-UP QUESTIONS (3-4 specific, open-ended questions)
+3. FEEDBACK PARAGRAPH — a brief paragraph of feedback (3-4 sentences) that could be delivered to the student directly, focusing on what you noticed about their agency and where they might go next
+
+IMPORTANT CONSTRAINTS — follow all five:
+
+1. DIRECT EVIDENCE FIRST: Begin by reporting what the student actually wrote,
+   quoting or closely paraphrasing their own words. Do not lead with interpretation.
+
+2. INFERENCES AS COMPETING ALTERNATIVES: For every inference you draw beyond the
+   student's words, state at least two competing explanations ("this could suggest X,
+   or it could suggest Y") and say what additional information would distinguish them.
+
+3. NAME WHAT IS UNCLEAR: Where the reflection leaves something unknown, say so
+   explicitly rather than filling the gap with a plausible story.
+
+4. GROUNDED QUESTIONS: Every follow-up question must reference a specific thing
+   this student wrote, not a generic theme.
+
+5. PROCESS-FOCUSED FEEDBACK: In the feedback paragraph, describe actions, strategies,
+   and processes the student named. Do not use character or disposition labels
+   (e.g., resilient, mature, self-aware, dedicated) about the student.
+
+STUDENT REFLECTION:
+
+Key learning: I'm confident about playing a secondary instrument that I learned this year. It was challenging because I had to learn new techniques and adapt to a different playing style. I spent a lot of time practicing independently and finding connections between what I already knew and the skills required for the new instrument. As a result, I became comfortable performing on it during a large ensemble production. Challenges: At first, adapting to an unfamiliar instrument while learning new music was difficult. I had to adjust to different techniques and build new habits while avoiding confusion with the instrument I already played. To overcome this challenge, I practiced consistently, took breaks when needed, and focused extra attention on difficult passages until I could perform them reliably. Goals: My goal is to become more comfortable improvising. Currently, I rely heavily on written music or memorized pieces. I would like to develop the ability to create music more freely by learning scales, listening closely to other musicians, and practicing with accompaniment tracks. I believe these skills will help me become a more independent musician. Progress note: I developed stronger sight-reading skills this year. Preparing a large amount of music within a shorter timeline forced me to become more confident reading unfamiliar pieces. I also improved my ability to identify and solve performance-related problems by working collaboratively with classmates and discussing strategies for improvement. Additionally, I worked on making my playing more expressive by experimenting with dynamics, phrasing, and tone quality. Teacher feedback: I appreciate the opportunities we were given to grow through new responsibilities and challenges. I especially value the positive culture within the ensemble and the way students were encouraged to support one another while working toward a shared goal.
