@@ -233,6 +233,25 @@ PROVIDE YOUR RESPONSE IN THREE SECTIONS:
 2. FOLLOW-UP QUESTIONS (3-4 specific, open-ended questions)
 3. FEEDBACK PARAGRAPH — a brief paragraph of feedback (3-4 sentences) that could be delivered to the student directly, focusing on what you noticed about their agency and where they might go next`;
 
+const constrainedConstraints = `IMPORTANT CONSTRAINTS — follow all five:
+
+1. DIRECT EVIDENCE FIRST: Begin by reporting what the student actually wrote,
+   quoting or closely paraphrasing their own words. Do not lead with interpretation.
+
+2. INFERENCES AS COMPETING ALTERNATIVES: For every inference you draw beyond the
+   student's words, state at least two competing explanations ("this could suggest X,
+   or it could suggest Y") and say what additional information would distinguish them.
+
+3. NAME WHAT IS UNCLEAR: Where the reflection leaves something unknown, say so
+   explicitly rather than filling the gap with a plausible story.
+
+4. GROUNDED QUESTIONS: Every follow-up question must reference a specific thing
+   this student wrote, not a generic theme.
+
+5. PROCESS-FOCUSED FEEDBACK: In the feedback paragraph, describe actions, strategies,
+   and processes the student named. Do not use character or disposition labels
+   (e.g., resilient, mature, self-aware, dedicated) about the student.`;
+
 function CriteriaTable({ rows }: { rows: typeof partA }) {
   return (
     <div className="overflow-x-auto mb-4">
@@ -563,7 +582,7 @@ export default function Assignment2() {
               </summary>
               <div className="px-4 pb-4 pt-2 text-amber-50">
             <p className="mb-4 text-sm">
-              The initial results raised a question: is the observation-to-interpretation drift a property of the model, or of the prompt? To find out, I ran the same four reflections through additional models (Gemini 3.5 Flash-Lite and GPT 5.5 with the original prompt), and then re-tested Gemini 3.5 Flash and GPT 5.5 with a <span className="font-semibold">constrained prompt </span>that requires the model to: (1) report direct evidence first, anchored to the student&apos;s own words; (2) state every inference as competing alternatives (&ldquo;could suggest X, or could suggest Y &mdash; here is what would distinguish them&rdquo;); (3) name what remains unclear rather than filling gaps; (4) ground follow-up questions in specific things the student wrote; and (5) give process-focused feedback with no character labels.
+              The initial results raised a question: is the observation-to-interpretation drift a property of the model, or of the prompt? To find out, I ran the same four reflections through additional models (Gemini 3.5 Flash-Lite and GPT 5.5 with the original prompt), and then re-tested Gemini 3.5 Flash and GPT 5.5 with a <span className="font-semibold">constrained prompt </span>that requires the model to: (1) report direct evidence first, anchored to the student&apos;s own words; (2) state every inference as competing alternatives (&ldquo;could suggest X, or could suggest Y &mdash; here is what would distinguish them&rdquo;); (3) name what remains unclear rather than filling gaps; (4) ground follow-up questions in specific things the student wrote; and (5) give process-focused feedback with no character labels. The full text of the constrained prompt appears in Appendix E.
             </p>
             <p className="mb-6 text-sm">
               All five outputs were scored against the heuristic. The Equity gate is tested directly in the Equity Gate Test that follows.
@@ -793,6 +812,19 @@ export default function Assignment2() {
                   <p className="font-semibold text-[#B4985B] mb-2">Development</p>
                   <p>AI coding assistants were used to build and style the structural elements of this website.</p>
                 </div>
+              </div>
+            </details>
+
+            <details className="group mb-4 rounded-lg bg-black/40 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] open:bg-[#B4985B]/10 open:ring-1 open:ring-[#B4985B]/30" open={false}>
+              <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-semibold text-[#B4985B] transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
+                <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Appendix E: Constrained Prompt
+              </summary>
+              <div className="px-4 pb-4 pt-2 text-amber-50">
+                <p className="mb-4 text-sm">The constrained prompt is the Appendix A prompt with the following block appended. This is the reconstruction used in the Equity Gate Test; as noted in that test&apos;s Limitations, the original constrained-prompt text from the Prompt Architecture Test was not preserved verbatim.</p>
+                <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-black/50 p-4 font-mono text-xs leading-relaxed">{constrainedConstraints}</pre>
               </div>
             </details>
           </Panel>
